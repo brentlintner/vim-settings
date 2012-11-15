@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/brent/Dropbox'
+let g:netrw_dirhist_2='/home/brent/src/ripple/lib/ripple/ui/plugins/accelerometer'
+let g:netrw_dirhist_3='/home/brent/src/ripple/client/ui/plugins/camera'
+let g:netrw_dirhist_4='/home/brent/src/ripple/client/platform/cordova/2.0.0/bridge'
+let g:netrw_dirhist_5='/home/brent/src/ripple'
+let g:netrw_dirhist_6='/home/brent/Dropbox'
+let g:netrw_dirhist_7='/home/brent/.vim'
