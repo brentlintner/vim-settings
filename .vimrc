@@ -12,9 +12,9 @@ colors twilight256
 set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Always set autoindent
+" Disable folding.
 
-set autoindent
+set nofoldenable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fast saving (\w)
@@ -80,6 +80,7 @@ au! BufRead,BufNewFile Jakefile     setfiletype javascript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation settings..
 
+set autoindent
 filetype plugin indent on
 autocmd FileType * set tabstop=4|set shiftwidth=4
 autocmd FileType ruby set tabstop=2|set shiftwidth=2
@@ -206,15 +207,3 @@ map <leader>G :s/^\/\///<CR> :silent noh<CR>
 
 map <leader>s :setlocal spell spelllang=en_ca<CR>
 map <leader>S :setlocal nospell<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Searching...
-
-" Ignore case when searching
-set ignorecase
-" When searching try to be smart about cases 
-set smartcase
-" Highlight search results
-set hlsearch
-" Makes search act like search in modern browsers
-set incsearch
