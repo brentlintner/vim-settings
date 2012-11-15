@@ -7,6 +7,11 @@ set background=dark
 colors twilight256 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow backspacing over everything in insert mode
+
+set backspace=indent,eol,start
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always set autoindent
 
 set autoindent
@@ -191,8 +196,14 @@ endif
 " Comment out selected lines (with JS comments)
 " TODO: figure out how to do with current filetype's comment
 
-vmap <leader>g :s/^/\/\//<CR> :silent noh<CR>
-vmap <leader>G :s/^\/\///<CR> :silent noh<CR>
+map <leader>g :s/^/\/\//<CR> :silent noh<CR>
+map <leader>G :s/^\/\///<CR> :silent noh<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Spellcheck en_CA
+
+map <leader>s :setlocal spell spelllang=en_ca<CR>
+map <leader>S :setlocal nospell<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching...
