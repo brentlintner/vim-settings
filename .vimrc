@@ -80,8 +80,10 @@ au! BufRead,BufNewFile Jakefile     setfiletype javascript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation settings..
 
+filetype plugin indent on
 autocmd FileType * set tabstop=4|set shiftwidth=4
 autocmd FileType ruby set tabstop=2|set shiftwidth=2
+autocmd FileType text setlocal textwidth=78 " for git commits
 set expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
