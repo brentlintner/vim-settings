@@ -4,6 +4,7 @@ set nocompatible
 " Color settings
 
 set background=dark 
+set t_Co=256
 colors twilight256 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

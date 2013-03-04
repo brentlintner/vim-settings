@@ -26,11 +26,6 @@ http://amix.dk/vim/vimrc.html
 http://www.fprintf.net/vimCheatSheet.html
 http://vim.wikia.com/wiki/Vim_Tips_Wiki
 
-## Setting 256 bit Color Support (using colors/twilight256)
-
-Put `export TERM=xterm-256color` in your bash profile.
-
-
 ## Ack Plugin
 
 You need to install the ack program.
