@@ -213,3 +213,8 @@ map <leader>G :s/^\/\///<CR> :silent noh<CR>
 
 map <leader>s :setlocal spell spelllang=en_ca<CR>
 map <leader>S :setlocal nospell<CR>
+
+" Load in a custom config in CWD?
+if filereadable(".vim.custom")
+    so .vim.custom
+endif
