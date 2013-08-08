@@ -238,12 +238,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     endfun
     " }}}
 
-    call <SID>X("Normal", "fffedc", "", "")
+    call <SID>X("Normal", "f0f0f0", "", "")
 
     " highlight groups
     "call <SID>X("Cursor", "708090", "f0e68c", "")
     "CursorIM
-    call <SID>X("Directory", "dad085", "", "")
+    call <SID>X("Directory", "ececc8", "", "")
     "DiffAdd
     "DiffChange
     "DiffDelete
@@ -264,7 +264,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("StatusLine", "666666", "", "none,underline")
     call <SID>X("StatusLineNC", "606060", "", "none,underline")
     call <SID>X("Title", "d08356", "", "underline")
-    call <SID>X("Visual", "404040", "fffedc", "reverse")
+    call <SID>X("Visual", "404040", "f0f0f0", "reverse")
     "VisualNOS
     "call <SID>X("WarningMsg", "fa8072", "", "")
     "WildMenu
@@ -286,12 +286,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
     call <SID>X("String", "a2a96f", "", "")
     call <SID>X("PreProc", "8a9597", "", "")
-    call <SID>X("Type", "e3d796", "", "")
+    call <SID>X("Type", "ececc8", "", "")
     call <SID>X("Special", "c2c98f", "", "")
     call <SID>X("Underlined", "fffedc", "", "underline")
     call <SID>X("Ignore", "666666", "", "")
     call <SID>X("Error", "602020", "", "")
-    call <SID>X("Todo", "ff4500", "eeee00", "")
+    call <SID>X("Todo", "666666", "eeee00", "")
 
     if version >= 700
         call <SID>X("CursorLine", "262626", "", "none")
