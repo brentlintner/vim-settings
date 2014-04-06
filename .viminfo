@@ -8,23 +8,26 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/dffd
+~MSle0~/content: '
 
 # Command Line History (newest to oldest):
 :qa
 :wqa
 :wa
-:qa!
+:bd!
 :bd
+:qa!
+:wq
 :close
 :c
 :'<,'>qa
 :w
 :wea
-:wq
 :81
 
 # Search String History (newest to oldest):
+?/content: '
+? content: '
 ?/build-linux-kernelj
 ?/dffd
 ? dffd
@@ -43,8 +46,6 @@
 ? dfdfdfd
 ?/mini
 ? mini
-?/wid
-? wid
 
 # Expression History (newest to oldest):
 
@@ -54,70 +55,86 @@
 
 # Registers:
 "0	LINE	0
-	${top name 13} ${top pid 13} ${top cpu 13} ${top mem 13}
-""1	LINE	0
+	autocmd FileType css set tabstop=2|set shiftwidth=2
+"1	LINE	0
 	
 "2	LINE	0
-	${sensors}
+	
 "3	LINE	0
+	
+"4	LINE	0
+	
+"5	LINE	0
+	
+"6	LINE	0
+	au! BufRead,BufNewFile *.styl       setfiletype javascript
+	au! BufRead,BufNewFile Jakefile     setfiletype javascript
+"7	LINE	0
+	
+"8	LINE	0
+	${sensors}
+"9	LINE	0
 	${top name 11} ${top pid 11} ${top cpu 11} ${top mem 11}
 	${top name 12} ${top pid 12} ${top cpu 12} ${top mem 12}
 	${top name 13} ${top pid 13} ${top cpu 13} ${top mem 13}
 	${top name 14} ${top pid 14} ${top cpu 14} ${top mem 14}
-"4	LINE	0
-	Networking
-"5	LINE	0
-	Processes: ${alignr}$processes ($running_processes running)
-"6	LINE	0
-	CPU: ${alignr}${freq} MHz
-"7	LINE	0
-	Processes: $processes  Running: $running_processes
-"8	LINE	0
-	
-"9	LINE	0
-	
-	Core 1 ${cpubar 4 cpu1} ${cpu cpu1}%
-	Core 2 - ${cpu cpu2}% ${cpubar 4 cpu2}
-	Core 3 - ${cpu cpu3}% ${cpubar 4 cpu3}
-	Core 4 - ${cpu cpu4}% ${cpubar 4 cpu4}
-	Core 5 - ${cpu cpu5}% ${cpubar 4 cpu5}
-	Core 6 - ${cpu cpu6}% ${cpubar 4 cpu6}
-	Core 7 - ${cpu cpu7}% ${cpubar 4 cpu7}
-	Core 8 - ${cpu cpu8}% ${cpubar 4 cpu8}
-"-	CHAR	0
-	 
+""-	CHAR	0
+	html
 
 # File marks:
-'0  4  0  ~/src/bithound/app/NERD_tree_1
-'1  68  0  ~/.conkyrc
-'2  6  0  ~/NERD_tree_1
-'3  25  8  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
-'4  1  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
-'5  3  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
-'6  81  0  ~/src/bithound/app/NERD_tree_1
-'7  44  9  ~/.conkyrc
-'8  101  0  ~/src/bithound/app/NERD_tree_1
-'9  2  0  ~/src/bithound/app/views/login.mustache
+'0  97  21  ~/.vimrc
+'1  33  0  ~/src/bithound/app/views/_layout.mustache
+'2  85  55  ~/.vimrc
+'3  8  4  ~/src/bithound/app/views/elements.mustache
+'4  101  20  ~/.vimrc
+'5  16  0  ~/src/bithound/app/web/styles/main.less
+'6  2  0  ~/src/bithound/app/web/styles/icons.less
+'7  1  0  ~/src/bithound/app/NERD_tree_1
+'8  68  0  ~/.conkyrc
+'9  6  0  ~/NERD_tree_1
 
 # Jumplist (newest first):
--'  4  0  ~/src/bithound/app/NERD_tree_1
--'  19  0  ~/src/bithound/app/NERD_tree_1
+-'  97  21  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  33  0  ~/src/bithound/app/views/_layout.mustache
+-'  1  0  ~/src/bithound/app/views/index.mustache
+-'  1  0  ~/src/bithound/app/web/styles/mixins.less
+-'  172  0  ~/src/bithound/app/web/styles/main.less
+-'  142  2  ~/src/bithound/app/web/styles/main.less
+-'  2  0  ~/src/bithound/app/web/styles/colours.less
+-'  1  0  ~/src/bithound/app/web/styles/buttons.less
+-'  85  55  ~/.vimrc
+-'  99  0  ~/.vimrc
+-'  8  4  ~/src/bithound/app/views/elements.mustache
+-'  1  0  ~/src/bithound/app/views/elements.mustache
+-'  101  20  ~/.vimrc
+-'  103  0  ~/.vimrc
+-'  16  0  ~/src/bithound/app/web/styles/main.less
+-'  22  0  ~/src/bithound/app/web/styles/main.less
+-'  2  0  ~/src/bithound/app/web/styles/main.less
+-'  1  0  ~/src/bithound/app/web/styles/main.less
+-'  75  4  ~/src/bithound/app/web/styles/mixins.less
+-'  9  0  ~/src/bithound/app/web/styles/colours.less
+-'  1  0  ~/src/bithound/app/web/styles/colours.less
+-'  2  0  ~/src/bithound/app/web/styles/icons.less
+-'  3  0  ~/src/bithound/app/web/styles/colours.less
+-'  1  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.less
+-'  1  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
 -'  1  0  ~/src/bithound/app/NERD_tree_1
+-'  106  0  ~/src/bithound/app/NERD_tree_1
 -'  68  0  ~/.conkyrc
 -'  1  0  ~/.conkyrc
 -'  6  0  ~/NERD_tree_1
 -'  20  0  ~/NERD_tree_1
 -'  1  0  ~/NERD_tree_1
 -'  25  8  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
--'  1  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
 -'  3  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
 -'  6  0  ~/src/bithound/app/web/styles/main.less
--'  1  0  ~/src/bithound/app/web/styles/main.less
--'  81  0  ~/src/bithound/app/NERD_tree_1
--'  90  0  ~/src/bithound/app/NERD_tree_1
+-'  168  0  ~/src/bithound/app/NERD_tree_1
+-'  177  0  ~/src/bithound/app/NERD_tree_1
 -'  44  9  ~/.conkyrc
--'  101  0  ~/src/bithound/app/NERD_tree_1
--'  108  0  ~/src/bithound/app/NERD_tree_1
+-'  188  0  ~/src/bithound/app/NERD_tree_1
+-'  195  0  ~/src/bithound/app/NERD_tree_1
 -'  1  0  ~/src/bithound/app/views/login.mustache
 -'  2  0  ~/src/bithound/app/views/login.mustache
 -'  4  11  ~/.conkyrc
@@ -144,14 +161,14 @@
 -'  54  5  ~/.conkyrc
 -'  53  5  ~/.conkyrc
 -'  42  5  ~/.conkyrc
--'  85  0  ~/src/bithound/app/NERD_tree_1
--'  92  0  ~/src/bithound/app/NERD_tree_1
+-'  172  0  ~/src/bithound/app/NERD_tree_1
+-'  179  0  ~/src/bithound/app/NERD_tree_1
 -'  1  0  ~/src/bithound/app/views/login.mustache
 -'  2  0  ~/src/bithound/app/views/login.mustache
--'  62  0  ~/src/bithound/app/NERD_tree_1
--'  71  0  ~/src/bithound/app/NERD_tree_1
--'  82  0  ~/src/bithound/app/NERD_tree_1
--'  89  0  ~/src/bithound/app/NERD_tree_1
+-'  149  0  ~/src/bithound/app/NERD_tree_1
+-'  158  0  ~/src/bithound/app/NERD_tree_1
+-'  169  0  ~/src/bithound/app/NERD_tree_1
+-'  176  0  ~/src/bithound/app/NERD_tree_1
 -'  1  0  ~/src/bithound/app/views/login.mustache
 -'  2  0  ~/src/bithound/app/views/login.mustache
 -'  6  0  ~/NERD_tree_1
@@ -160,15 +177,10 @@
 -'  6  0  ~/NERD_tree_1
 -'  20  0  ~/NERD_tree_1
 -'  1  0  ~/NERD_tree_1
--'  25  8  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
--'  1  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
--'  3  0  ~/src/bithound/app/web/components/button-wrap/button-wrap.html
--'  6  0  ~/src/bithound/app/web/styles/main.less
--'  1  0  ~/src/bithound/app/web/styles/main.less
--'  63  0  ~/src/bithound/app/NERD_tree_1
--'  72  0  ~/src/bithound/app/NERD_tree_1
+-'  150  0  ~/src/bithound/app/NERD_tree_1
+-'  159  0  ~/src/bithound/app/NERD_tree_1
 -'  44  9  ~/.conkyrc
--'  83  0  ~/src/bithound/app/NERD_tree_1
+-'  170  0  ~/src/bithound/app/NERD_tree_1
 -'  1  0  ~/src/bithound/app/views/login.mustache
 -'  2  0  ~/src/bithound/app/views/login.mustache
 -'  4  11  ~/.conkyrc
@@ -179,26 +191,44 @@
 -'  46  7  ~/.conkyrc
 -'  47  7  ~/.conkyrc
 -'  48  7  ~/.conkyrc
--'  49  7  ~/.conkyrc
--'  50  7  ~/.conkyrc
--'  51  7  ~/.conkyrc
--'  52  0  ~/.conkyrc
--'  39  0  ~/.conkyrc
--'  43  0  ~/.conkyrc
--'  37  0  ~/.conkyrc
--'  60  0  ~/.conkyrc
--'  58  0  ~/.conkyrc
--'  57  0  ~/.conkyrc
--'  38  0  ~/.conkyrc
--'  31  2  ~/.conkyrc
--'  41  19  ~/.conkyrc
--'  54  5  ~/.conkyrc
--'  53  5  ~/.conkyrc
+-'  33  0  ~/src/bithound/app/views/_layout.mustache
+-'  1  0  ~/src/bithound/app/views/index.mustache
 
 # History of marks within files (newest to oldest):
 
+> ~/.vimrc
+	"	97	21
+	^	85	56
+	.	85	55
+	+	103	0
+	+	103	0
+	+	103	0
+	+	95	0
+	+	96	0
+	+	95	26
+	+	98	0
+	+	100	0
+	+	96	20
+	+	98	22
+	+	100	24
+	+	101	20
+	+	85	0
+	+	86	0
+	+	87	0
+	+	87	0
+	+	85	51
+	+	86	51
+	+	87	0
+	+	93	48
+	+	97	19
+	+	99	20
+	+	85	55
+
+> ~/src/bithound/app/web/styles/buttons.less
+	"	1	0
+
 > ~/src/bithound/app/NERD_tree_1
-	"	4	0
+	"	13	0
 	.	1	0
 	+	1	0
 	+	1	0
@@ -231,6 +261,124 @@
 	+	1	0
 	+	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/src/bithound/app/web/styles/colours.less
+	"	2	0
+
+> ~/src/bithound/app/web/styles/main.less
+	"	172	0
+	.	119	0
+	+	16	0
+	+	22	0
+	+	16	0
+	+	64	0
+	+	117	0
+	+	119	0
+
+> ~/src/bithound/app/web/styles/mixins.less
+	"	1	0
+	.	91	15
+	+	3	0
+	+	24	0
+	+	83	0
+	+	84	15
+	+	85	18
+	+	82	0
+	+	85	0
+	+	89	15
+	+	90	18
+	+	91	15
+
+> ~/src/bithound/app/views/index.mustache
+	"	1	0
+
+> ~/src/bithound/app/views/_layout.mustache
+	"	33	0
+
+> ~/src/bithound/app/[fuf]
+	"	1	50
+	^	1	51
+	.	1	50
+	+	1	38
+	+	1	50
+
+> ~/src/bithound/app/HACKING.md
+	"	1	0
+
+> ~/src/bithound/app/web/components/score-card/score-card.less
+	"	3	2
+	.	3	0
+	+	3	0
+
+> ~/src/bithound/app/web/styles/boilerplate.less
+	"	3	1
+	^	110	1
+	.	98	0
+	+	10	0
+	+	98	0
+	+	99	0
+	+	98	0
+	+	101	0
+	+	107	0
+	+	109	0
+	+	110	0
+	+	98	0
+
+> ~/src/bithound/app/web/styles/icons.less
+	"	3	5
+	^	4	7
+	.	4	6
+	+	2	0
+	+	4	6
+
+> ~/src/bithound/app/web/styles/typography.less
+	"	1	0
+	.	4	0
+	+	4	0
+
+> ~/src/burlesque/web/x-git-show/index.styl
+	"	13	2
+	.	14	0
+	+	14	0
+
+> ~/src/bithound/app/views/elements.mustache
+	"	8	4
+	.	8	0
+	+	8	0
+
+> ~/src/bithound/app/web/components/button-wrap/button-wrap.html
+	"	1	0
+	.	2	0
+	+	2	0
+
+> ~/src/bithound/app/web/components/button-wrap/button-wrap.less
+	"	1	0
+
+> ~/src/vim-settings/.git/COMMIT_EDITMSG
+	"	1	41
+	^	1	42
+	.	1	41
+	+	1	41
 
 > ~/.conkyrc
 	"	68	0
@@ -342,34 +490,11 @@
 	+	1	0
 	+	1	0
 
-> ~/src/bithound/app/web/components/button-wrap/button-wrap.html
-	"	25	8
-	.	2	0
-	+	2	0
-
-> ~/src/bithound/app/[fuf]
-	"	1	40
-	^	1	41
-	.	1	40
-	+	1	40
-
-> ~/src/bithound/app/web/components/button-wrap/button-wrap.less
-	"	1	0
-
 > ~/src/bithound/app/web/components/score-card/score-card.html
 	"	21	10
 
-> ~/src/bithound/app/web/styles/main.less
-	"	6	0
-
 > ~/src/bithound/app/views/login.mustache
 	"	1	0
-
-> ~/src/bithound/app/views/index.mustache
-	"	1	0
-
-> ~/src/bithound/app/views/_layout.mustache
-	"	12	0
 
 > /etc/conky/conky.conf
 	"	58	0
