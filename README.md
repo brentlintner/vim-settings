@@ -10,12 +10,14 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 ## Installation
 
-   cd ~/
-   git clone git@github.com:brentlintner/vim-settings.git
-   ln -s vim-settings/.vimrc
-   ln -s vim-settings/.vim
-   cd vim-settings
-   ./configure
+```bash
+ cd ~/
+ git clone git@github.com:brentlintner/vim-settings.git
+ ln -s vim-settings/.vimrc
+ ln -s vim-settings/.vim
+ cd vim-settings
+ ./configure
+ ```
 
 ## Other References
 
