@@ -6,6 +6,8 @@ Inspired by [gtanner's vim config](https://github.com/gtanner/tinyhippos.vimrc).
 
 Uses [Pathogen](https://github.com/tpope/vim-pathogen).
 
+See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bundle).
+
 ## Other References
 
 * http://yavin4.anshul.info/2006/05/18/spell-check-in-vim-7/
