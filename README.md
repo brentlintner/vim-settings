@@ -8,6 +8,15 @@ Uses [Pathogen](https://github.com/tpope/vim-pathogen).
 
 See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bundle).
 
+## Installation
+
+   cd ~/
+   git clone git@github.com:brentlintner/vim-settings.git
+   ln -s vim-settings/.vimrc
+   ln -s vim-settings/.vim
+   cd vim-settings
+   ./configure
+
 ## Other References
 
 * http://yavin4.anshul.info/2006/05/18/spell-check-in-vim-7/
