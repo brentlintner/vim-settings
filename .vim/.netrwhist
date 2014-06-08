@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/brent/.vim/syntax'
-let g:netrw_dirhist_2='/Users/brent/src/danatree/tasks/compile'
-let g:netrw_dirhist_3='/Users/brent/src/tag-this/server'
