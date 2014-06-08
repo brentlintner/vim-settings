@@ -1,6 +1,12 @@
 set nocompatible
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable Pathogen
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color settings
 
 set background=dark 
@@ -98,6 +104,7 @@ autocmd FileType css set tabstop=2|set shiftwidth=2
 autocmd FileType stylus set tabstop=2|set shiftwidth=2
 autocmd FileType html set tabstop=2|set shiftwidth=2
 autocmd FileType mustache set tabstop=2|set shiftwidth=2
+autocmd FileType coffee set tabstop=2|set shiftwidth=2
 autocmd FileType jade set tabstop=2|set shiftwidth=2
 autocmd FileType text setlocal textwidth=78 " for git commits
 set expandtab
