@@ -13,6 +13,7 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 * Vim
 * Git
 * Ruby
+* NodeJS/NPM
 * C Toolchain
 
 ## Installation

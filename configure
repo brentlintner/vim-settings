@@ -6,3 +6,6 @@ cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
 cd ../../../../
+
+# For JSHint Plugin
+sudo npm install -g jshint
