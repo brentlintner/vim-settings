@@ -10,11 +10,11 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 ## Requirements
 
-* Vim
+* Vim (with Ruby support)
 * Git
-* Ruby w/ dev lib
+* Ruby (with ruby-dev headers)
 * NodeJS/NPM
-* C Toolchain
+* GNU toolchain (or equivalent)
 
 ## Installation
 
@@ -25,7 +25,15 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
  ln -s vim-settings/.vim
  cd vim-settings
  ./configure
- ```
+```
+
+## Command-T Plugin
+
+This is what requires ruby, ruby-dev, a toolchain and vim compiled with ruby support.
+
+Having troubles: see [Install Vim with Ruby Support and Command-t Plugin on Ubuntu](http://www.justinbar.net/post/install-vim-with-ruby-support-and-command-t-plugin-on-ubuntu).
+
+If you don't want to use it, then just remove the git repo from `.vim/bundle`.
 
 ## Other References
 
