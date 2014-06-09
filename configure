@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
 git submodule update --init
+
+# See Compiling C Extension https://github.com/wincent/command-t
+cd .vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
+cd ../../../../

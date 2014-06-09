@@ -64,3 +64,18 @@
 [submodule ".vim/bundle/Command-T"]
 	path = .vim/bundle/Command-T
 	url = git@github.com:wincent/Command-T.git
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/mw-utils"]
+	path = .vim/bundle/mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/snipmate-nodejs"]
+	path = .vim/bundle/snipmate-nodejs
+	url = git@github.com:jamescarr/snipmate-nodejs.git
