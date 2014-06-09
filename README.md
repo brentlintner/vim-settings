@@ -12,7 +12,7 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 * Vim
 * Git
-* Ruby
+* Ruby w/ dev lib
 * NodeJS/NPM
 * C Toolchain
 
