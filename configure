@@ -7,5 +7,5 @@ ruby extconf.rb
 make
 cd ../../../../
 
-# For JSHint Plugin
-sudo npm install -g jshint
+# For JSHint/CoffeeScript Plugins
+sudo npm install -g jshint coffee-script
