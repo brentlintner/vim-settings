@@ -8,10 +8,9 @@ call pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color settings
-
-set background=dark 
+set background=dark
 set t_Co=256
-colors twilight256 
+colors xoria256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Allow backspacing over everything in insert mode

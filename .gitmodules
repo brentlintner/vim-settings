@@ -79,3 +79,9 @@
 [submodule ".vim/bundle/snipmate-nodejs"]
 	path = .vim/bundle/snipmate-nodejs
 	url = git@github.com:jamescarr/snipmate-nodejs.git
+[submodule ".vim/bundle/vim-colors-twilight2"]
+	path = .vim/bundle/vim-colors-twilight2
+	url = git@github.com:bmorrall/vim-colors-twilight2.git
+[submodule ".vim/bundle/vim-colors-zenburn"]
+	path = .vim/bundle/vim-colors-zenburn
+	url = git@github.com:jnurmine/Zenburn.git
