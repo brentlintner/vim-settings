@@ -8,6 +8,13 @@ Uses [Pathogen](https://github.com/tpope/vim-pathogen).
 
 See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bundle).
 
+## Requirements
+
+* Vim
+* Git
+* Ruby
+* C Toolchain
+
 ## Installation
 
 ```bash
