@@ -7,6 +7,11 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Command-T ignores
+
+let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**coverage/*,**/bower_components/*"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color settings
 set background=dark
 set t_Co=256
