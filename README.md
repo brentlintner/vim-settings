@@ -15,6 +15,7 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 * Ruby (with ruby-dev headers)
 * NodeJS/NPM
 * GNU toolchain (or equivalent)
+* Ack
 
 ## Installation
 
