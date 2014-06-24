@@ -35,6 +35,16 @@ Having troubles: see [Install Vim with Ruby Support and Command-t Plugin on Ubun
 
 If you don't want to use it, then just remove the git repo from `.vim/bundle`.
 
+## Ack Plugin
+
+Install via: http://beyondgrep.com/install
+
+You might also need to:
+
+    alias ack="ack-grep"
+
+In your `.bashrc`.
+
 ## Other References
 
 * http://yavin4.anshul.info/2006/05/18/spell-check-in-vim-7/
