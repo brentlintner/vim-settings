@@ -114,7 +114,7 @@ autocmd FileType text setlocal textwidth=78 " for git commits
 set expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map space to / (search) and c-space to ? (backgwards search)
+" Map space to / (search) and c-space to ? (backwards search)
 
 map <space> /
 map <c-space> ?
