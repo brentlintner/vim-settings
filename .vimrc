@@ -33,6 +33,11 @@ set nofoldenable
 nmap <leader>w :w!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Sudo saving (w!!) and ignore case for saving
+cmap w!! w !sudo tee % >/dev/null
+cmap W w
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching...
 
 " Ignore case when searching
