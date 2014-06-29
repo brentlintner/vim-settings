@@ -8,4 +8,4 @@ make
 cd ../../../../
 
 # For JSHint/CoffeeScript Plugins
-npm install
+sudo npm install -g jshint coffee-script coffeelint

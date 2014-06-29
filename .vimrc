@@ -7,13 +7,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use local npm packages
-
-let coffee_compiler = '$VIM_SETTINGS/node_modules/.bin/coffee'
-let coffee_linter = '$VIM_SETTINGS/node_modules/.bin/coffeelint'
-let jshintprg = '$VIM_SETTINGS/node_modules/.bin/jshint'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Command-T ignores
 
 let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**coverage/*,**/bower_components/*"
