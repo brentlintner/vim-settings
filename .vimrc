@@ -129,8 +129,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  NERD Tree Commands
+"  NERD Tree
 
+let NERDTreeShowHidden=1
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
