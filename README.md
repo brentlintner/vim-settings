@@ -30,7 +30,7 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 You will also need to put this in your `.bashrc`.
 
-    export VIM_SETTINGS="$HOME/path/to/vim-settings-repo"
+  export VIM_SETTINGS="$HOME/path/to/vim-settings-repo"
 
 ## Command-T Plugin
 
