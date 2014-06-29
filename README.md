@@ -46,6 +46,10 @@ You might also need to:
 
 In your `.bashrc`.
 
+## Adding Custom Commands Per Directory
+
+If you have a `.vim.custom` file in the CWD, it will be evaluated (last).
+
 ## Other References
 
 * http://yavin4.anshul.info/2006/05/18/spell-check-in-vim-7/
