@@ -1,3 +1,4 @@
 .vim-fuf
 .vim/doc/tags
 .viminfo
+node_modules

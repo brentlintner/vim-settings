@@ -28,6 +28,10 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
  ./configure
 ```
 
+You will also need to put this in your `.bashrc`.
+
+  export VIM_SETTINGS="$HOME/path/to/vim-settings-repo"
+
 ## Command-T Plugin
 
 This is what requires ruby, ruby-dev, a toolchain and vim compiled with ruby support.
