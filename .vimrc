@@ -13,6 +13,7 @@ let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**coverage/*,**/bower
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color settings
+
 set background=dark
 set t_Co=256
 colors xoria256
@@ -235,7 +236,9 @@ map <leader>G :s/^\/\///<CR> :silent noh<CR>
 map <leader>s :setlocal spell spelllang=en_ca<CR>
 map <leader>S :setlocal nospell<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Load in a custom config in CWD?
+
 if filereadable(".vim.custom")
     so .vim.custom
 endif
