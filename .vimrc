@@ -230,6 +230,11 @@ if !has("unix")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map jj to replace the escape key.
+
+:imap jj <Esc>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comment out selected lines (with JS comments)
 " TODO: figure out how to do with current filetype's comment
 
