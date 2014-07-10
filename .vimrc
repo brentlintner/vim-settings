@@ -100,6 +100,7 @@ set title
 
 au! BufRead,BufNewFile Jakefile     setfiletype javascript
 au! BufRead,BufNewFile *.mustache   setfiletype mustache
+au! BufRead,BufNewFile *.co         setfiletype coffee
 au! BufRead,BufNewFile *.less       setfiletype less
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
