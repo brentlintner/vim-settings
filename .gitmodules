@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/vim-colors-twilighted"]
 	path = .vim/bundle/vim-colors-twilighted
 	url = git@github.com:brentlintner/twilighted.vim.git
+[submodule ".vim/bundle/vim-colors"]
+	path = .vim/bundle/vim-colors
+	url = git@github.com:spf13/vim-colors.git
