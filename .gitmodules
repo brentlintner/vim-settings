@@ -31,12 +31,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/vim-colors-mustang"]
-	path = .vim/bundle/vim-colors-mustang
-	url = git@github.com:marcus/vim-mustang.git
-[submodule ".vim/bundle/vim-colors-mango"]
-	path = .vim/bundle/vim-colors-mango
-	url = https://github.com/goatslacker/mango.vim
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
@@ -76,15 +70,9 @@
 [submodule ".vim/bundle/snipmate-nodejs"]
 	path = .vim/bundle/snipmate-nodejs
 	url = git@github.com:jamescarr/snipmate-nodejs.git
-[submodule ".vim/bundle/vim-colors-twilight2"]
-	path = .vim/bundle/vim-colors-twilight2
-	url = git@github.com:bmorrall/vim-colors-twilight2.git
 [submodule ".vim/bundle/vim-colors-zenburn"]
 	path = .vim/bundle/vim-colors-zenburn
 	url = git@github.com:jnurmine/Zenburn.git
-[submodule ".vim/bundle/vim-colors-twilight"]
-	path = .vim/bundle/vim-colors-twilight
-	url = git@github.com:vim-scripts/twilight256.vim.git
 [submodule ".vim/bundle/vim-colors-twilighted"]
 	path = .vim/bundle/vim-colors-twilighted
 	url = git@github.com:brentlintner/twilighted.vim.git
