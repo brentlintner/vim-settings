@@ -109,15 +109,6 @@ au! BufRead,BufNewFile *.less       setfiletype less
 set autoindent
 filetype plugin indent on
 autocmd FileType * set tabstop=2|set shiftwidth=2
-autocmd FileType ruby set tabstop=2|set shiftwidth=2
-autocmd FileType javascript set tabstop=2|set shiftwidth=2
-autocmd FileType less set tabstop=2|set shiftwidth=2
-autocmd FileType css set tabstop=2|set shiftwidth=2
-autocmd FileType stylus set tabstop=2|set shiftwidth=2
-autocmd FileType html set tabstop=2|set shiftwidth=2
-autocmd FileType mustache set tabstop=2|set shiftwidth=2
-autocmd FileType coffee set tabstop=2|set shiftwidth=2
-autocmd FileType jade set tabstop=2|set shiftwidth=2
 autocmd FileType text setlocal textwidth=78 " for git commits
 set expandtab
 
