@@ -40,9 +40,6 @@
 [submodule ".vim/bundle/vim-colors-xoria256"]
 	path = .vim/bundle/vim-colors-xoria256
 	url = git@github.com:vim-scripts/xoria256.vim.git
-[submodule ".vim/bundle/taglist"]
-	path = .vim/bundle/taglist
-	url = git@github.com:vim-scripts/taglist.vim.git
 [submodule ".vim/bundle/emmet-vim"]
 	path = .vim/bundle/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git

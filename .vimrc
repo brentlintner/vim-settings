@@ -143,11 +143,6 @@ let NERDTreeShowHidden=1
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  Tag List Commands
-
-nnoremap <silent> <C-e><C-t> :TlistToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual mode related..
 
 " In visual mode when you press * or # to search for the current selection
