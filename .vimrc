@@ -185,13 +185,6 @@ endif
 :imap jj <Esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Comment out selected lines (with JS comments)
-" TODO: figure out how to do with current filetype's comment
-
-map <leader>g :s/^/\/\//<CR> :silent noh<CR>
-map <leader>G :s/^\/\///<CR> :silent noh<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spellcheck en_CA
 
 map <leader>s :setlocal spell spelllang=en_ca<CR>
