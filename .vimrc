@@ -10,6 +10,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
 set wildignore+=*/node_modules/*,*coverage/*,*/bower_components/*,*.vim/bundle"
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 
 " color and syntax settings
 set background=dark
