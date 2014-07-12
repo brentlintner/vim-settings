@@ -3,18 +3,14 @@
 My current vim setup.
 
 Inspired by [gtanner's vim config](https://github.com/gtanner/tinyhippos.vimrc).
-
 Uses [Pathogen](https://github.com/tpope/vim-pathogen).
-
 See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bundle).
 
 ## Requirements
 
-* Vim (with Ruby support)
+* Vim
 * Git
-* Ruby (with ruby-dev headers)
 * NodeJS/NPM
-* GNU toolchain (or equivalent)
 * Ack
 
 ## Installation
@@ -27,14 +23,6 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
  cd vim-settings
  ./configure
 ```
-
-## Command-T Plugin
-
-This is what requires ruby, ruby-dev, a toolchain and vim compiled with ruby support.
-
-Having troubles: see [Install Vim with Ruby Support and Command-t Plugin on Ubuntu](http://www.justinbar.net/post/install-vim-with-ruby-support-and-command-t-plugin-on-ubuntu).
-
-If you don't want to use it, then just remove the git repo from `.vim/bundle`.
 
 ## Ack Plugin
 

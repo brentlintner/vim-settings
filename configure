@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 git submodule update --init
 
-# See Compiling C Extension https://github.com/wincent/command-t
-cd .vim/bundle/Command-T/ruby/command-t
-ruby extconf.rb
-make
-cd ../../../../
-
 # For JSHint/CoffeeScript Plugins
 npm install -g jshint coffee-script coffeelint

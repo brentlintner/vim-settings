@@ -7,9 +7,12 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Command-T ignores
+" Ctrl-P
 
-let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**coverage/*,**/bower_components/*"
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_show_hidden = 1
+set wildignore+=*/node_modules/*,*coverage/*,*/bower_components/*,*.vim/bundle"
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color settings
