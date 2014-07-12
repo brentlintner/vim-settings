@@ -24,6 +24,40 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
  ./configure
 ```
 
+## Common Commands
+
+`space`
+
+Search.
+
+`jj`
+
+Escape insert mode.
+
+`\s,\S`
+
+Toggle spell check.
+
+`ctrl-p`
+
+Runs :CtrlPMixed.
+
+`ctrl-n`
+
+Runs :CtrlPBuffer.
+
+`ctrl-e+f`
+
+Runs :NerdTreeToggle.
+
+`ctrl-h,j,k,l`
+
+Move around windows.
+
+`ctrl-V`
+
+Paste from clipboard.
+
 ## Ack Plugin
 
 Install via: http://beyondgrep.com/install
