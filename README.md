@@ -58,6 +58,14 @@ Move around windows.
 
 Paste from clipboard.
 
+## Syntastic
+
+The `configure` script handles installing some packages.
+
+However, be sure to install them:
+
+https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
+
 ## Ack Plugin
 
 Install via: http://beyondgrep.com/install
