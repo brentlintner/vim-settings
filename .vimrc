@@ -6,7 +6,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " ctrl-p
-let g:ctrlp_cmd = 'CtrlPMixed'
+" TODO: clear cache on pull up? map new key?
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
 set wildignore+=*/node_modules/*,*coverage/*,*/bower_components/*,*.vim/bundle"
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
