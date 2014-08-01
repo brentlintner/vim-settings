@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/vim-scala"]
 	path = .vim/bundle/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule ".vim/bundle/vim-rdoc"]
+	path = .vim/bundle/vim-rdoc
+	url = git@github.com:depuracao/vim-rdoc.git
