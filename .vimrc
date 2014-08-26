@@ -47,6 +47,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" Disable wrapping
+set nowrap
+
 " Allow switching between buffers without saving .
 set hidden
 
