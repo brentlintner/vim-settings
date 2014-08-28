@@ -16,7 +16,7 @@ nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 " color and syntax settings
 set background=dark
 set t_Co=256
-colors xoria256
+colors twilighted
 syntax on
 
 set backspace=indent,eol,start " backspacing support
