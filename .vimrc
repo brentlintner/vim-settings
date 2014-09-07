@@ -9,7 +9,7 @@ call pathogen#infect()
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
-set wildignore+=*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*
+set wildignore+=*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.keep
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 
