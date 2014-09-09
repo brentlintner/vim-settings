@@ -5,6 +5,9 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" disable vim-markdown folder
+let g:vim_markdown_folding_disabled=1
+
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
