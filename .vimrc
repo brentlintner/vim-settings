@@ -72,6 +72,7 @@ au! BufRead,BufNewFile *.less       setfiletype less
 set autoindent
 filetype plugin indent on
 autocmd FileType * set tabstop=2|set shiftwidth=2
+autocmd FileType hs set tabstop=2|set shiftwidth=2
 autocmd FileType text setlocal textwidth=78 " for git commits
 set expandtab
 
