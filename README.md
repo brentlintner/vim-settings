@@ -58,6 +58,10 @@ Move around windows.
 
 Paste from clipboard.
 
+`Ack WORD`
+
+Search and display entries.
+
 ## Syntastic
 
 The `configure` script handles installing some packages.
