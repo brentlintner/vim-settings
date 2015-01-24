@@ -109,3 +109,12 @@
 [submodule ".vim/bundle/vim-typescript"]
 	path = .vim/bundle/vim-typescript
 	url = git@github.com:leafgarland/typescript-vim.git
+[submodule ".vim/bundle/gist-vim"]
+	path = .vim/bundle/gist-vim
+	url = git@github.com:mattn/gist-vim.git
+[submodule ".vim/webapi-vim"]
+	path = .vim/webapi-vim
+	url = git@github.com:mattn/webapi-vim.git
+[submodule ".vim/bundle/webapi-vim"]
+	path = .vim/bundle/webapi-vim
+	url = git@github.com:mattn/webapi-vim.git
