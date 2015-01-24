@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/webapi-vim"]
 	path = .vim/bundle/webapi-vim
 	url = git@github.com:mattn/webapi-vim.git
+[submodule ".vim/bundle/vim-spacebars"]
+	path = .vim/bundle/vim-spacebars
+	url = git://github.com/Slava/vim-spacebars.git
