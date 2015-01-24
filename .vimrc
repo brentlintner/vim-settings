@@ -5,6 +5,8 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" testing
+
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
