@@ -1,0 +1,79 @@
+snippet thelpers
+	Template.${1:template_name}.helpers({
+		${2}
+	});
+snippet te
+	Template.${1:template_name}.events({
+		${2}
+	});
+snippet ehandler
+	'${1:selector}': function (e, tmpl) {
+		${3}
+	}${2:,}
+snippet pub
+	Meteor.publish('${1}', function () {
+		${2}
+	});
+snippet sub
+	Meteor.subscribe('${1}');
+snippet startup
+	Meteor.startup(function () {
+		${1}	
+	});
+snippet helper
+	Handlebars.registerHelper('${1}', function (options) {
+		${2}
+	});
+snippet filter
+	function ${1} (context, page) {
+		${2}
+	}
+snippet pages
+	Meteor.pages({
+		${1}
+	});
+snippet rmap
+	Router.map(function () {
+		${1}
+	});
+snippet rconfig
+	Router.configure({
+		${1}
+	});
+snippet route
+	Router.route('${1}', {
+		name: '${2}',
+		controller: '${3}',
+		action: '${4}'
+	});
+snippet sset
+	Session.set('${1:key}', ${2:value});
+snippet sget
+	Session.get('${1:key}');
+snippet sequals
+	Session.equals('${1:key}', ${2:value});
+
+snippet group
+	/*****************************************************************************/
+	/* ${1} */
+	/*****************************************************************************/
+snippet test
+	Tinytest.add('${1}', function (test) {
+		${2}
+	});
+snippet auto
+	Deps.autorun(function (c) {
+		${1}
+	});
+snippet client
+	if (Meteor.isClient) {
+		${1}
+	}
+snippet server
+	if (Meteor.isServer) {
+		${1}
+	}
+snippet methods
+	Meteor.methods({
+		${1}
+	});
