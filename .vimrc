@@ -10,6 +10,13 @@ call pathogen#infect()
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" html tidy
+let g:syntastic_html_tidy_ignore_errors = [
+    \ '<form> lacks "action" attribute',
+    \ '<template> is not recognized!',
+    \ 'discarding unexpected <template>'
+  \ ]
+
 " gist-vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
@@ -74,6 +81,8 @@ au! BufRead,BufNewFile Jakefile     setfiletype javascript
 au! BufRead,BufNewFile *.mustache   setfiletype mustache
 au! BufRead,BufNewFile *.co         setfiletype coffee
 au! BufRead,BufNewFile *.less       setfiletype less
+au! BufRead,BufNewFile .jshintrc    setfiletype json
+au! BufRead,BufNewFile .jslintrc    setfiletype json
 
 " Indentation settings..
 set autoindent
@@ -95,7 +104,7 @@ map <C-l> <C-W>l
 
 "  NERD Tree
 let NERDTreeShowHidden=1
-nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
+nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
 " Map jj to replace the escape key.
 :imap jj <Esc>
