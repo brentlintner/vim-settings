@@ -79,11 +79,11 @@ set title
 
 " Custom file extensions..
 au! BufRead,BufNewFile Jakefile     setfiletype javascript
+au! BufRead,BufNewFile .jshintrc    setfiletype javascript
+au! BufRead,BufNewFile .jslintrc    setfiletype javascript
 au! BufRead,BufNewFile *.mustache   setfiletype mustache
 au! BufRead,BufNewFile *.co         setfiletype coffee
 au! BufRead,BufNewFile *.less       setfiletype less
-au! BufRead,BufNewFile .jshintrc    setfiletype json
-au! BufRead,BufNewFile .jslintrc    setfiletype json
 
 " Indentation settings..
 set autoindent
