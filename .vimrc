@@ -101,7 +101,7 @@ nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 :imap jj <Esc>
 
 " Spellcheck en_CA
-map <leader>s :setlocal spell spelllang=en_ca<CR>
+map <leader>s :setlocal spell spelllang=en_us<CR>
 map <leader>S :setlocal nospell<CR>
 
 " Load in a custom config in CWD?
