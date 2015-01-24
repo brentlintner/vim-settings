@@ -5,12 +5,13 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" testing
-
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
-" html tidy
+" remove trailing spaces
+command TRAIL %s/\s\+$//
+
+" html tidy - Meteor
 let g:syntastic_html_tidy_ignore_errors = [
     \ '<form> lacks "action" attribute',
     \ '<template> is not recognized!',
@@ -18,7 +19,7 @@ let g:syntastic_html_tidy_ignore_errors = [
   \ ]
 
 " gist-vim
-let g:gist_clip_command = 'pbcopy'
+let g:gist_clip_command = 'pbcopy' " pbcopy for OSX Only
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 
