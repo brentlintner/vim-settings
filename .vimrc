@@ -8,6 +8,10 @@ call pathogen#infect()
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" gist-vim
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
