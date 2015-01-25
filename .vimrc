@@ -8,6 +8,9 @@ call pathogen#infect()
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" emmet
+let g:user_emmet_leader_key='<C-i>'
+
 " spotify
 let g:spotify_country_code = 'US'
 
