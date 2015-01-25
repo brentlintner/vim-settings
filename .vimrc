@@ -8,6 +8,28 @@ call pathogen#infect()
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" emmet
+let g:user_emmet_leader_key='<C-i>'
+
+" spotify
+let g:spotify_country_code = 'US'
+
+" remove trailing spaces
+command TRAIL %s/\s\+$//
+
+" html tidy - Meteor
+let g:syntastic_html_tidy_ignore_errors = [
+    \ '<form> lacks "action" attribute',
+    \ '<template> is not recognized!',
+    \ 'discarding unexpected <template>',
+    \ 'discarding unexpected </template>'
+  \ ]
+
+" gist-vim
+let g:gist_clip_command = 'pbcopy' " pbcopy for OSX Only
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
@@ -64,6 +86,8 @@ set title
 
 " Custom file extensions..
 au! BufRead,BufNewFile Jakefile     setfiletype javascript
+au! BufRead,BufNewFile .jshintrc    setfiletype javascript
+au! BufRead,BufNewFile .jslintrc    setfiletype javascript
 au! BufRead,BufNewFile *.mustache   setfiletype mustache
 au! BufRead,BufNewFile *.co         setfiletype coffee
 au! BufRead,BufNewFile *.less       setfiletype less
@@ -88,17 +112,16 @@ map <C-l> <C-W>l
 
 "  NERD Tree
 let NERDTreeShowHidden=1
-nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
+nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
 " Map jj to replace the escape key.
 :imap jj <Esc>
 
 " Spellcheck en_CA
-map <leader>s :setlocal spell spelllang=en_ca<CR>
+map <leader>s :setlocal spell spelllang=en_us<CR>
 map <leader>S :setlocal nospell<CR>
 
 " Load in a custom config in CWD?
-
 if filereadable(".vim.custom")
     so .vim.custom
 endif
