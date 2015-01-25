@@ -19,6 +19,7 @@ let g:syntastic_html_tidy_ignore_errors = [
     \ '<form> lacks "action" attribute',
     \ '<template> is not recognized!',
     \ 'discarding unexpected <template>'
+    \ 'discarding unexpected </template>'
   \ ]
 
 " gist-vim
