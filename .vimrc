@@ -8,6 +8,9 @@ call pathogen#infect()
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" spotify
+let g:spotify_country_code = 'US'
+
 " remove trailing spaces
 command TRAIL %s/\s\+$//
 
