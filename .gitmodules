@@ -121,3 +121,6 @@
 [submodule ".vim/bundle/tcomment-vim"]
 	path = .vim/bundle/tcomment-vim
 	url = git@github.com:tomtom/tcomment_vim.git
+[submodule ".vim/bundle/jquery"]
+	path = .vim/bundle/jquery
+	url = git@github.com:nono/jquery.vim.git
