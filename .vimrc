@@ -88,10 +88,11 @@ map <C-l> <C-W>l
 
 "  NERD Tree
 let NERDTreeShowHidden=1
-nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+nnoremap <silent> nn :NERDTreeToggle<CR>
 
-" Map jk to replace the escape key.
-:imap jk <Esc>
+" Map jj to replace the escape key.
+:imap jj <Esc>
 
 " Spellcheck en_CA
 map <leader>s :setlocal spell spelllang=en_us<CR>
