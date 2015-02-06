@@ -45,47 +45,23 @@ colors twilighted
 syntax on
 
 set backspace=indent,eol,start " backspacing support
-
 set nofoldenable " Disable folding
-
-" Fast saving (\w)
-nmap <leader>w :w!<cr>
-
-" Sudo saving (w!!) and ignore case for saving
-cmap w!! w !sudo tee % >/dev/null
-cmap W w
-
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
 set hlsearch " Highlight search resultsh
 set incsearch " be like search in modern browsers
-
-" Enable mouse (if terminal has support for it)
-if has('mouse')
-  set mouse=a
-endif
-
 set ruler " Always set the mouse cursor position
+set nowrap " Disable wrapping
+set hidden " Allow switching between buffers without saving .
+set number " Always show line numbers.
+set title " Set xterm title.
 
 " Turn off backups, etc.
 set nobackup
 set nowb
 set noswapfile
 
-" Disable wrapping
-set nowrap
-
-" Allow switching between buffers without saving .
-set hidden
-
-" Always show line numbers.
-set number
-
-" Set xterm title.
-set title
-
 " Custom file extensions..
-au! BufRead,BufNewFile Jakefile     setfiletype javascript
 au! BufRead,BufNewFile .jshintrc    setfiletype javascript
 au! BufRead,BufNewFile .jslintrc    setfiletype javascript
 au! BufRead,BufNewFile *.mustache   setfiletype mustache
@@ -114,8 +90,8 @@ map <C-l> <C-W>l
 let NERDTreeShowHidden=1
 nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
-" Map jj to replace the escape key.
-:imap jj <Esc>
+" Map jk to replace the escape key.
+:imap jk <Esc>
 
 " Spellcheck en_CA
 map <leader>s :setlocal spell spelllang=en_us<CR>

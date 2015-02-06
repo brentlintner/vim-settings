@@ -76,15 +76,15 @@
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim2hs"]
-	path = .vim/bundle/vim2hs
-	url = git@github.com:dag/vim2hs.git
+# [submodule ".vim/bundle/vim2hs"]
+# 	path = .vim/bundle/vim2hs
+# 	url = git@github.com:dag/vim2hs.git
 [submodule ".vim/bundle/vim-golang"]
 	path = .vim/bundle/vim-golang
 	url = git@github.com:jnwhiteh/vim-golang.git
-[submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
-	url = git@github.com:derekwyatt/vim-scala.git
+# [submodule ".vim/bundle/vim-scala"]
+# 	path = .vim/bundle/vim-scala
+# 	url = git@github.com:derekwyatt/vim-scala.git
 [submodule ".vim/bundle/vim-rdoc"]
 	path = .vim/bundle/vim-rdoc
 	url = git@github.com:depuracao/vim-rdoc.git
@@ -121,6 +121,6 @@
 [submodule ".vim/bundle/tcomment-vim"]
 	path = .vim/bundle/tcomment-vim
 	url = git@github.com:tomtom/tcomment_vim.git
-[submodule ".vim/bundle/jquery"]
-	path = .vim/bundle/jquery
-	url = git@github.com:nono/jquery.vim.git
+# [submodule ".vim/bundle/jquery"]
+# 	path = .vim/bundle/jquery
+# 	url = git@github.com:nono/jquery.vim.git
