@@ -33,9 +33,8 @@ set nofoldenable " Disable folding
 " Fast saving (\w)
 nmap <leader>w :w!<cr>
 
-" Sudo saving (w!!) and ignore case for saving
+" Sudo saving (w!!)
 cmap w!! w !sudo tee % >/dev/null
-cmap W w
 
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
