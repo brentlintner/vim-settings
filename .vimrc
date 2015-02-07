@@ -12,8 +12,8 @@ let g:vim_markdown_folding_disabled=1
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
-set wildignore+=*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.keep
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.keep
+let g:ctrlp_custom_ignore = '\v[\/](build|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 
 " color and syntax settings
