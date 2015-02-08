@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/brentlintner/vim-settings.png?label=ready&title=Ready)](https://waffle.io/brentlintner/vim-settings)
 # There Be Wizards In Here!
 
 My current vim setup.
