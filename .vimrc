@@ -91,6 +91,7 @@ map <C-l> <C-W>l
 
 "  NERD Tree
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.baseDir.ts$']
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 " Map jj to replace the escape key.
