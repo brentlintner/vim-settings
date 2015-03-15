@@ -76,7 +76,9 @@ set autoindent
 filetype plugin indent on
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType hs set tabstop=2|set shiftwidth=2
-autocmd FileType text setlocal textwidth=78 " for git commits
+autocmd FileType text setlocal textwidth=72
+autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal spell
 set expandtab
 
 " Map space to / (search)
