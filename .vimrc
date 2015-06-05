@@ -103,6 +103,9 @@ nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 map <leader>s :setlocal spell spelllang=en_ca<CR>
 map <leader>S :setlocal nospell<CR>
 
+" Clear search
+map <leader>h :let @/ = ""<CR>
+
 " Load in a custom config in CWD?
 
 if filereadable(".vim.custom")
