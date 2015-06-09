@@ -30,7 +30,7 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 Search.
 
-`\h`
+`\k`
 
 Clear search.
 
