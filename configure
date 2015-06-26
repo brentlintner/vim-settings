@@ -2,4 +2,4 @@
 git submodule update --init
 
 # For JSHint/CoffeeScript Plugins
-npm install -g jshint coffee-script coffeelint
+npm install -g eslint coffee-script coffeelint tslint
