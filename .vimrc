@@ -30,8 +30,12 @@ set backspace=indent,eol,start " backspacing support
 
 set nofoldenable " Disable folding
 
+" auto passive syntastic mode
+let g:syntastic_mode_map = { 'mode': 'passive'}
+nmap <C-w>e :SyntasticCheck<CR>
+
 " Fast saving (\w)
-nmap <leader>w :w!<cr>
+nmap <leader>w :wa<cr>
 
 " Sudo saving (w!!)
 cmap w!! w !sudo tee % >/dev/null
@@ -94,55 +98,22 @@ map <C-l> <C-W>l
 "  NERD Tree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.baseDir.ts$']
-let g:NERDTreeWinPos = "right"
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
-" Map jj to replace the escape key.
+" Map ctrl-j to replace the escape key.
 :imap jj <Esc>
 
 " Spellcheck en_CA
-map <leader>s :setlocal spell spelllang=en_ca<CR>
-map <leader>S :setlocal nospell<CR>
+nnoremap <C-w>s :setlocal spell spelllang=en_ca<CR>
+nnoremap <C-w>S :setlocal nospell<CR>
 
 " Clear search
-map <leader>k :let @/ = ""<CR>
+nnoremap <C-w><space> :let @/ = ""<CR>
 
 " Load in a custom config in CWD?
-
 if filereadable(".vim.custom")
     so .vim.custom
 endif
-
-" Visual mode related..
-" In visual mode when you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
-" From an idea by Michael Naumann
-function! VisualSearch(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
 
 " Need +virtualedit to paste in insert mode.
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']

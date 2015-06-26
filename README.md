@@ -26,19 +26,23 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 ## Common Commands
 
-`space`
-
-Search.
-
-`\k`
-
-Clear search.
-
 `jj`
 
 Escape insert mode.
 
-`\s,\S`
+`\w`
+
+Save all buffers.
+
+`space`
+
+Search.
+
+`ctrl-w+space`
+
+Clear search.
+
+`ctrl-w+{c,C}`
 
 Toggle spell check.
 
@@ -54,7 +58,7 @@ Runs :CtrlPBuffer.
 
 Runs :NerdTreeToggle.
 
-`ctrl-h,j,k,l`
+`ctrl-{h,j,k,l}`
 
 Move around windows.
 
@@ -64,7 +68,15 @@ Paste from clipboard.
 
 `Ack WORD`
 
-Search and display entries.
+Search and display lines matched. `o` opens files.
+
+`ctrl-w+e`
+
+Toggle Syntastic passive mode.
+
+## Adding Custom Commands Per Directory
+
+If you have a `.vim.custom` file in the CWD, it will be evaluated (last).
 
 ## Syntastic
 
@@ -78,15 +90,9 @@ https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
 
 Install via: http://beyondgrep.com/install
 
-You might also need to:
+You might also need to add this to your shell config:
 
     alias ack="ack-grep"
-
-In your `.bashrc`.
-
-## Adding Custom Commands Per Directory
-
-If you have a `.vim.custom` file in the CWD, it will be evaluated (last).
 
 ## Other References
 
