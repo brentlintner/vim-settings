@@ -70,7 +70,7 @@ Paste from clipboard.
 
 Search and display lines matched. `o` opens files.
 
-`ctrl-w+e`
+`ctrl-w+E`
 
 Toggle Syntastic passive mode.
 

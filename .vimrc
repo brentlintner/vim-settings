@@ -30,10 +30,6 @@ set backspace=indent,eol,start " backspacing support
 
 set nofoldenable " Disable folding
 
-" auto passive syntastic mode
-let g:syntastic_mode_map = { 'mode': 'passive'}
-nmap <C-w>e :SyntasticCheck<CR>
-
 " Fast saving (\w)
 nmap <leader>w :wa<cr>
 
@@ -94,6 +90,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Command to toggle syntastic passive mode
+nnoremap <C-w>E :SyntasticToggleMode<CR>
 
 "  NERD Tree
 let NERDTreeShowHidden=1
