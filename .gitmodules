@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/editorconfig-vim"]
 	path = .vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
