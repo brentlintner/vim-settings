@@ -19,6 +19,7 @@ let g:ctrlp_show_hidden = 1
 set wildignore+=*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.keep
 let g:ctrlp_custom_ignore = '\v[\/](build|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
+nnoremap <silent> <C-b> :CtrlPTag<CR>
 
 " color and syntax settings
 set background=dark
@@ -85,22 +86,25 @@ set expandtab
 map <space> /
 map <silent> <leader><cr> :noh<cr>
 
-"  Easier way to move between windows.
+" Easier way to move between windows.
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Tabbing shortcuts
+nmap <leader>t :tabclose<CR>
+
 " Command to toggle syntastic passive mode
 nnoremap <C-w>E :SyntasticToggleMode<CR>
+
+" Tagbar
+nnoremap <C-w>b :TagbarToggle<CR>
 
 "  NERD Tree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.baseDir.ts$']
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
-
-" Map ctrl-j to replace the escape key.
-:imap jj <Esc>
 
 " Spellcheck en_CA
 nnoremap <C-w>s :setlocal spell spelllang=en_ca<CR>
@@ -108,6 +112,9 @@ nnoremap <C-w>S :setlocal nospell<CR>
 
 " Clear search
 nnoremap <C-w><space> :let @/ = ""<CR>
+
+" Gundo shortcut
+nnoremap <C-w>g :GundoToggle<CR>
 
 " Load in a custom config in CWD?
 if filereadable(".vim.custom")

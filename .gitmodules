@@ -121,3 +121,30 @@
 [submodule ".vim/bundle/vim-coloresque"]
 	path = .vim/bundle/vim-coloresque
 	url = git@github.com:gorodinskiy/vim-coloresque.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim/bundle/easytags"]
+	path = .vim/bundle/easytags
+	url = git@github.com:xolox/vim-easytags.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = git@github.com:xolox/vim-misc.git
+[submodule ".vim/bundle/matchtag"]
+	path = .vim/bundle/matchtag
+	url = git@github.com:gregsexton/MatchTag.git
+[submodule ".vim/bundle/csapprox"]
+	path = .vim/bundle/csapprox
+	url = git@github.com:godlygeek/csapprox.git
+[submodule ".vim/bundle/vim-endwise"]
+	path = .vim/bundle/vim-endwise
+	url = git@github.com:tpope/vim-endwise.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-git"]
+	path = .vim/bundle/vim-git
+	url = git@github.com:tpope/vim-git.git
+[submodule ".vim/bundle/gundo"]
+	path = .vim/bundle/gundo
+	url = git@github.com:sjl/gundo.vim.git

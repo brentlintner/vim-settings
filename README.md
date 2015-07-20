@@ -13,6 +13,13 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 * NodeJS/NPM
 * Ack
 
+### Optional
+
+* GHC
+* Cabal
+* Ruby
+* RubyGems
+
 ## Installation
 
 ```bash
@@ -26,10 +33,6 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 ## Common Commands
 
-`jj`
-
-Escape insert mode.
-
 `\w`
 
 Save all buffers.
@@ -42,7 +45,7 @@ Search.
 
 Clear search.
 
-`ctrl-w+{c,C}`
+`ctrl-w+{s,S}`
 
 Toggle spell check.
 
@@ -53,6 +56,10 @@ Runs :CtrlPMixed.
 `ctrl-n`
 
 Runs :CtrlPBuffer.
+
+`ctrl-b`
+
+Runs :CtrlPTag
 
 `ctrl-e+f`
 
@@ -73,6 +80,18 @@ Search and display lines matched. `o` opens files.
 `ctrl-w+E`
 
 Toggle Syntastic passive mode.
+
+`ctrl-w+{m,M}`
+
+Toggle Tagbar
+
+`\t`
+
+Close tab.
+
+`:tabe [path]`
+
+Open tab.
 
 ## Adding Custom Commands Per Directory
 
