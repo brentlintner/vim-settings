@@ -81,9 +81,13 @@ Search and display lines matched. `o` opens files.
 
 Toggle Syntastic passive mode.
 
-`ctrl-w+{m,M}`
+`ctrl-w+b`
 
 Toggle Tagbar
+
+`ctrl-w+g`
+
+Toggle Gundo
 
 `\t`
 
