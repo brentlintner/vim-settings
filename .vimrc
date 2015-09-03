@@ -1,6 +1,9 @@
 " keep it awesome- custom file warrants this
 set nocompatible
 
+" enable clipboard
+set clipboard=unnamedplus
+
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
