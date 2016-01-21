@@ -78,7 +78,7 @@ au! BufRead,BufNewFile *.es6        setfiletype javascript
 
 " Highlight char when over textwidth
 highlight ColorColumn ctermbg=red
-call matchadd("ColorColumn", '\%81v', 100)
+call matchadd("ColorColumn", '\%81v', 80)
 
 " Indentation settings..
 set autoindent
