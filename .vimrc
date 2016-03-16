@@ -105,7 +105,18 @@ map <C-l> <C-W>l
 nmap <leader>t :tabclose<CR>
 
 " Command to toggle syntastic passive mode
-nnoremap <C-w>E :SyntasticToggleMode<CR>
+nnoremap <C-w>e :SyntasticCheck<CR>
+nnoremap <C-w>E :SyntasticReset<CR>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_mode_map = {
+        \ "mode": "passive",
+        \ "active_filetypes": [],
+        \ "passive_filetypes": [] }
 
 " Tagbar
 nnoremap <C-w>b :TagbarToggle<CR>

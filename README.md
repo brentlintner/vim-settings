@@ -77,9 +77,13 @@ Paste from clipboard.
 
 Search and display lines matched. `o` opens files.
 
+`ctrl-w+e`
+
+Run Syntastic.
+
 `ctrl-w+E`
 
-Toggle Syntastic passive mode.
+Close Syntastic.
 
 `ctrl-w+b`
 
