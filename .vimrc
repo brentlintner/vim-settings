@@ -116,8 +116,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_jump = 0
 let g:syntastic_mode_map = { "mode": "passive" }
-let g:syntastic_ruby_checkers=["rubocop", "mri", "flog", "reek"]
-let g:syntastic_typescript_checkers=["tslint", "tsc", "eslint"]
+let g:syntastic_ruby_checkers=["mri", "rubocop", "flog", "reek"]
+let g:syntastic_typescript_checkers=["tsc", "tslint", "eslint"]
 let g:syntastic_javascript_checkers=["eslint", "jshint"]
 let g:syntastic_coffeescript_checkers=["coffeescript", "coffee" ]
 
