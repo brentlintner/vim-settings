@@ -37,6 +37,10 @@ See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bund
 
 Save all buffers.
 
+`\{-,=}`
+
+Resize vertically split windows.
+
 `space`
 
 Search.

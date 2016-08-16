@@ -132,6 +132,10 @@ let g:syntastic_typescript_checkers=["tsc", "tslint", "eslint"]
 let g:syntastic_javascript_checkers=["eslint", "jshint"]
 let g:syntastic_coffeescript_checkers=["coffeescript", "coffee" ]
 
+" Resize windows
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>= :vertical resize +5<CR>
+
 " Tagbar
 nnoremap <C-w>b :TagbarToggle<CR>
 
