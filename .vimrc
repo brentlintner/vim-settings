@@ -1,5 +1,7 @@
-" keep it awesome- custom file warrants this
-set nocompatible
+if !has('nvim')
+    " keep it awesome- custom file warrants this
+    set nocompatible
+endif
 
 " enable clipboard
 set clipboard=unnamedplus
@@ -46,7 +48,7 @@ set hlsearch " Highlight search resultsh
 set incsearch " be like search in modern browsers
 
 " Enable mouse (if terminal has support for it)
-if has('mouse')
+if !has('nvim') && has('mouse')
   set mouse=a
 endif
 
@@ -96,6 +98,11 @@ map <space> /
 map <silent> <leader><cr> :noh<cr>
 
 " Easier way to move between windows.
+" Apparenty (ATM), Neovim sends <BS> vs ^H
+" https://github.com/neovim/neovim/issues/2048#issuecomment-77159983
+if has('nvim')
+    nmap <BS> <C-W>h
+endif
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -145,7 +152,9 @@ if filereadable(".vim.custom")
 endif
 
 " Need +virtualedit to paste in insert mode.
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-imap <S-Insert> <C-V>
+if !has('nvim')
+    exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+    exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+    imap <S-Insert> <C-V>
+endif
 vmap <S-Insert> <C-V>
