@@ -88,6 +88,7 @@ filetype plugin indent on
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType hs set tabstop=2|set shiftwidth=2
 autocmd FileType coffee set tabstop=2|set shiftwidth=2
+autocmd FileType vim set tabstop=4|set shiftwidth=4
 autocmd FileType text setlocal textwidth=72
 autocmd FileType gitcommit setlocal textwidth=72
 autocmd FileType gitcommit setlocal spell
