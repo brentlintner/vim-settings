@@ -112,6 +112,9 @@ map <C-l> <C-W>l
 " Tabbing shortcuts
 nmap <leader>t :tabclose<CR>
 
+" Close window
+nmap <C-w>c :close<CR>
+
 " Command to toggle syntastic passive mode
 nnoremap <C-w>e :SyntasticCheck<CR>
 nnoremap <C-w>E :SyntasticReset<CR>

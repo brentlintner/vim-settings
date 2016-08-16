@@ -45,6 +45,10 @@ Search.
 
 Clear search.
 
+`ctrl-w+c`
+
+`:close`.
+
 `ctrl-w+{s,S}`
 
 Toggle spell check.
