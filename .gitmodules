@@ -124,9 +124,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
-[submodule ".vim/bundle/easytags"]
-	path = .vim/bundle/easytags
-	url = git@github.com:xolox/vim-easytags.git
 [submodule ".vim/bundle/vim-misc"]
 	path = .vim/bundle/vim-misc
 	url = git@github.com:xolox/vim-misc.git
@@ -148,3 +145,6 @@
 [submodule ".vim/bundle/gundo"]
 	path = .vim/bundle/gundo
 	url = git@github.com:sjl/gundo.vim.git
+[submodule ".vim/bundle/vim-es6"]
+	path = .vim/bundle/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git
