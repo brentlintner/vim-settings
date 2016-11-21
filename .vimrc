@@ -1,7 +1,5 @@
-if !has('nvim')
-    " keep it awesome- custom file warrants this
-    set nocompatible
-endif
+" keep it awesome- custom file warrants this
+set nocompatible
 
 " enable clipboard
 set clipboard=unnamedplus
@@ -48,7 +46,7 @@ set hlsearch " Highlight search resultsh
 set incsearch " be like search in modern browsers
 
 " Enable mouse (if terminal has support for it)
-if !has('nvim') && has('mouse')
+if has('mouse')
   set mouse=a
 endif
 
@@ -168,10 +166,10 @@ if filereadable(".vim.custom")
     so .vim.custom
 endif
 
-" Need +virtualedit to paste in insert mode.
 if !has('nvim')
+    " Need +virtualedit to paste in insert mode.
     exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
     exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
     imap <S-Insert> <C-V>
+    vmap <S-Insert> <C-V>
 endif
-vmap <S-Insert> <C-V>
