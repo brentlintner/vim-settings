@@ -19,7 +19,7 @@ let g:gist_post_private = 1
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
-set wildignore+=*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.keep
+set wildignore+=*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 let g:ctrlp_custom_ignore = '\v[\/](\.?build|\.test|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
@@ -132,7 +132,8 @@ let g:syntastic_auto_jump = 0
 " Put into passive mode, and set desired checkers
 let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_ruby_checkers=["mri", "vile_rubocop", "vile_rails_best_practices", "vile_rubycritic"]
-let g:syntastic_typescript_checkers=["tsc", "vile_tslint"]
+"let g:syntastic_typescript_checkers=["tsc", "vile_tslint"]
+let g:syntastic_typescript_checkers=["vile_tslint"]
 let g:syntastic_javascript_checkers=["vile_eslint", "vile_jshint"]
 let g:syntastic_slim_checkers=["vile_slim_lint", "vile_rails_best_practices"]
 let g:syntastic_haskell_checkers=["vile_hlint"]
