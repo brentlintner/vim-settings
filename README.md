@@ -2,33 +2,17 @@
 
 My current vim setup.
 
-Inspired by [gtanner's vim config](https://github.com/gtanner/tinyhippos.vimrc).
-Uses [Pathogen](https://github.com/tpope/vim-pathogen).
-See [Bundles](https://github.com/brentlintner/vim-settings/tree/master/.vim/bundle).
-
-## Requirements
-
-* Vim
-* Git
-* NodeJS/NPM
-* Ack
-
-### Optional
-
-* GHC
-* Cabal
-* Ruby
-* RubyGems
+Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 ## Installation
 
-```bash
- cd ~/
- git clone git@github.com:brentlintner/vim-settings.git
- ln -s vim-settings/.vimrc
- ln -s vim-settings/.vim
- cd vim-settings
- ./configure
+```sh
+  cd ~/
+  git clone git@github.com:brentlintner/vim-settings.git
+  ln -s vim-settings/.vimrc
+  ln -s vim-settings/.vim
+  cd vim-settings
+  vim +PluginInstall +qall
 ```
 
 ## Common Commands
