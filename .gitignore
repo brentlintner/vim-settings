@@ -2,3 +2,4 @@
 .vim/doc/tags
 .viminfo
 tags
+.vim/bundle
