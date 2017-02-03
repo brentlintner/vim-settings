@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-git submodule update --init
-npm install -g csslint jshint typescript eslint coffee-script coffeelint tslint
-gem install scss_lint reek rubocop flay flog
-cabal install hlint
