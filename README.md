@@ -99,9 +99,7 @@ If you have a `.vim.custom` file in the CWD, it will be evaluated (last).
 
 ## Syntastic
 
-The `configure` script handles installing some packages.
-
-However, be sure to install them:
+Be sure to install any checkers (`rubocop`, `rubycritic`, etc) via:
 
 https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
 
