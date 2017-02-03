@@ -1,12 +1,73 @@
 " keep it awesome- custom file warrants this
 set nocompatible
 
+" -- plugins --
+
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'brentlintner/twilighted.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'dag/vim2hs'
+Plugin 'depuracao/vim-rdoc'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'elzr/vim-json'
+Plugin 'git@github.com:forthright/syntastic'
+Plugin 'garbas/vim-snipmate'
+Plugin 'godlygeek/csapprox'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'gregsexton/MatchTag'
+Plugin 'groenewege/vim-less'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jamescarr/snipmate-nodejs'
+Plugin 'jnurmine/Zenburn'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'juvenn/mustache.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'mattn/emmet-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'pangloss/vim-javascript'
+Plugin 'peterhoeg/vim-qml'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'spf13/vim-colors'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/xoria256.vim'
+Plugin 'wavded/vim-stylus'
+Plugin 'xolox/vim-misc'
+
+call vundle#end()
+
+" -- main config --
+
 " enable clipboard
 set clipboard=unnamedplus
-
-" pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
