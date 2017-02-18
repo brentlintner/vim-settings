@@ -17,7 +17,9 @@ Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 ### Update Plugins
 
+```sh
   vim +PluginUpdate +qall
+```
 
 ## Common Commands
 
