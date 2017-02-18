@@ -15,6 +15,10 @@ Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
   vim +PluginInstall +qall
 ```
 
+### Update Plugins
+
+  vim +PluginUpdate +qall
+
 ## Common Commands
 
 `\w`
