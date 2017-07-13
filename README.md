@@ -23,81 +23,28 @@ Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 ## Common Commands
 
-`\w`
-
-Save all buffers.
-
-`\{-,=}`
-
-Resize vertically split windows.
-
-`space`
-
-Search.
-
-`ctrl-w+space`
-
-Clear search.
-
-`ctrl-w+c`
-
-`:close`.
-
-`ctrl-w+{s,S}`
-
-Toggle spell check.
-
-`ctrl-p`
-
-Runs :CtrlPMixed.
-
-`ctrl-n`
-
-Runs :CtrlPBuffer.
-
-`ctrl-b`
-
-Runs :CtrlPTag
-
-`ctrl-e+f`
-
-Runs :NerdTreeToggle.
-
-`ctrl-{h,j,k,l}`
-
-Move around windows.
-
-`ctrl-V`
-
-Paste from clipboard.
-
-`Ack WORD`
-
-Search and display lines matched. `o` opens files.
-
-`ctrl-w+e`
-
-Run Syntastic.
-
-`ctrl-w+E`
-
-Close Syntastic.
-
-`ctrl-w+b`
-
-Toggle Tagbar
-
-`ctrl-w+g`
-
-Toggle Gundo
-
-`\t`
-
-Close tab.
-
-`:tabe [path]`
-
-Open tab.
+| cmd | description |
+| --- | --- |
+| `\w` | Save all buffers |
+| `\{-,=}` | Resize vertically split windows |
+| `space` | Search |
+| `ctrl-w+space` | Clear search |
+| `ctrl-w+m` | `:make` |
+| `ctrl-w+c` | `:close` |
+| `ctrl-w+{s,S}` | Toggle spell check |
+| `ctrl-p` | Runs :CtrlPMixed |
+| `ctrl-n` | Runs :CtrlPBuffer |
+| `ctrl-b` | Runs :CtrlPTag |
+| `ctrl-e+f` | Runs :NerdTreeToggle |
+| `ctrl-{h,j,k,l}` | Move around windows |
+| `ctrl-V` | Paste from clipboard |
+| `Ack WORD` | Search and display lines matched. `o` opens files |
+| `ctrl-w+e` | Run Syntastic |
+| `ctrl-w+E` | Close Syntastic |
+| `ctrl-w+b` | Toggle Tagbar |
+| `ctrl-w+g` | Toggle Gundo |
+| `\t` | Close tab |
+| `:tabe [path]` | Open tab |
 
 ## Adding Custom Commands Per Directory
 
