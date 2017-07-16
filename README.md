@@ -16,6 +16,7 @@ Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
   cd vim-settings
 
   git submodule update --init
+  git submodule foreach git checkout master
 
   vim +PluginInstall +qall
 ```
