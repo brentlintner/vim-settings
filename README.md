@@ -8,7 +8,7 @@ Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 ```sh
   cd ~/
-  git clone git@github.com:brentlintner/vim-settings.git
+  git clone https://github.com/brentlintner/vim-settings.git
 
   ln -s vim-settings/.vimrc
   ln -s vim-settings/.vim
