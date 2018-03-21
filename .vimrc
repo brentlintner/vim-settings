@@ -83,7 +83,7 @@ let g:gist_post_private = 1
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
 set wildignore+=*vendor/*,*.docs*,*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
-let g:ctrlp_custom_ignore = '\v[\/](\.?build|\.test|dist|\.git|\.hg|\.svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.build|\.test|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
