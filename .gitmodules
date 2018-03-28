@@ -2,3 +2,6 @@
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
 	branch = master
+[submodule ".vim/bundle/twilighted.vim"]
+	path = .vim/bundle/twilighted.vim
+	url = https://github.com/brentlintner/twilighted.vim

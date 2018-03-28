@@ -10,10 +10,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'brentlintner/twilighted.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'brentlintner/twilighted.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'dag/vim2hs'
 Plugin 'depuracao/vim-rdoc'
