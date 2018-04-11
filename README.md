@@ -4,6 +4,10 @@ My current [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) config setup
 
 Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
+## Screenshot
+
+![demo with a few files open](https://raw.githubusercontent.com/brentlintner/vim-settings/master/screenshot.png)
+
 ## Installation
 
 ```sh
