@@ -1,22 +1,21 @@
 # There Be Wizards In Here!
 
-My current vim setup.
+My current [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) config setup.
 
 Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 ## Installation
 
 ```sh
-  cd ~/
-  git clone https://github.com/brentlintner/vim-settings.git
-
-  ln -s vim-settings/.vimrc
-  ln -s vim-settings/.vim
-
-  cd vim-settings
+  git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
+  cd ~/.vim-settings
 
   git submodule update --init
   git submodule foreach git checkout master
+
+  ln -s ~/.vim-settings/.vimrc
+  ln -s ~/.vim-settings/.vim
+  ln -s ~/.vim-settings/.vim ~/.config/nvim
 
   vim +PluginInstall +qall
 ```
@@ -61,11 +60,3 @@ If you have a `.vim.custom` file in the CWD, it will be evaluated (last).
 Be sure to install any checkers (`rubocop`, `rubycritic`, etc) via:
 
 https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
-
-## Ack Plugin
-
-Install via: http://beyondgrep.com/install
-
-You might also need to add this to your shell config:
-
-    alias ack="ack-grep"
