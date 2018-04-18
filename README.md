@@ -12,7 +12,7 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 
 ## Requirements
 
-* [The Silver_Searcher](https://github.com/ggreer/the_silver_searcher)
+* [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
 * [Syntax Checkers (Optional)](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers)
 
 ## Installation
