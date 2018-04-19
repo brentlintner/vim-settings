@@ -141,6 +141,22 @@ call vundle#end()
 
 " -- main config --
 
+" color and syntax settings
+set background=light
+syntax on
+set t_Co=256
+colorscheme twilighted
+
+set wildignore+=*.build*,*build/lib*,*vendor/*,*.docs*,*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+
+" ctrl-p
+" TODO: clear cache on pull up? map new key?
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](\.build|\.test|dist|\.git|\.hg|\.svn)$'
+nnoremap <silent> <C-n> :CtrlPBuffer<CR>
+nnoremap <silent> <C-b> :CtrlPTag<CR>
+
 " set snippet keys
 let g:UltiSnipsExpandTrigger="<tab>"
 
@@ -161,25 +177,9 @@ call deoplete#custom#option('smart_case', v:true)
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 
-" ctrl-p
-" TODO: clear cache on pull up? map new key?
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_show_hidden = 1
-
 " configure smartest
 map <leader>t :call RunTestFile()<cr>
 map <leader>T :call RunNearestTest()<cr>
-
-set wildignore+=*.build*,*build/lib*,*vendor/*,*.docs*,*.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
-let g:ctrlp_custom_ignore = '\v[\/](\.build|\.test|dist|\.git|\.hg|\.svn)$'
-nnoremap <silent> <C-n> :CtrlPBuffer<CR>
-nnoremap <silent> <C-b> :CtrlPTag<CR>
-
-" color and syntax settings
-set background=light
-syntax on
-set t_Co=256
-colorscheme twilighted
 
 set backspace=indent,eol,start " backspacing support
 
@@ -259,13 +259,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " TypeScript config
-let g:typescript_compiler_binary = 'npm run -s tsc'
+let g:typescript_compiler_binary = 'npx tsc'
 let g:typescript_compiler_options = ''
-"let g:tsuquyomi_disable_quickfix = 1
-"let g:typescript_indent_disable = 1
-
-" Ack shorthand
-command Ack Ag
 
 " Close window
 nmap <C-w>c :close<CR>
