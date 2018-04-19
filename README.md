@@ -52,7 +52,7 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 | `ctrl-V`         | Paste from clipboard            |
 | `ctrl-w+e`       | Run lint check                  |
 | `ctrl-w+E`       | Close lint check window         |
-| `ctrl-w+h`       | Toggle undo history             |
+| `ctrl-w+g`       | Toggle undo history             |
 | `ctrl-w+p`       | Strip trailing whitespace       |
 | `Ack WORD`       | Grep files                      |
 | `\w`             | Save all buffers                |

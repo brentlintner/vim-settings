@@ -316,7 +316,7 @@ nnoremap <C-w>S :setlocal nospell<CR>
 nnoremap <C-w><space> :let @/ = ""<CR>
 
 " Gundo shortcut
-nnoremap <C-w>h :GundoToggle<CR>
+nnoremap <C-w>g :GundoToggle<CR>
 
 " Load in a custom config in CWD?
 if filereadable('.vim.custom')
