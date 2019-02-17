@@ -70,6 +70,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 " syntax highlighting and improved indentation for JavaScript
 Plugin 'pangloss/vim-javascript'
 
+" React JSX syntax highlighting and indenting for vim
+Plugin 'mxw/vim-jsx'
+
 " syntax highlighting etc for php
 Plugin 'StanAngeloff/php.vim'
 
