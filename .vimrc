@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'brentlintner/twilighted.vim'
 
 " shows which lines have been added, modified, or removed
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
 
 " syntax highlighting and other scripts for Haskell
 Plugin 'dag/vim2hs'
