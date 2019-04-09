@@ -18,10 +18,11 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 ## Installation
 ```sh
   git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
-  cd ~/.vim-settings
 
+  cd ~/.vim-settings
   git submodule update --init
   git submodule foreach git checkout master
+  cd ~
 
   ln -s ~/.vim-settings/.vimrc
   ln -s ~/.vim-settings/.vim
