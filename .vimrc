@@ -275,10 +275,29 @@ nmap <C-w>p :StripWhitespace<CR>
 nnoremap <C-w>e :SyntasticCheck<CR>
 nnoremap <C-w>E :SyntasticReset<CR>
 
+" Statusline
+" %F(Full file path)
+" %m(Shows + if modified - if not modifiable)
+" %r(Shows RO if readonly)
+" %<(Truncate here if necessary)
+" \ (Separator)
+" %=(Right align)
+" %l(Line number)
+" %v(Column number)
+" %L(Total number of lines)
+" %p(How far in file we are percentage wise)
+" %%(Percent sign)
 " Recommended statusline (see :help syntastic)
+set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" Change the highlighting so it stands out
+"hi statusline ctermbg=white ctermfg=black
+
+" Make sure it always shows
+set laststatus=2
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
