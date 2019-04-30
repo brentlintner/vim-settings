@@ -174,7 +174,7 @@ set wildignore+=*.build*,*.idea*,*.gradle/*,*android/build*,*app/build*,*build/l
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](\.build|\.test|dist|\.git|\.hg|\.svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.test|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
