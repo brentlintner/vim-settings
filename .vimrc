@@ -22,7 +22,7 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'tomasiser/vim-code-dark'
 
 " shows which lines have been added, modified, or removed
-"Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 " syntax highlighting and other scripts for Haskell
 Plugin 'dag/vim2hs'
