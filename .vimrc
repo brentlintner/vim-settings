@@ -12,6 +12,15 @@ Plugin 'VundleVim/Vundle.vim'
 " theme akin to TextMate's twilight theme + translucent bg
 Plugin 'brentlintner/twilighted.vim'
 
+" A dark colorscheme for Vim
+Plugin 'mhinz/vim-janah'
+
+" A dark Vim/Neovim color scheme
+Plugin 'joshdick/onedark.vim'
+
+" Dark+ inspired theme
+Plugin 'tomasiser/vim-code-dark'
+
 " shows which lines have been added, modified, or removed
 "Plugin 'airblade/vim-gitgutter'
 
@@ -145,10 +154,19 @@ call vundle#end()
 " -- main config --
 
 " color and syntax settings
-set background=light
 syntax on
 set t_Co=256
 colorscheme twilighted
+hi Normal guibg=NONE ctermbg=NONE
+
+" disable bg color for onedark
+"if (has("autocmd") && !has("gui_running"))
+  "augroup colorset
+    "autocmd!
+    "let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    "autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  "augroup END
+"endif
 
 set wildignore+=*.build*,*.idea*,*.gradle/*,*android/build*,*app/build*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
