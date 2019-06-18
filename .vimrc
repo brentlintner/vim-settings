@@ -85,6 +85,9 @@ Plugin 'mxw/vim-jsx'
 " syntax highlighting etc for php
 Plugin 'StanAngeloff/php.vim'
 
+" syntax highlighting for blade
+Plugin 'jwalton512/vim-blade'
+
 " syntax highlighting for QML
 Plugin 'peterhoeg/vim-qml'
 
@@ -185,7 +188,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag -i --nogroup --nocolor --column'
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
