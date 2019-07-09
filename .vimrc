@@ -152,6 +152,9 @@ Plugin 'honza/vim-snippets'
 " syntax support for Docker
 Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 
+" syntax for .vue files
+Plugin 'posva/vim-vue'
+
 call vundle#end()
 
 " -- main config --
@@ -180,6 +183,9 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](\.test|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
+
+" speed up vue plugin
+let g:vue_disable_pre_processors = 1
 
 " set snippet keys
 let g:UltiSnipsExpandTrigger="<tab>"
