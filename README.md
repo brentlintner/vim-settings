@@ -29,6 +29,8 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
   ln -s ~/.vim-settings/.vim ~/.config/nvim
 
   vim +PluginInstall +qall
+
+  pip3 install --user pynvim
   vim +UpdateRemotePlugins +qall
 ```
 ### Update Plugins
