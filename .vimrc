@@ -194,7 +194,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column'
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules'
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
