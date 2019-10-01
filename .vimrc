@@ -174,7 +174,7 @@ hi Normal guibg=NONE ctermbg=NONE
   "augroup END
 "endif
 
-set wildignore+=*.build*,*.idea*,*.gradle/*,*android/build*,*app/build*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*.build/*,*.idea*,*.gradle/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
