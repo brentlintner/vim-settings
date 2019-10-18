@@ -18,22 +18,22 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 
 ## Installation
 ```sh
-  git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
+git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 
-  cd ~/.vim-settings
-  git submodule update --init
-  git submodule foreach git checkout master
-  cd ~
+cd ~/.vim-settings
+git submodule update --init
+git submodule foreach git checkout master
+cd ~
 
-  ln -s ~/.vim-settings/.vimrc
-  ln -s ~/.vim-settings/.vim
-  ln -s ~/.vim-settings/.vim ~/.config/nvim
+ln -s ~/.vim-settings/.vimrc
+ln -s ~/.vim-settings/.vim
+ln -s ~/.vim-settings/.vim ~/.config/nvim
 
-  pacman -S the_silver_searcher # or apt install the_silver_searcher
-  pip3 install --user pynvim
+pacman -S the_silver_searcher # or apt install the_silver_searcher
+pip3 install --user pynvim
 
-  vim +PluginInstall +qall
-  vim +UpdateRemotePlugins +qall
+vim +PluginInstall +qall
+vim +UpdateRemotePlugins +qall
 ```
 
 ### Intellisense
@@ -54,8 +54,8 @@ vim
 ```
 ### Update Plugins
 ```sh
-  vim +PluginClean +qall
-  vim +PluginUpdate +qall
+vim +PluginClean +qall
+vim +PluginUpdate +qall
 ```
 ## Custom Commands
 
