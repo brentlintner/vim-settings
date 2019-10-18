@@ -36,7 +36,7 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
   vim +UpdateRemotePlugins +qall
 ```
 
-#### Intellisense
+### Intellisense
 
 Uses [CoC](https://github.com/neoclide/coc.nvim) and its [extensions](https://github.com/neoclide/coc.nvim/network/dependents).
 ```sh
