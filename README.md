@@ -13,6 +13,7 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 ## Requirements
 
 * [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+* [Solargraph](https://solargraph.org/)
 * [Syntax Checkers (Optional)](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers)
 
 ## Installation
@@ -28,10 +29,28 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
   ln -s ~/.vim-settings/.vim
   ln -s ~/.vim-settings/.vim ~/.config/nvim
 
-  vim +PluginInstall +qall
-
+  pacman -S the_silver_searcher # or apt install the_silver_searcher
   pip3 install --user pynvim
+
+  vim +PluginInstall +qall
   vim +UpdateRemotePlugins +qall
+```
+
+#### Intellisense
+
+Uses [CoC](https://github.com/neoclide/coc.nvim) and its [extensions](https://github.com/neoclide/coc.nvim/network/dependents).
+```sh
+ln -s ~/.vim-setting/coc-settings.json ~/coc-settings.json
+cd .vim/bundle/coc.nvim
+git fetch origin release
+git checkout -b release origin/release
+cd -
+
+gem install solargraph
+vim
+# :CocInstall coc-tsserver
+# :CocInstall coc-solargraph
+
 ```
 ### Update Plugins
 ```sh

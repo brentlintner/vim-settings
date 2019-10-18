@@ -155,6 +155,9 @@ Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 " syntax for .vue files
 Plugin 'posva/vim-vue'
 
+" smart lookups
+Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
+
 call vundle#end()
 
 " -- main config --
@@ -194,7 +197,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules'
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore *.lock'
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
