@@ -47,15 +47,14 @@ git checkout -b release origin/release
 cd -
 
 gem install solargraph
-vim
-# :CocInstall coc-tsserver
-# :CocInstall coc-solargraph
-
+vim -c 'CocInstall coc-tsserver' -c qall
+vim -c 'CocInstall coc-solargraph' -c qall
 ```
 ### Update Plugins
 ```sh
 vim +PluginClean +qall
 vim +PluginUpdate +qall
+vim +CocUpdateSync +qall
 ```
 ## Custom Commands
 
