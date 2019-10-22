@@ -63,9 +63,8 @@ vim +CocUpdateSync +qall
 | `space`          | Search for pattern in file      |
 | `tab`            | Snippet auto complete           |
 | `ctrl-w+space`   | Clear search highlight          |
-| `ctrl-p`         | Fuzzy search files              |
-| `ctrl-n`         | Fuzzy search current buffers    |
-| `ctrl-b`         | Fuzzy search tags               |
+| `ctrl-p`         | Search files              |
+| `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-e+f`       | Open file tree browser          |
 | `ctrl-w+c`       | Close a buffer window           |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
