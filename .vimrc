@@ -177,13 +177,13 @@ hi Normal guibg=NONE ctermbg=NONE
   "augroup END
 "endif
 
-set wildignore+=*.build/*,*.idea*,*.gradle/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*build/,*.build/*,*.idea*,*.gradle/*,*dist*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](\.test|dist|\.git|\.hg|\.svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.test|build|dist|\.git|\.hg|\.svn)$'
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
@@ -197,7 +197,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore *.lock'
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore coverage --ignore dist --ignore *.lock --ignore build --ignore package-lock.json'
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
