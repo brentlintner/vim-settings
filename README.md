@@ -22,7 +22,6 @@ git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 
 cd ~/.vim-settings
 git submodule update --init
-git submodule foreach git checkout master
 cd ~
 
 ln -s ~/.vim-settings/.vimrc
@@ -41,11 +40,6 @@ vim +UpdateRemotePlugins +qall
 Uses [CoC](https://github.com/neoclide/coc.nvim) and its [extensions](https://github.com/neoclide/coc.nvim/network/dependents).
 ```sh
 ln -s ~/.vim-setting/coc-settings.json ~/coc-settings.json
-cd .vim/bundle/coc.nvim
-git fetch origin release
-git checkout -b release origin/release
-cd -
-
 gem install solargraph
 vim -c 'CocInstall coc-tsserver' -c qall
 vim -c 'CocInstall coc-solargraph' -c qall
