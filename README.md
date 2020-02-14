@@ -43,6 +43,9 @@ ln -s ~/.vim-setting/coc-settings.json ~/coc-settings.json
 gem install solargraph
 vim -c 'CocInstall coc-tsserver' -c qall
 vim -c 'CocInstall coc-solargraph' -c qall
+vim -c 'CocInstall coc-phpls' -c qall
+vim -c 'CocInstall coc-html' -c qall
+vim -c 'CocInstall coc-css' -c qall
 ```
 ### Update Plugins
 ```sh
