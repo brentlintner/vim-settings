@@ -13,7 +13,7 @@ See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10
 ## Requirements
 
 * [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
-* [Solargraph](https://solargraph.org/)
+* [CoC Extensions (Optional)](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
 * [Syntax Checkers (Optional)](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers)
 
 ## Installation
