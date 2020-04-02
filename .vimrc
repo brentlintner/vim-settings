@@ -103,15 +103,6 @@ Plugin 'scrooloose/nerdcommenter'
 " file system explorer
 Plugin 'scrooloose/nerdtree'
 
-" extensible and asynchronous completion framework
-if has('nvim')
-    Plugin 'Shougo/deoplete.nvim'
-else
-    Plugin 'Shougo/deoplete.nvim'
-    Plugin 'roxma/nvim-yarp'
-    Plugin 'roxma/vim-hug-neovim-rpc'
-endif
-
 " visualize your Vim undo tree
 Plugin 'sjl/gundo.vim'
 
@@ -201,10 +192,6 @@ let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignor
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('smart_case', v:true)
 
 " gist-vim
 let g:gist_detect_filetype = 1
