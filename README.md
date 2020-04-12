@@ -22,6 +22,9 @@ git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 
 cd ~/.vim-settings
 git submodule update --init
+cd .vim/bundle/coc.nvim
+git fetch origin
+git checkout -b release origin/release
 cd ~
 
 ln -s ~/.vim-settings/.vimrc
