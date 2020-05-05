@@ -193,13 +193,16 @@ let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignor
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
 
+" CoC settings
+inoremap <silent><expr> <c-n> coc#refresh()
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " gist-vim
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
-
-" configure smartest
-map <leader>t :call RunTestFile()<cr>
-map <leader>T :call RunNearestTest()<cr>
 
 set backspace=indent,eol,start " backspacing support
 

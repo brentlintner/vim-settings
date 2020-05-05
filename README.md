@@ -76,8 +76,8 @@ vim +CocUpdateSync +qall
 | `ctrl-w+p`       | Strip trailing whitespace       |
 | `Ack WORD`       | Grep files                      |
 | `\w`             | Save all buffers                |
-| `\t`             | Run Ruby test file              |
-| `\T`             | Run Ruby test near current line |
+| `gr`             | Show all file that reference type                |
+| `gd`             | Go to definition of type                |
 | `\{-,=}`         | Resize vertically split windows |
 
 ## Per Directory Config
