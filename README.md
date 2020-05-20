@@ -70,8 +70,6 @@ vim +CocUpdateSync +qall
 | `ctrl-w+{s,S}`   | Toggle spell check              |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |
-| `ctrl-w+e`       | Run lint check                  |
-| `ctrl-w+E`       | Close lint check window         |
 | `ctrl-w+g`       | Toggle undo history             |
 | `ctrl-w+p`       | Strip trailing whitespace       |
 | `Ack WORD`       | Grep files                      |

@@ -18,7 +18,6 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'elzr/vim-json'
-Plugin 'forthright/syntastic'
 Plugin 'godlygeek/csapprox'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'groenewege/vim-less'
@@ -210,54 +209,11 @@ nmap <leader>t :T npm t %<cr>
 nmap <leader>t :T npm t %<cr>
 nmap <leader>T :T ./vendor/bin/phpunit %<cr>
 
-
 " Clear whitespace
 nmap <C-w>p :StripWhitespace<CR>
 
-" Command to toggle syntastic passive mode
-nnoremap <C-w>e :SyntasticCheck<CR>
-nnoremap <C-w>E :SyntasticReset<CR>
-
-" Statusline
-" %F(Full file path)
-" %m(Shows + if modified - if not modifiable)
-" %r(Shows RO if readonly)
-" %<(Truncate here if necessary)
-" \ (Separator)
-" %=(Right align)
-" %l(Line number)
-" %v(Column number)
-" %L(Total number of lines)
-" %p(How far in file we are percentage wise)
-" %%(Percent sign)
-" Recommended statusline (see :help syntastic)
-set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" Change the highlighting so it stands out
-"hi statusline ctermbg=white ctermfg=black
-
 " Make sure it always shows
 set laststatus=2
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_aggregate_errors = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_auto_jump = 0
-
-" Put into passive mode, and set desired checkers
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_ruby_checkers=['mri', 'vile_rubocop', 'vile_rails_best_practices', 'vile_rubycritic']
-let g:syntastic_typescript_checkers=['vile_tslint']
-let g:syntastic_javascript_checkers=['vile_eslint']
-let g:syntastic_slim_checkers=['vile_slim_lint', 'vile_rails_best_practices']
-let g:syntastic_haskell_checkers=['vile_hlint']
-let g:syntastic_sass_checkers=['vile_sass_lint']
-let g:syntastic_coffee_checkers=['coffee', 'vile_coffeelint' ]
 
 " Resize windows
 nnoremap <Leader>- :vertical resize -5<CR>
