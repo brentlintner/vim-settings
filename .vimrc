@@ -301,7 +301,6 @@ let g:typescript_compiler_options = ''
 nmap <C-w>c :close<CR>
 nmap <C-w>C :TcloseAll!<CR>
 nmap <leader>t :T npm t %<cr>
-nmap <leader>t :T npm t %<cr>
 nmap <leader>T :T ./vendor/bin/phpunit %<cr>
 
 " Clear whitespace
