@@ -171,11 +171,10 @@ hi Normal guibg=NONE ctermbg=NONE
   "augroup END
 "endif
 
-set wildignore+=*/build/,*/.build/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*/build/,*/storage/*,*/.build/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
-"let g:ctrlp_user_command = 'ag -i -l -G %s --nogroup --nocolor --column --ignore node_modules --ignore coverage --ignore dist --ignore "*.lock" --ignore "\/build\/" --ignore package-lock.json .'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
@@ -189,7 +188,7 @@ nnoremap <silent> <C-b> :CtrlPTag<CR>
 
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 0
-"highlight clear SignColumn
+highlight clear SignColumn
 
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
@@ -201,7 +200,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore coverage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
@@ -298,8 +297,13 @@ map <C-l> <C-W>l
 let g:typescript_compiler_binary = 'npx tsc'
 let g:typescript_compiler_options = ''
 
-" Close window
+" window and neoterm commands
 nmap <C-w>c :close<CR>
+nmap <C-w>C :TcloseAll!<CR>
+nmap <leader>t :T npm t %<cr>
+nmap <leader>t :T npm t %<cr>
+nmap <leader>T :T ./vendor/bin/phpunit %<cr>
+
 
 " Clear whitespace
 nmap <C-w>p :StripWhitespace<CR>

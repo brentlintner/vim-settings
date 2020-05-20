@@ -76,6 +76,8 @@ vim +CocUpdateSync +qall
 | `ctrl-w+p`       | Strip trailing whitespace       |
 | `Ack WORD`       | Grep files                      |
 | `\w`             | Save all buffers                |
+| `\t`             | Run current file with npm test                |
+| `\T`             | Run current file with phpunit                |
 | `gr`             | Show all file that reference type                |
 | `gd`             | Go to definition of type                |
 | `\{-,=}`         | Resize vertically split windows |
