@@ -168,13 +168,19 @@ hi Normal guibg=NONE ctermbg=NONE
   "augroup END
 "endif
 
-set wildignore+=*build/,*.build/*,*.idea*,*.gradle/*,*dist*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*/build/,*/.build/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
+"let g:ctrlp_user_command = 'ag -i -l -G %s --nogroup --nocolor --column --ignore node_modules --ignore coverage --ignore dist --ignore "*.lock" --ignore "\/build\/" --ignore package-lock.json .'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](\.test|build|dist|\.git|\.hg|\.svn)$'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_custom_ignore = {
+            \   'dir' : '\.test|node_modules|\.git$|\.hg$|\.svn$',
+            \   'file': '',
+            \ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
