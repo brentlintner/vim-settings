@@ -148,6 +148,8 @@ Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " better terminal
 Plugin 'kassio/neoterm', { 'branch': 'release' }
+
+" auto linting
 Plugin 'dense-analysis/ale'
 
 call vundle#end()
