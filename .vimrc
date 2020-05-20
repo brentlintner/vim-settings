@@ -189,6 +189,8 @@ nnoremap <silent> <C-b> :CtrlPTag<CR>
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 0
 hi SignColumn guibg=NONE ctermbg=NONE
+hi ALEErrorSign guibg=NONE ctermbg=NONE
+hi ALEWarningSign guibg=NONE ctermbg=NONE
 
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
