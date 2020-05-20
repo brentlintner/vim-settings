@@ -229,7 +229,7 @@ set nofoldenable " Disable folding
 nmap <leader>w :wa<cr>
 
 " Fast edit snippets (\w)
-nmap <leader>s :UtilSnipsEdit<cr>
+nmap <leader>s :UltiSnipsEdit<cr>
 
 " Sudo saving (w!!)
 cmap w!! w !sudo tee % >/dev/null
