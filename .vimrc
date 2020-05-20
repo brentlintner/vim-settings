@@ -6,150 +6,55 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-" Manage thyself!
 Plugin 'VundleVim/Vundle.vim'
-
-" theme akin to TextMate's twilight theme + translucent bg
 Plugin 'brentlintner/twilighted.vim'
-
-" A dark colorscheme for Vim
 Plugin 'mhinz/vim-janah'
-
-" A dark Vim/Neovim color scheme
 Plugin 'joshdick/onedark.vim'
-
-" Dark+ inspired theme
 Plugin 'tomasiser/vim-code-dark'
-
-" shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
-
-" syntax highlighting and other scripts for Haskell
 Plugin 'dag/vim2hs'
-
-" syntax highlighting for RDoc
 Plugin 'depuracao/vim-rdoc'
-
-" support for Scala
 Plugin 'derekwyatt/vim-scala'
-
-" syntax highlighting for Pug (formerly Jade)
 Plugin 'digitaltoad/vim-jade'
-
-" support for EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
-
-" highlighting of keywords vs values, warnings, and quote concealing
 Plugin 'elzr/vim-json'
-
-" syntax checking (fork that includes syntax checkers that use ferret)
 Plugin 'forthright/syntastic'
-
-" make gvim-only colorschemes work transparently in terminal
 Plugin 'godlygeek/csapprox'
-
-" css/less/sass/html color preview
 Plugin 'gorodinskiy/vim-coloresque'
-
-" syntax highlighting, indenting and autocompletion for LESS
 Plugin 'groenewege/vim-less'
-
-" improved syntax highlighting for Go
 Plugin 'fatih/vim-go'
-
-" syntax highlighting for CoffeeScript
 Plugin 'kchmck/vim-coffee-script'
-
-" Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'ctrlpvim/ctrlp.vim'
-
-" syntax highlighting support for TypeScript
 Plugin 'leafgarland/typescript-vim'
-
-" support creating gists from buffers
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-
-" support for Ack
 Plugin 'mileszs/ack.vim'
-
-" highlight trailing whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
-
-" syntax highlighting and improved indentation for JavaScript
 Plugin 'pangloss/vim-javascript'
-
-" React JSX syntax highlighting and indenting for vim
 Plugin 'mxw/vim-jsx'
-
-" syntax highlighting etc for php
 Plugin 'StanAngeloff/php.vim'
-
-" syntax highlighting for blade
 Plugin 'jwalton512/vim-blade'
-
-" syntax highlighting for QML
 Plugin 'peterhoeg/vim-qml'
-
-" syntax highlighting and more for Markdown
 Plugin 'plasticboy/vim-markdown'
-
-" syntax highlighting and indenting for PowerShell
 Plugin 'PProvost/vim-ps1'
-
-" auto comment support
 Plugin 'scrooloose/nerdcommenter'
-
-" file system explorer
 Plugin 'scrooloose/nerdtree'
-
-" visualize your Vim undo tree
 Plugin 'sjl/gundo.vim'
-
-" syntax highlighting for Slim
 Plugin 'slim-template/vim-slim'
-
-" helps to end certain code structures automatically
 Plugin 'tpope/vim-endwise'
-
-" syntax and indenting for git files
 Plugin 'tpope/vim-git'
-
-" syntax highlighting for Sass, Haml and Sass
 Plugin 'tpope/vim-haml'
-
-" enhanced syntax highlighting for Rails
 Plugin 'tpope/vim-rails'
-
-" change surrounding quotes, etc
 Plugin 'tpope/vim-surround'
-
-" syntax highlighting etc for Ruby
 Plugin 'vim-ruby/vim-ruby'
-
-" syntax highlighting for Stylus
 Plugin 'wavded/vim-stylus'
-
-" run tests for Ruby
 Plugin 'kurko/smartest.vim'
-
-" auto md table tabbing
 Plugin 'godlygeek/tabular'
-
-" code snippets
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
-
-" syntax support for Docker
 Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
-
-" syntax for .vue files
 Plugin 'posva/vim-vue'
-
-" smart lookups
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
-
-" better terminal
 Plugin 'kassio/neoterm', { 'branch': 'release' }
 
 call vundle#end()
