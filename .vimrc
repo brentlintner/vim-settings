@@ -187,6 +187,10 @@ let g:ctrlp_custom_ignore = {
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
+" git gutter
+let g:gitgutter_set_sign_backgrounds = 0
+"highlight clear SignColumn
+
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
 
