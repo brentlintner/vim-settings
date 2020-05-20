@@ -156,6 +156,8 @@ call vundle#end()
 
 " -- main config --
 
+set shell=/usr/bin/zsh
+
 " color and syntax settings
 syntax on
 set t_Co=256
