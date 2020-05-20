@@ -56,6 +56,7 @@ Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 Plugin 'posva/vim-vue'
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 Plugin 'kassio/neoterm', { 'branch': 'release' }
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 
