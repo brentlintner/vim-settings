@@ -60,23 +60,24 @@ vim +CocUpdateSync +qall
 
 | cmd              | description                     |
 | ---              | ---                             |
-| `space`          | Search for pattern in file      |
+| `:Ag WORD`       | Grep files                      |
 | `tab`            | Snippet auto complete           |
-| `ctrl-w+space`   | Clear search highlight          |
+| `space`          | Search for pattern in file      |
+| `\space`   | Clear search highlight          |
+| `\c`       | Close a buffer window           |
+| `\d`       | Delete a buffer window           |
+| `\w`             | Save all buffers                |
+| `\s`             | Edit snippets for current file type                |
+| `\t`             | Run current file with npm test                |
+| `\T`             | Run current file with phpunit                |
 | `ctrl-p`         | Search files              |
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-e+f`       | Open file tree browser          |
-| `ctrl-w+c`       | Close a buffer window           |
-| `ctrl-w+d`       | Delete a buffer window           |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |
 | `ctrl-w+g`       | Toggle undo history             |
 | `ctrl-w+p`       | Strip trailing whitespace       |
-| `Ack WORD`       | Grep files                      |
-| `\w`             | Save all buffers                |
-| `\t`             | Run current file with npm test                |
-| `\T`             | Run current file with phpunit                |
 | `gr`             | Show all file that reference type                |
 | `gd`             | Go to definition of type                |
 | `\{-,=}`         | Resize vertically split windows |

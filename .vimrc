@@ -210,6 +210,7 @@ let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignor
 let g:vim_markdown_folding_disabled=1
 
 " CoC settings
+" TODO: map tab to complete (else tab)?
 inoremap <silent><expr> <c-n> coc#refresh()
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -226,6 +227,9 @@ set nofoldenable " Disable folding
 
 " Fast saving (\w)
 nmap <leader>w :wa<cr>
+
+" Fast edit snippets (\w)
+nmap <leader>s :UtilSnipsEdit<cr>
 
 " Sudo saving (w!!)
 cmap w!! w !sudo tee % >/dev/null
@@ -303,9 +307,9 @@ let g:typescript_compiler_options = ''
 
 " window and neoterm commands
 " TODO: use leader vs C where possible
-nmap <C-w>c :close<CR>
-nmap <C-w>d :bd<CR>
-nmap <C-w>C :TcloseAll!<CR>
+nmap <leader>c :close<CR>
+nmap <leader>d :bd<CR>
+nmap <leader>C :TcloseAll!<CR>
 nmap <leader>t :TcloseAll! \| :T npm t %<cr>
 nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
 let g:neoterm_default_mod = 'botright'
@@ -330,7 +334,8 @@ nnoremap <C-w>s :setlocal spell spelllang=en_ca<CR>
 nnoremap <C-w>S :setlocal nospell<CR>
 
 " Clear search
-nnoremap <C-w><space> :let @/ = ""<CR>
+nnoremap <leader><space> :let @/ = ""<CR>
+command! -nargs=1 Ag Ack <args>
 
 " Gundo shortcut
 nnoremap <C-w>g :GundoToggle<CR>
