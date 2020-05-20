@@ -306,6 +306,7 @@ nmap <C-w>c :close<CR>
 nmap <C-w>C :TcloseAll!<CR>
 nmap <leader>t :T npm t %<cr>
 nmap <leader>T :T ./vendor/bin/phpunit %<cr>
+let g:neoterm_default_mod = 'botright'
 
 " Clear whitespace
 nmap <C-w>p :StripWhitespace<CR>
