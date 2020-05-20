@@ -149,6 +149,9 @@ Plugin 'posva/vim-vue'
 " smart lookups
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" better terminal
+Plugin 'kassio/neoterm', { 'branch': 'release' }
+
 call vundle#end()
 
 " -- main config --
