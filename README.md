@@ -67,6 +67,7 @@ vim +CocUpdateSync +qall
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-e+f`       | Open file tree browser          |
 | `ctrl-w+c`       | Close a buffer window           |
+| `ctrl-w+d`       | Delete a buffer window           |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |

@@ -302,10 +302,12 @@ let g:typescript_compiler_binary = 'npx tsc'
 let g:typescript_compiler_options = ''
 
 " window and neoterm commands
+" TODO: use leader vs C where possible
 nmap <C-w>c :close<CR>
+nmap <C-w>d :bd<CR>
 nmap <C-w>C :TcloseAll!<CR>
-nmap <leader>t :T npm t %<cr>
-nmap <leader>T :T ./vendor/bin/phpunit %<cr>
+nmap <leader>t :TcloseAll! \| :T npm t %<cr>
+nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
 let g:neoterm_default_mod = 'botright'
 
 " Clear whitespace
