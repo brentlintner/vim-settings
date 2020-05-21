@@ -49,6 +49,10 @@ vim -c 'CocInstall coc-solargraph' -c qall
 vim -c 'CocInstall coc-phpls' -c qall
 vim -c 'CocInstall coc-html' -c qall
 vim -c 'CocInstall coc-css' -c qall
+vim -c 'CocInstall coc-json' -c qall
+vim -c 'CocInstall coc-vetur' -c qall
+vim -c 'CocInstall coc-vimlsp' -c qall
+vim -c 'CocInstall coc-python' -c qall
 ```
 ### Update Plugins
 ```sh
