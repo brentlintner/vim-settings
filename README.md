@@ -67,7 +67,7 @@ vim +CocUpdateSync +qall
 | `:Ag WORD`       | Grep files                      |
 | `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
-| `\space|\s`   | Clear search highlight          |
+| `\space,\s`   | Clear search highlight          |
 | `\c`       | Close a buffer window           |
 | `\d`       | Delete a buffer window           |
 | `\w`             | Save all buffers                |
