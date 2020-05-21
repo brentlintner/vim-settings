@@ -67,11 +67,11 @@ vim +CocUpdateSync +qall
 | `:Ag WORD`       | Grep files                      |
 | `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
-| `\space`   | Clear search highlight          |
+| `\space|\s`   | Clear search highlight          |
 | `\c`       | Close a buffer window           |
 | `\d`       | Delete a buffer window           |
 | `\w`             | Save all buffers                |
-| `\s`             | Edit snippets for current file type                |
+| `\S`             | Edit snippets for current file type                |
 | `\t`             | Run current file with npm test                |
 | `\T`             | Run current file with phpunit                |
 | `ctrl-p`         | Search files              |
