@@ -74,6 +74,8 @@ vim +CocUpdateSync +qall
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-e+f`       | Open file tree browser          |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
+| `ctrl-w+v` | Split buffer window vertically             |
+| `ctrl-w+n` | Split buffer window horizontally             |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |
 | `ctrl-w+g`       | Toggle undo history             |
