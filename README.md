@@ -1,56 +1,8 @@
-# There Be Wizards In Here!
-
-My current [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) config setup.
-
-Uses [Vundle](https://github.com/VundleVim/Vundle.vim).
-
-See [.vimrc](https://github.com/brentlintner/vim-settings/blob/master/.vimrc#L10) for what plugins will be installed.
-
-## Screenshot
+# My [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) Config
 
 ![demo with a few files open](https://raw.githubusercontent.com/brentlintner/vim-settings/master/screenshot.png)
 
-## Requirements
-
-* [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
-* [CoC Extensions (Optional)](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
-* [Syntax Checkers (Optional)](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers)
-
-## Installation
-```sh
-git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
-
-cd ~/.vim-settings
-git submodule update --init
-cd .vim/bundle/coc.nvim
-git fetch origin
-git checkout -b release origin/release
-cd ~
-
-ln -s ~/.vim-settings/.vimrc
-ln -s ~/.vim-settings/.vim
-ln -s ~/.vim-settings/.vim ~/.config/nvim
-
-# external deps
-pacman -S the_silver_searcher # or apt install the_silver_searcher
-pip3 install --user pynvim
-gem install solargraph
-
-vim +PluginInstall +qall
-vim +UpdateRemotePlugins +qall
-```
-
-### Intellisense
-
-Uses [CoC](https://github.com/neoclide/coc.nvim) and its [extensions](https://github.com/neoclide/coc.nvim/network/dependents).
-
-### Update Plugins
-```sh
-vim +PluginClean +qall
-vim +PluginUpdate +qall
-vim +CocUpdateSync +qall
-```
-## Custom Commands
+## Commands
 
 | cmd              | description                     |
 | ---              | ---                             |
@@ -75,10 +27,63 @@ vim +CocUpdateSync +qall
 | `ctrl-V`         | Paste from clipboard            |
 | `ctrl-w+g`       | Toggle undo history             |
 | `ctrl-w+p`       | Strip trailing whitespace       |
+| `ctrl-w+t`       | Auto indent md table       |
 | `gr`             | Show all file that reference type                |
 | `gd`             | Go to definition of type                |
 | `\{-,=}`         | Resize vertically split windows |
 
-## Per Directory Config
+## Install
+```sh
+git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 
-If you have a `.vim.custom` file in the CWD, it will be evaluated last.
+cd ~/.vim-settings
+
+git submodule update --init
+
+ln -s ~/.vim-settings/.vimrc
+ln -s ~/.vim-settings/.vim
+ln -s ~/.vim-settings/.vim ~/.config/nvim
+
+vim +PluginInstall +UpdateRemotePlugins
+```
+## Main Plugins
+
+Plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim).
+
+* [Vim-Polyglot](https://github.com/sheerun/vim-polyglot)
+* [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
+* [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+* [Ack](https://github.com/mileszs/ack.vim)
+* [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
+* [NerdTree](https://github.com/scrooloose/nerdtree)
+* [](https://github.com/godlygeek/tabular)
+* [UltiSnips](https://github.com/sirver/ultisnips)
+* [Snippets](https://github.com/honza/vim-snippets)
+* [CoC](https://github.com/neoclide/coc.nvim)
+* [Neoterm](https://github.com/kassio/neoterm', { 'branch': 'release' )
+* [Ale](https://github.com/dense-analysis/ale)
+
+### Dependencies
+
+* [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+* [Python](https://pypi.org/project/pip/)
+* [Ruby](https://rubygems.org/)
+* [Node.js](https://nodejs.org/)
+```sh
+pacman -S the_silver_searcher # or apt install the_silver_searcher
+pip install pynvim
+gem install solargraph
+```
+### Updating Plugins
+```sh
+vim +PluginClean +PluginUpdate +CocUpdateSync
+```
+### Submodule Issues
+
+If you get issues about non-release branches you may need to:
+```sh
+cd .vim/bundle/coc.nvim
+git fetch origin
+git checkout -b release origin/release
+cd ~
+```

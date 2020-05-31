@@ -12,29 +12,11 @@ Plugin 'VundleVim/Vundle.vim'
 " theme akin to TextMate's twilight theme + translucent bg
 Plugin 'brentlintner/twilighted.vim'
 
-" A dark colorscheme for Vim
-Plugin 'mhinz/vim-janah'
-
-" A dark Vim/Neovim color scheme
-Plugin 'joshdick/onedark.vim'
-
-" Dark+ inspired theme
-Plugin 'tomasiser/vim-code-dark'
+" multi lang syntax support
+Plugin 'sheerun/vim-polyglot'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
-
-" syntax highlighting and other scripts for Haskell
-Plugin 'dag/vim2hs'
-
-" syntax highlighting for RDoc
-Plugin 'depuracao/vim-rdoc'
-
-" support for Scala
-Plugin 'derekwyatt/vim-scala'
-
-" syntax highlighting for Pug (formerly Jade)
-Plugin 'digitaltoad/vim-jade'
 
 " support for EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
@@ -48,20 +30,8 @@ Plugin 'godlygeek/csapprox'
 " css/less/sass/html color preview
 Plugin 'gorodinskiy/vim-coloresque'
 
-" syntax highlighting, indenting and autocompletion for LESS
-Plugin 'groenewege/vim-less'
-
-" improved syntax highlighting for Go
-Plugin 'fatih/vim-go'
-
-" syntax highlighting for CoffeeScript
-Plugin 'kchmck/vim-coffee-script'
-
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'ctrlpvim/ctrlp.vim'
-
-" syntax highlighting support for TypeScript
-Plugin 'leafgarland/typescript-vim'
 
 " support creating gists from buffers
 Plugin 'mattn/webapi-vim'
@@ -73,27 +43,6 @@ Plugin 'mileszs/ack.vim'
 " highlight trailing whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
 
-" syntax highlighting and improved indentation for JavaScript
-Plugin 'pangloss/vim-javascript'
-
-" React JSX syntax highlighting and indenting for vim
-Plugin 'mxw/vim-jsx'
-
-" syntax highlighting etc for php
-Plugin 'StanAngeloff/php.vim'
-
-" syntax highlighting for blade
-Plugin 'jwalton512/vim-blade'
-
-" syntax highlighting for QML
-Plugin 'peterhoeg/vim-qml'
-
-" syntax highlighting and more for Markdown
-Plugin 'plasticboy/vim-markdown'
-
-" syntax highlighting and indenting for PowerShell
-Plugin 'PProvost/vim-ps1'
-
 " auto comment support
 Plugin 'scrooloose/nerdcommenter'
 
@@ -103,45 +52,18 @@ Plugin 'scrooloose/nerdtree'
 " visualize your Vim undo tree
 Plugin 'sjl/gundo.vim'
 
-" syntax highlighting for Slim
-Plugin 'slim-template/vim-slim'
-
 " helps to end certain code structures automatically
 Plugin 'tpope/vim-endwise'
-
-" syntax and indenting for git files
-Plugin 'tpope/vim-git'
-
-" syntax highlighting for Sass, Haml and Sass
-Plugin 'tpope/vim-haml'
-
-" enhanced syntax highlighting for Rails
-Plugin 'tpope/vim-rails'
 
 " change surrounding quotes, etc
 Plugin 'tpope/vim-surround'
 
-" syntax highlighting etc for Ruby
-Plugin 'vim-ruby/vim-ruby'
-
-" syntax highlighting for Stylus
-Plugin 'wavded/vim-stylus'
-
 " run tests for Ruby
 Plugin 'kurko/smartest.vim'
-
-" auto md table tabbing
-Plugin 'godlygeek/tabular'
 
 " code snippets
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
-
-" syntax support for Docker
-Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
-
-" syntax for .vue files
-Plugin 'posva/vim-vue'
 
 " smart lookups
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -151,9 +73,6 @@ Plugin 'kassio/neoterm', { 'branch': 'release' }
 
 " auto linting
 Plugin 'dense-analysis/ale'
-
-" vala support
-Plugin 'arrufat/vala.vim'
 
 call vundle#end()
 
@@ -166,15 +85,6 @@ syntax on
 set t_Co=256
 colorscheme twilighted
 hi Normal guibg=NONE ctermbg=NONE
-
-" disable bg color for onedark
-"if (has("autocmd") && !has("gui_running"))
-  "augroup colorset
-    "autocmd!
-    "let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    "autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
-  "augroup END
-"endif
 
 set wildignore+=*/build/,*/storage/*,*/.build/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
@@ -190,27 +100,6 @@ let g:ctrlp_custom_ignore = {
             \ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
-
-" git gutter
-let g:gitgutter_set_sign_backgrounds = 0
-hi SignColumn guibg=NONE ctermbg=NONE
-hi ALEErrorSign guibg=NONE ctermbg=NONE
-hi ALEWarningSign guibg=NONE ctermbg=NONE
-
-" speed up vue plugin
-let g:vue_disable_pre_processors = 1
-
-" set snippet keys
-let g:UltiSnipsExpandTrigger="<tab>"
-
-" enable clipboard
-set clipboard=unnamedplus
-
-" use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
-
-" disable vim-markdown folder
-let g:vim_markdown_folding_disabled=1
 
 " CoC settings
 let g:coc_global_extensions=[
@@ -230,6 +119,31 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" git gutter
+let g:gitgutter_set_sign_backgrounds = 0
+hi SignColumn guibg=NONE ctermbg=NONE
+hi ALEErrorSign guibg=NONE ctermbg=NONE
+hi ALEWarningSign guibg=NONE ctermbg=NONE
+
+" speed up vue plugin
+let g:vue_disable_pre_processors = 1
+
+" set snippet keys
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+" enable clipboard
+set clipboard=unnamedplus
+
+" use silver searcher underneath ack.vim
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
+command! -nargs=1 Ag Ack <args>
+
+" disable vim-markdown folder
+let g:vim_markdown_folding_disabled=1
 
 " gist-vim
 let g:gist_detect_filetype = 1
@@ -277,13 +191,6 @@ set number
 " Set xterm title.
 set title
 
-" Custom file extensions..
-au! BufRead,BufNewFile Jakefile     setfiletype javascript
-au! BufRead,BufNewFile *.mustache   setfiletype mustache
-au! BufRead,BufNewFile *.co         setfiletype coffee
-au! BufRead,BufNewFile *.less       setfiletype less
-au! BufRead,BufNewFile *.es6        setfiletype javascript
-
 " Highlight char when over textwidth
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
@@ -330,6 +237,7 @@ let g:neoterm_default_mod = 'botright'
 
 " Clear whitespace
 nmap <C-w>p :StripWhitespace<CR>
+let g:better_whitespace_enabled=1
 
 " Make sure it always shows
 set laststatus=2
@@ -350,15 +258,9 @@ nnoremap <C-w>S :setlocal nospell<CR>
 " Clear search
 nnoremap <leader><space> :let @/ = ""<CR>
 nnoremap <leader><s> :let @/ = ""<CR>
-command! -nargs=1 Ag Ack <args>
 
 " Gundo shortcut
 nnoremap <C-w>g :GundoToggle<CR>
-
-" Load in a custom config in CWD?
-if filereadable('.vim.custom')
-    so .vim.custom
-endif
 
 if !has('nvim')
     " Need +virtualedit to paste in insert mode.
