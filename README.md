@@ -31,8 +31,10 @@ ln -s ~/.vim-settings/.vimrc
 ln -s ~/.vim-settings/.vim
 ln -s ~/.vim-settings/.vim ~/.config/nvim
 
+# external deps
 pacman -S the_silver_searcher # or apt install the_silver_searcher
 pip3 install --user pynvim
+gem install solargraph
 
 vim +PluginInstall +qall
 vim +UpdateRemotePlugins +qall
@@ -41,19 +43,7 @@ vim +UpdateRemotePlugins +qall
 ### Intellisense
 
 Uses [CoC](https://github.com/neoclide/coc.nvim) and its [extensions](https://github.com/neoclide/coc.nvim/network/dependents).
-```sh
-ln -s ~/.vim-setting/coc-settings.json ~/coc-settings.json
-gem install solargraph
-vim -c 'CocInstall coc-tsserver' -c qall
-vim -c 'CocInstall coc-solargraph' -c qall
-vim -c 'CocInstall coc-phpls' -c qall
-vim -c 'CocInstall coc-html' -c qall
-vim -c 'CocInstall coc-css' -c qall
-vim -c 'CocInstall coc-json' -c qall
-vim -c 'CocInstall coc-vetur' -c qall
-vim -c 'CocInstall coc-vimlsp' -c qall
-vim -c 'CocInstall coc-python' -c qall
-```
+
 ### Update Plugins
 ```sh
 vim +PluginClean +qall

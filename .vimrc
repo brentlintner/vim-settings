@@ -213,6 +213,17 @@ let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignor
 let g:vim_markdown_folding_disabled=1
 
 " CoC settings
+let g:coc_global_extensions=[
+        \ 'coc-tsserver',
+        \ 'coc-solargraph',
+        \ 'coc-phpls',
+        \ 'coc-html',
+        \ 'coc-css',
+        \ 'coc-json',
+        \ 'coc-vetur',
+        \ 'coc-vimlsp',
+        \ 'coc-omnisharp'
+    \]
 " TODO: map tab to complete (else tab)?
 inoremap <silent><expr> <c-n> coc#refresh()
 nmap <silent> gd <Plug>(coc-definition)
