@@ -152,6 +152,9 @@ Plugin 'kassio/neoterm', { 'branch': 'release' }
 " auto linting
 Plugin 'dense-analysis/ale'
 
+" vala support
+Plugin 'arrufat/vala.vim'
+
 call vundle#end()
 
 " -- main config --
