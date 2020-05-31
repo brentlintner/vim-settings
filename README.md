@@ -68,12 +68,13 @@ vim +CocUpdateSync +qall
 | `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
 | `\space,\s`   | Clear search highlight          |
-| `\c`       | Close a buffer window           |
+| `ctrl-w+c`       | Close a buffer window           |
 | `\d`       | Delete a buffer window           |
 | `\w`             | Save all buffers                |
 | `\S`             | Edit snippets for current file type                |
 | `\t`             | Run current file with npm test                |
 | `\T`             | Run current file with phpunit                |
+| `\C`             | Close all neoterm windows and buffers                |
 | `ctrl-p`         | Search files              |
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-e+f`       | Open file tree browser          |

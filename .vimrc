@@ -310,7 +310,7 @@ let g:typescript_compiler_options = ''
 
 " window and neoterm commands
 " TODO: use leader vs C where possible
-nmap <leader>c :close<CR>
+nmap <C-c> :close<CR>
 nmap <leader>d :bd<CR>
 nmap <leader>C :TcloseAll!<CR>
 nmap <leader>t :TcloseAll! \| :T npm t %<cr>
