@@ -126,6 +126,10 @@ hi SignColumn guibg=NONE ctermbg=NONE
 hi ALEErrorSign guibg=NONE ctermbg=NONE
 hi ALEWarningSign guibg=NONE ctermbg=NONE
 
+let g:ale_linters = {
+\   'sh': [],
+\}
+
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
 
@@ -180,7 +184,7 @@ set nowb
 set noswapfile
 
 " Disable wrapping
-set nowrap
+"set nowrap
 
 " Allow switching between buffers without saving .
 set hidden
