@@ -145,6 +145,8 @@ set clipboard=unnamedplus
 " use silver searcher underneath ack.vim
 let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
 command! -nargs=1 Ag Ack <args>
+command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
+nmap <leader>g :Ag<space>
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1

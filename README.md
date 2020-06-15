@@ -6,19 +6,19 @@
 
 | cmd              | description                     |
 | ---              | ---                             |
-| `:Ag WORD`       | Grep files                      |
 | `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
 | `\space,\s`   | Clear search highlight          |
-| `ctrl-w+c`       | Close a buffer window           |
-| `\d`       | Delete a buffer window           |
+| `\g WORD`       | Grep files                      |
 | `\w`             | Save all buffers                |
 | `\S`             | Edit snippets for current file type                |
 | `\t`             | Run current file with npm test                |
 | `\T`             | Run current file with phpunit                |
+| `\d`       | Delete a buffer window           |
 | `\C`             | Close all neoterm windows and buffers                |
 | `ctrl-p`         | Search files              |
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
+| `ctrl-w+c`       | Close a buffer window           |
 | `ctrl-e+f`       | Open file tree browser          |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
 | `ctrl-w+v` | Split buffer window vertically             |
