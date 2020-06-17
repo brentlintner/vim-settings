@@ -71,6 +71,10 @@ Plugin 'kassio/neoterm', { 'branch': 'release' }
 " auto linting
 Plugin 'dense-analysis/ale'
 
+" markdown plugin
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 call vundle#end()
 
 " -- main config --
