@@ -231,6 +231,9 @@ map <C-l> <C-W>l
 let g:typescript_compiler_binary = 'npx tsc'
 let g:typescript_compiler_options = ''
 
+" Show git blame
+nmap <leader>b :Git<space>blame<CR>
+
 " window and neoterm commands
 " TODO: use leader vs C where possible
 nmap <C-c> :close<CR>
