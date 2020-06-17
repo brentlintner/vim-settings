@@ -27,7 +27,6 @@
 | `ctrl-w+n` | Split buffer window horizontally             |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |
-| `ctrl-w+g`       | Toggle undo history             |
 | `ctrl-w+p`       | Strip trailing whitespace       |
 | `ctrl-w+t`       | Auto indent md table       |
 | `gr`             | Show all file that reference type                |
