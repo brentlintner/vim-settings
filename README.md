@@ -56,11 +56,10 @@ Plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim).
 * [Ack](https://github.com/mileszs/ack.vim)
 * [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
 * [NerdTree](https://github.com/scrooloose/nerdtree)
-* [](https://github.com/godlygeek/tabular)
 * [UltiSnips](https://github.com/sirver/ultisnips)
 * [Snippets](https://github.com/honza/vim-snippets)
 * [CoC](https://github.com/neoclide/coc.nvim)
-* [Neoterm](https://github.com/kassio/neoterm', { 'branch': 'release' )
+* [Neoterm](https://github.com/kassio/neoterm)
 * [Ale](https://github.com/dense-analysis/ale)
 
 ### Dependencies
