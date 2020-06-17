@@ -75,6 +75,9 @@ Plugin 'dense-analysis/ale'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" git integration (blame, etc)
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()
 
 " -- main config --
