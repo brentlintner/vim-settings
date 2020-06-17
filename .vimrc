@@ -49,9 +49,6 @@ Plugin 'scrooloose/nerdcommenter'
 " file system explorer
 Plugin 'scrooloose/nerdtree'
 
-" visualize your Vim undo tree
-Plugin 'sjl/gundo.vim'
-
 " helps to end certain code structures automatically
 Plugin 'tpope/vim-endwise'
 
