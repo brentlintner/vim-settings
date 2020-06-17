@@ -203,18 +203,13 @@ set title
 
 " Highlight char when over textwidth
 highlight ColorColumn ctermbg=red
-call matchadd('ColorColumn', '\%81v', 100)
+call matchadd('ColorColumn', '\%81v', 120)
 
 " Indentation settings..
 set autoindent
 filetype plugin indent on
 autocmd FileType * set tabstop=2|set shiftwidth=2
-autocmd FileType hs set tabstop=2|set shiftwidth=2
-autocmd FileType coffee set tabstop=2|set shiftwidth=2
 autocmd FileType vim set tabstop=4|set shiftwidth=4
-autocmd FileType text setlocal textwidth=72
-autocmd FileType gitcommit setlocal textwidth=72
-autocmd FileType gitcommit setlocal spell
 set expandtab
 
 " Map space to / (search)
