@@ -62,6 +62,7 @@ Plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim).
 * [CoC](https://github.com/neoclide/coc.nvim)
 * [Neoterm](https://github.com/kassio/neoterm)
 * [Ale](https://github.com/dense-analysis/ale)
+* [Fugitive](https://github.com/tpope/vim-fugitive)
 
 ### Dependencies
 
