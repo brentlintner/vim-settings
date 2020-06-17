@@ -8,7 +8,7 @@
 | ---              | ---                             |
 | `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
-| `\space,\s`   | Clear search highlight          |
+| `\space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
 | `\z`       | Run shell command                      |
 | `\b`       | View git blame                      |
