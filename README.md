@@ -10,6 +10,7 @@
 | `space`          | Search for pattern in file      |
 | `\space,\s`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
+| `\z`       | Run shell command                      |
 | `\b`       | View git blame                      |
 | `\w`             | Save all buffers                |
 | `\S`             | Edit snippets for current file type                |
