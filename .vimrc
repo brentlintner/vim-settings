@@ -99,7 +99,7 @@ set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*/public/*,*.idea*
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_custom_ignore = {
             \   'dir' : '\.test|coverage|node_modules|\.git$|\.hg$|\.svn$',
             \   'file': '',
