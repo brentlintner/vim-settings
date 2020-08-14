@@ -215,7 +215,7 @@ autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType vim set tabstop=4|set shiftwidth=4
 set expandtab
 
-" Map space to / (search)
+" Map space to search
 map <space> /
 map <silent> <leader><cr> :noh<cr>
 
