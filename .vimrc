@@ -134,6 +134,7 @@ hi ALEWarningSign guibg=NONE ctermbg=NONE
 
 let g:ale_linters = {
 \   'sh': [],
+\   'php': [],
 \}
 
 " speed up vue plugin
