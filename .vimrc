@@ -90,7 +90,9 @@ set t_Co=256
 colorscheme twilighted
 hi Normal guibg=NONE ctermbg=NONE
 
-set wildignore+=*/build/,*/storage/*,*/.build/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set nowrap
+
+set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
@@ -99,7 +101,7 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = {
-            \   'dir' : '\.test|node_modules|\.git$|\.hg$|\.svn$',
+            \   'dir' : '\.test|coverage|node_modules|\.git$|\.hg$|\.svn$',
             \   'file': '',
             \ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
@@ -147,7 +149,7 @@ let g:UltiSnipsEditSplit="vertical"
 set clipboard=unnamedplus
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
+let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore node_modules --ignore deployment --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
 command! -nargs=1 Ag Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
 nmap <leader>g :Ag<space>
