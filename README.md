@@ -27,11 +27,9 @@
 | `ctrl-w+n` | Split buffer window horizontally             |
 | `ctrl-{h,j,k,l}` | Move around windows             |
 | `ctrl-V`         | Paste from clipboard            |
-| `ctrl-w+p`       | Strip trailing whitespace       |
-| `ctrl-w+t`       | Auto indent md table       |
+| `\{-,=}`         | Resize vertically split windows |
 | `gr`             | Show all file that reference type                |
 | `gd`             | Go to definition of type                |
-| `\{-,=}`         | Resize vertically split windows |
 
 ## Install
 ```sh
@@ -40,6 +38,8 @@ git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 cd ~/.vim-settings
 
 git submodule update --init
+
+cd ~/
 
 ln -s ~/.vim-settings/.vimrc
 ln -s ~/.vim-settings/.vim

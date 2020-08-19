@@ -248,7 +248,6 @@ nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
 let g:neoterm_default_mod = 'botright'
 
 " Clear whitespace
-nmap <C-w>p :StripWhitespace<CR>
 let g:better_whitespace_enabled=1
 
 " Make sure it always shows
