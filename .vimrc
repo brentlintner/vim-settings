@@ -273,6 +273,9 @@ nnoremap <C-w>S :setlocal nospell<CR>
 nnoremap <leader><space> :let @/ = ""<CR>
 nnoremap <leader><s> :let @/ = ""<CR>
 
+" if on Windows Terminal
+" nnoremap <c-z> <nop>
+
 if !has('nvim')
     " Need +virtualedit to paste in insert mode.
     exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
