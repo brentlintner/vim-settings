@@ -118,6 +118,7 @@ let g:coc_global_extensions=[
         \ 'coc-css',
         \ 'coc-json',
         \ 'coc-vetur',
+        \ 'coc-flutter',
         \ 'coc-vimlsp',
         \ 'coc-omnisharp'
     \]
