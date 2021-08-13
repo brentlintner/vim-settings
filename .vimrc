@@ -82,7 +82,9 @@ call vundle#end()
 
 " -- main config --
 
-set shell=/usr/bin/zsh
+set shell=/bin/zsh
+"set shell=/usr/bin/zsh
+"set shell='cmd.exe'
 
 " color and syntax settings
 syntax on
