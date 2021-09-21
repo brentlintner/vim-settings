@@ -175,9 +175,6 @@ nmap <leader>w :wa<cr>
 " Fast edit snippets (\w)
 nmap <leader>S :UltiSnipsEdit<cr>
 
-" Sudo saving (w!!)
-cmap w!! w !sudo tee % >/dev/null
-
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
 set hlsearch " Highlight search resultsh
