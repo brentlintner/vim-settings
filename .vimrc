@@ -208,8 +208,6 @@ call matchadd('ColorColumn', '\%81v', 120)
 " Indentation settings..
 set autoindent
 filetype plugin indent on
-autocmd FileType * set tabstop=2|set shiftwidth=2
-autocmd FileType vim set tabstop=4|set shiftwidth=4
 set expandtab
 
 " Map space to search
