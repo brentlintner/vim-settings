@@ -66,7 +66,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " better terminal
-Plugin 'kassio/neoterm', { 'branch': 'release' }
+" Plugin 'kassio/neoterm'
 
 " auto linting
 Plugin 'dense-analysis/ale'
@@ -235,12 +235,12 @@ nmap <leader>b :Git<space>blame<CR>
 " window and neoterm commands
 " TODO: use leader vs C where possible
 nmap <C-c> :close<CR>
-nmap <leader>z :TcloseAll! \| :T<space>
+"nmap <leader>z :TcloseAll! \| :T<space>
 nmap <leader>d :bd<CR>
-nmap <leader>C :TcloseAll!<CR>
-nmap <leader>t :TcloseAll! \| :T npm t %<cr>
-nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
-let g:neoterm_default_mod = 'botright'
+"nmap <leader>C :TcloseAll!<CR>
+"nmap <leader>t :TcloseAll! \| :T npm t %<cr>
+"nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
+"let g:neoterm_default_mod = 'botright'
 
 " Clear whitespace
 let g:better_whitespace_enabled=1
