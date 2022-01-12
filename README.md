@@ -10,14 +10,12 @@
 | `space`          | Search for pattern in file      |
 | `\space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
-| `\z`       | Run shell command                      |
 | `\b`       | View git blame                      |
 | `\w`             | Save all buffers                |
 | `\S`             | Edit snippets for current file type                |
-| `\t`             | Run current file with npm test                |
-| `\T`             | Run current file with phpunit                |
 | `\d`       | Delete a buffer window           |
-| `\C`             | Close all neoterm windows and buffers                |
+| `\cc`       | Comment out selected lines           |
+| `\ci`       | Uncomment selected lines           |
 | `ctrl-p`         | Search files              |
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-c`       | Close a buffer |
