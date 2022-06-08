@@ -120,6 +120,9 @@ let g:ctrlp_custom_ignore = {
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 nnoremap <silent> <C-b> :CtrlPTag<CR>
 
+let g:python3_host_prog = '/usr/bin/python3'
+let g:pip3_host_prog = '/usr/bin/pip3'
+
 " CoC settings
 let g:coc_global_extensions=[
         \ 'coc-tsserver',
