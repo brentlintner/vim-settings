@@ -6,6 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+" https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together
+let g:ale_disable_lsp = 1
+
 " Manage thyself!
 Plugin 'VundleVim/Vundle.vim'
 
@@ -120,7 +123,7 @@ let g:coc_global_extensions=[
         \ 'coc-vetur',
         \ 'coc-flutter',
         \ 'coc-vimlsp',
-        \ 'coc-omnisharp'
+        \ 'coc-go',
     \]
 " TODO: map tab to complete (else tab)?
 inoremap <silent><expr> <c-n> coc#refresh()
@@ -135,7 +138,8 @@ hi SignColumn guibg=NONE ctermbg=NONE
 hi ALEErrorSign guibg=NONE ctermbg=NONE
 hi ALEWarningSign guibg=NONE ctermbg=NONE
 
-let g:ale_linters = {}
+let g:ale_linters = {
+\}
 
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
