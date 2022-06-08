@@ -12,6 +12,13 @@ let g:ale_disable_lsp = 1
 " Manage thyself!
 Plugin 'VundleVim/Vundle.vim'
 
+" color themes
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'romainl/Apprentice'
+Plugin 'sainnhe/everforest'
+Plugin 'jacoborus/tender.vim'
+Plugin 'ackyshake/Spacegray.vim'
+Plugin 'gosukiwi/vim-atom-dark'
 " theme akin to TextMate's twilight theme + translucent bg
 Plugin 'brentlintner/twilighted.vim'
 
@@ -92,6 +99,7 @@ set shell=/bin/zsh
 " color and syntax settings
 syntax on
 set t_Co=256
+set background=dark
 colorscheme twilighted
 hi Normal guibg=NONE ctermbg=NONE
 
