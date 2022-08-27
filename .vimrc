@@ -137,7 +137,7 @@ let g:coc_global_extensions=[
         \ 'coc-go',
     \]
 " TODO: map tab to complete (else tab)?
-inoremap <silent><expr> <c-n> coc#refresh()
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
