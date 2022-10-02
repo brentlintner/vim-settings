@@ -155,6 +155,9 @@ let g:ale_linters = {
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
 
+" disable optional perl module
+let g:loaded_perl_provider = 0
+
 " set snippet keys
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
