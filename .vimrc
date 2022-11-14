@@ -287,6 +287,9 @@ nnoremap <C-w>S :setlocal nospell<CR>
 nnoremap <leader><space> :let @/ = ""<CR>
 nnoremap <leader><s> :let @/ = ""<CR>
 
+" highlighting aliases
+au BufRead,BufNewFile *.plist set filetype=xml
+
 " if on Windows Terminal
 " nnoremap <c-z> <nop>
 
