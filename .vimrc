@@ -69,7 +69,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'kurko/smartest.vim'
 
 " code snippets
-Plugin 'sirver/ultisnips'
+"Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " smart lookups
