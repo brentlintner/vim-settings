@@ -217,8 +217,14 @@ set noswapfile
 " Allow switching between buffers without saving .
 set hidden
 
-" Always show line numbers.
-set number
+" Show hybrid line numbers except when out of focus or in Insert
+:set number
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
 
 " Set xterm title.
 set title
