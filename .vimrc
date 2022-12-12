@@ -26,6 +26,9 @@ Plugin 'axvr/photon.vim'
 Plugin 'neg-serg/neg.nvim'
 Plugin 'brentlintner/twilighted.vim'
 
+" Make themes work with transparent bg
+Plugin 'tribela/vim-transparent'
+
 " multi lang syntax support
 Plugin 'sheerun/vim-polyglot'
 
