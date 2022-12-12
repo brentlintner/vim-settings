@@ -105,7 +105,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 set nowrap
 
-set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*coverage*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
@@ -114,7 +114,7 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_custom_ignore = {
-            \   'dir' : '\.test|coverage|node_modules|\.git$|\.hg$|\.svn$',
+            \   'dir' : '\.test|node_modules|\.git$|\.hg$|\.svn$',
             \   'file': '',
             \ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
