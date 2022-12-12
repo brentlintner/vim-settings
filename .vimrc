@@ -19,7 +19,11 @@ Plugin 'sainnhe/everforest'
 Plugin 'jacoborus/tender.vim'
 Plugin 'ackyshake/Spacegray.vim'
 Plugin 'gosukiwi/vim-atom-dark'
-" theme akin to TextMate's twilight theme + translucent bg
+Plugin 'hardselius/warlock'
+Plugin 'Softmotions/vim-dark-frost-theme'
+Plugin 'axvr/raider.vim'
+Plugin 'axvr/photon.vim'
+Plugin 'neg-serg/neg.nvim'
 Plugin 'brentlintner/twilighted.vim'
 
 " multi lang syntax support
