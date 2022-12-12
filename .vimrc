@@ -106,8 +106,9 @@ set shell=/bin/zsh
 " color and syntax settings
 syntax on
 set t_Co=256
+set termguicolors
 set background=dark
-colorscheme twilighted
+colorscheme everforest
 hi Normal guibg=NONE ctermbg=NONE
 
 set nowrap
