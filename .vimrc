@@ -104,6 +104,14 @@ set shell=/bin/zsh
 "set shell='cmd.exe'
 
 " color and syntax settings
+let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+                            \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+                            \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+                            \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+                            \ 'StatusLine', 'StatusLineNC' ]
+let g:transparent_groups += ['Pmenu']
+let g:transparent_groups += ['CtrlPMode1', 'CtrlPMode2', 'CtrlPStats'] " CtrlP
+let g:transparent_groups += ['NormalFloat'] " coc.nvim
 syntax on
 set t_Co=256
 set termguicolors
