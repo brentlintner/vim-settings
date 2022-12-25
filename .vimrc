@@ -104,6 +104,7 @@ set shell=/bin/zsh
 "set shell='cmd.exe'
 
 " color and syntax settings
+let g:everforest_transparent_background = 1
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
                             \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                             \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
