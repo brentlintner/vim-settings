@@ -208,6 +208,8 @@ set nofoldenable " Disable folding
 
 " Fast saving (\w)
 nmap <leader>w :wa<cr>
+" Fast saving (leader free)
+noremap <C-w>w :wa<CR>
 
 " Fast edit snippets (\w)
 nmap <leader>S :UltiSnipsEdit<cr>
