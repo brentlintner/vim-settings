@@ -82,6 +82,9 @@ Plugin 'honza/vim-snippets'
 " smart lookups
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" show lsp symbols in pane
+Plugin 'liuchengxu/vista.vim'
+
 " better terminal
 " Plugin 'kassio/neoterm'
 
@@ -160,6 +163,20 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" vista
+let g:vista#renderer#enable_icon = 1
+let g:vista_default_executive = 'coc'
+let g:vista_sidebar_width = 40
+let g:vista_update_on_text_changed = 1
+let g:vista_blink = [0, 0]
+let g:vista_echo_cursor = 0
+let g:vista_echo_cursor_strategy = 'floating_win'
+let g:vista_cursor_delay = 200
+let g:vista_disable_statusline = 1
+let g:vista_highlight_whole_line = 0
+"let g:vista_fzf_preview = ['right:50%']
+nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 0

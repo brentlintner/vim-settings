@@ -20,6 +20,7 @@
 | `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
 | `ctrl-c`       | Close a buffer |
 | `ctrl-e+f`       | Open file tree browser          |
+| `ctrl-e+p`       | Open lsp symbol browser          |
 | `ctrl-w+{s,S}`   | Toggle spell check              |
 | `ctrl-w+v` | Split buffer window vertically             |
 | `ctrl-w+n` | Split buffer window horizontally             |
