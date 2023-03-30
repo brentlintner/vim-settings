@@ -44,7 +44,7 @@ Plugin 'elzr/vim-json'
 Plugin 'godlygeek/csapprox'
 
 " css/less/sass/html color preview
-Plugin 'gorodinskiy/vim-coloresque'
+"Plugin 'gorodinskiy/vim-coloresque'
 
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'ctrlpvim/ctrlp.vim'
