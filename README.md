@@ -19,7 +19,7 @@
 | `<c-w>w`             | Save all buffers                |
 | `<c-w>d`       | Delete a buffer window           |
 | `<c-w>v` | Split buffer window vertically             |
-| `<c-w>h` | Split buffer window horizontally             |
+| `<c-w>e` | Split buffer window horizontally             |
 | `<c-w>c` | Delete a buffer             |
 | `<c-w>{p,P}`   | Toggle spell check              |
 | `<c-{h,j,k,l}>` | Move around windows             |

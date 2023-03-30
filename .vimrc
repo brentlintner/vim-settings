@@ -339,7 +339,8 @@ let NERDTreeIgnore = []
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 " different split
-nnoremap <C-w>h :split<CR>
+nnoremap <C-w>e :split<CR>
+nnoremap <C-w>v :vsplit<CR>
 
 " Spellcheck en_CA
 nnoremap <C-w>p :setlocal spell spelllang=en_ca<CR>
