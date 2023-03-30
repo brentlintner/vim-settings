@@ -335,8 +335,10 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMinimalUI=1
-let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
-let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+"let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+"let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
