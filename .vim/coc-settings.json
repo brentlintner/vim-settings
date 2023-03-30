@@ -1,1 +1,24 @@
-/Users/brent/.dot-files/coc-settings.json
+{
+  "coc.preferences.extensionUpdateCheck": "never",
+  "vetur.ignoreProjectWarning": true,
+  "inlayHint.enable": false,
+  "outline.followCursor": true,
+  "outline.showLineNumber": true,
+  "outline.sortBy": "position",
+  "outline.detailAsDescription": false,
+  "outline.previewHighlightGroup": "None",
+  "outline.autoPreview": false,
+  "outline.previewBorderHighlightGroup": "None",
+  "suggest.floatConfig": {
+    "border": false
+  },
+  "diagnostic.floatConfig": {
+    "border": false
+  },
+  "signature.floatConfig": {
+    "border": false
+  },
+  "hover.floatConfig": {
+    "border": false
+  }
+}
