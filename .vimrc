@@ -25,9 +25,6 @@ Plugin 'brentlintner/twilighted.vim'
 " Make themes work with transparent bg
 Plugin 'tribela/vim-transparent'
 
-" dev icons!
-Plugin 'ryanoasis/vim-devicons'
-
 " multi lang syntax support
 Plugin 'sheerun/vim-polyglot'
 
@@ -65,8 +62,11 @@ Plugin 'scrooloose/nerdcommenter'
 " file system explorer
 Plugin 'scrooloose/nerdtree'
 
+" dev icons!
+Plugin 'ryanoasis/vim-devicons'
+
 " support nerdtree icons
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " helps to end certain code structures automatically
 Plugin 'tpope/vim-endwise'
@@ -144,7 +144,7 @@ let g:ctrlp_custom_ignore = {
             \   'file': '',
             \ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
-nnoremap <silent> <C-b> :CtrlPTag<CR>
+"nnoremap <silent> <C-t> :CtrlPTag<CR>
 
 let g:python3_host_prog = '/usr/bin/python3'
 let g:pip3_host_prog = '/usr/bin/pip3'
@@ -175,9 +175,6 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
 
-" nerdtree + icons lag
-let g:NERDTreeHighlightCursorline = 0
-
 " vista
 let g:vista#renderer#enable_icon = 1
 let g:vista_default_executive = 'coc'
@@ -192,7 +189,7 @@ let g:vista_cursor_delay = 0
 let g:vista_disable_statusline = 1
 let g:vista_highlight_whole_line = 1
 let g:vista_fzf_preview = ['right:50%']
-let g:vista_enable_centering_jump = 1
+let g:vista_enable_centering_jump = 0
 let g:vista_find_nearest_method_or_function_delay = 0
 
 " git gutter
@@ -334,8 +331,13 @@ nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>= :vertical resize +5<CR>
 
 "  NERD Tree
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = []
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeHighlightCursorline = 0
+let g:NERDTreeMinimalUI=1
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 " different split
