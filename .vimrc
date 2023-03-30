@@ -211,10 +211,11 @@ let g:vue_disable_pre_processors = 1
 let g:loaded_perl_provider = 0
 
 " set snippet keys
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsEditSplit="vertical"
+"nmap <leader>S :UltiSnipsEdit<cr>
 
 " enable clipboard
 if system('uname -s') == "Darwin\n"
@@ -241,12 +242,9 @@ set backspace=indent,eol,start " backspacing support
 set nofoldenable " Disable folding
 
 " Fast saving (\w)
-nmap <leader>w :wa<cr>
+"nmap <leader>w :wa<cr>
 " Fast saving (leader free)
 noremap <C-w>w :wa<CR>
-
-" Fast edit snippets (\w)
-nmap <leader>S :UltiSnipsEdit<cr>
 
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
@@ -340,13 +338,15 @@ let NERDTreeShowHidden = 1
 let NERDTreeIgnore = []
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
+" different split
+nnoremap <C-w>h :split<CR>
+
 " Spellcheck en_CA
-nnoremap <C-w>s :setlocal spell spelllang=en_ca<CR>
-nnoremap <C-w>S :setlocal nospell<CR>
+nnoremap <C-w>p :setlocal spell spelllang=en_ca<CR>
+nnoremap <C-w>P :setlocal nospell<CR>
 
 " Clear search
-nnoremap <leader><space> :let @/ = ""<CR>
-nnoremap <leader><s> :let @/ = ""<CR>
+nnoremap <C-w>s :let @/ = ""<CR>
 
 " highlighting aliases
 au BufRead,BufNewFile *.plist set filetype=xml

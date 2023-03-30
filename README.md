@@ -6,29 +6,27 @@
 
 | cmd              | description                     |
 | ---              | ---                             |
-| `tab`            | Snippet auto complete           |
 | `space`          | Search for pattern in file      |
-| `\space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
 | `\b`       | View git blame                      |
-| `\w`             | Save all buffers                |
-| `\S`             | Edit snippets for current file type                |
-| `\d`       | Delete a buffer window           |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
-| `c-p`         | Search files / Cycling autocomplete reverse (Insert)              |
-| `c-n`         | Search buffers / Cycle autocomplete (Insert)  |
-| `c-c`       | Close a buffer |
-| `c-e+f`       | Open file tree browser          |
-| `c-e+p`       | Open lsp symbol browser          |
-| `c-e+l`       | Show lint/compile errors          |
-| `c-w+{s,S}`   | Toggle spell check              |
-| `c-w+v` | Split buffer window vertically             |
-| `c-w+n` | Split buffer window horizontally             |
-| `c-w+c` | Delete a buffer             |
-| `c-{h,j,k,l}` | Move around windows             |
-| `c-V`         | Paste from clipboard            |
 | `\{-,=}`         | Resize vertically split windows |
+| `<c-s>`   | Clear search highlight          |
+| `<c-p>`         | Search files / Cycling autocomplete reverse (Insert)              |
+| `<c-n>`         | Search buffers / Cycle autocomplete (Insert)  |
+| `<c-c>`       | Close a buffer |
+| `<c-w>w`             | Save all buffers                |
+| `<c-w>d`       | Delete a buffer window           |
+| `<c-w>v` | Split buffer window vertically             |
+| `<c-w>h` | Split buffer window horizontally             |
+| `<c-w>c` | Delete a buffer             |
+| `<c-w>{p,P}`   | Toggle spell check              |
+| `<c-{h,j,k,l}>` | Move around windows             |
+| `<c-V>`         | Paste from clipboard            |
+| `<c-e><c-f>`       | Open file tree browser          |
+| `<c-e><c-p>`       | Open lsp symbol browser          |
+| `<c-e><c-l>`       | Show lint/compile errors          |
 | `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
 | `gi`             | Go to type definition of type                |
