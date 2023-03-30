@@ -55,7 +55,7 @@ vim +PluginInstall +UpdateRemotePlugins
 
 Plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim).
 
-For installed plugins see [.vimrc](.vimrc);
+For installed plugins see [.vimrc](.vimrc).
 
 ### Dependencies
 
