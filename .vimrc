@@ -6,28 +6,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-" https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together
-let g:ale_disable_lsp = 1
-
 " Manage thyself!
 Plugin 'VundleVim/Vundle.vim'
 
 " color themes
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'romainl/Apprentice'
+"Plugin 'NLKNguyen/papercolor-theme'
+"Plugin 'romainl/Apprentice'
 Plugin 'sainnhe/everforest'
-Plugin 'jacoborus/tender.vim'
-Plugin 'ackyshake/Spacegray.vim'
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'hardselius/warlock'
-Plugin 'Softmotions/vim-dark-frost-theme'
-Plugin 'axvr/raider.vim'
-Plugin 'axvr/photon.vim'
-Plugin 'neg-serg/neg.nvim'
+"Plugin 'jacoborus/tender.vim'
+"Plugin 'gosukiwi/vim-atom-dark'
+"Plugin 'hardselius/warlock'
+"Plugin 'Softmotions/vim-dark-frost-theme'
+"Plugin 'axvr/raider.vim'
+"Plugin 'axvr/photon.vim'
+"Plugin 'neg-serg/neg.nvim'
 Plugin 'brentlintner/twilighted.vim'
 
 " Make themes work with transparent bg
 Plugin 'tribela/vim-transparent'
+
+" dev icons!
+Plugin 'ryanoasis/vim-devicons'
 
 " multi lang syntax support
 Plugin 'sheerun/vim-polyglot'
@@ -66,6 +65,9 @@ Plugin 'scrooloose/nerdcommenter'
 " file system explorer
 Plugin 'scrooloose/nerdtree'
 
+" support nerdtree icons
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " helps to end certain code structures automatically
 Plugin 'tpope/vim-endwise'
 
@@ -73,7 +75,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
 
 " run tests for Ruby
-Plugin 'kurko/smartest.vim'
+"Plugin 'kurko/smartest.vim'
 
 " code snippets
 "Plugin 'sirver/ultisnips'
@@ -83,13 +85,16 @@ Plugin 'honza/vim-snippets'
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " show lsp symbols in pane
-Plugin 'liuchengxu/vista.vim'
+"Plugin 'liuchengxu/vista.vim'
+Plugin 'brentlintner/vista.vim'
 
 " better terminal
 " Plugin 'kassio/neoterm'
 
 " auto linting
-Plugin 'dense-analysis/ale'
+" https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together
+"let g:ale_disable_lsp = 1
+"Plugin 'dense-analysis/ale'
 
 " markdown plugin
 Plugin 'godlygeek/tabular'
@@ -158,25 +163,37 @@ let g:coc_global_extensions=[
         \ 'coc-go',
     \]
 " TODO: map tab to complete (else tab)?
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
+inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
+nmap <silent> gh :call CocAction('doHover')<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+"nnoremap <silent> <C-e><C-p> :CocOutline<CR>
+nnoremap <silent> <C-e><C-p> :Vista!!<CR>
+nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
+
+" nerdtree + icons lag
+let g:NERDTreeHighlightCursorline = 0
 
 " vista
 let g:vista#renderer#enable_icon = 1
 let g:vista_default_executive = 'coc'
 let g:vista_sidebar_width = 40
+let g:vista_floating_delay = 100
 let g:vista_update_on_text_changed = 1
+let g:vista_update_on_text_changed_delay = 0
 let g:vista_blink = [0, 0]
 let g:vista_echo_cursor = 0
 let g:vista_echo_cursor_strategy = 'floating_win'
-let g:vista_cursor_delay = 200
+let g:vista_cursor_delay = 0
 let g:vista_disable_statusline = 1
-let g:vista_highlight_whole_line = 0
-"let g:vista_fzf_preview = ['right:50%']
-nnoremap <silent> <C-e><C-p> :Vista!!<CR>
+let g:vista_highlight_whole_line = 1
+let g:vista_fzf_preview = ['right:50%']
+let g:vista_enable_centering_jump = 1
+let g:vista_find_nearest_method_or_function_delay = 0
 
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 0
@@ -245,6 +262,7 @@ set ruler " Always set the mouse cursor position
 
 " Turn off backups, etc.
 set nobackup
+set nowritebackup
 set nowb
 set noswapfile
 
@@ -301,7 +319,7 @@ nmap <leader>b :Git<space>blame<CR>
 " TODO: use leader vs C where possible
 nmap <C-c> :close<CR>
 "nmap <leader>z :TcloseAll! \| :T<space>
-nmap <leader>d :bd<CR>
+nmap <C-w>c :bd<CR>
 "nmap <leader>C :TcloseAll!<CR>
 "nmap <leader>t :TcloseAll! \| :T npm t %<cr>
 "nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>

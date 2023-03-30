@@ -16,19 +16,24 @@
 | `\d`       | Delete a buffer window           |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
-| `ctrl-p`         | Search files              |
-| `ctrl-n`         | Search buffers / Cycle autocomplete (Insert)  |
-| `ctrl-c`       | Close a buffer |
-| `ctrl-e+f`       | Open file tree browser          |
-| `ctrl-e+p`       | Open lsp symbol browser          |
-| `ctrl-w+{s,S}`   | Toggle spell check              |
-| `ctrl-w+v` | Split buffer window vertically             |
-| `ctrl-w+n` | Split buffer window horizontally             |
-| `ctrl-{h,j,k,l}` | Move around windows             |
-| `ctrl-V`         | Paste from clipboard            |
+| `c-p`         | Search files / Cycling autocomplete reverse (Insert)              |
+| `c-n`         | Search buffers / Cycle autocomplete (Insert)  |
+| `c-c`       | Close a buffer |
+| `c-e+f`       | Open file tree browser          |
+| `c-e+p`       | Open lsp symbol browser          |
+| `c-e+l`       | Show lint/compile errors          |
+| `c-w+{s,S}`   | Toggle spell check              |
+| `c-w+v` | Split buffer window vertically             |
+| `c-w+n` | Split buffer window horizontally             |
+| `c-w+c` | Delete a buffer             |
+| `c-{h,j,k,l}` | Move around windows             |
+| `c-V`         | Paste from clipboard            |
 | `\{-,=}`         | Resize vertically split windows |
-| `gr`             | Show all file that reference type                |
+| `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
+| `gi`             | Go to type definition of type                |
+| `gr`             | Go to implementation of type                |
+| `gh`             | Show function signature  |
 
 ## Install
 ```sh
@@ -50,18 +55,7 @@ vim +PluginInstall +UpdateRemotePlugins
 
 Plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim).
 
-* [Vim-Polyglot](https://github.com/sheerun/vim-polyglot)
-* [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
-* [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
-* [Ack](https://github.com/mileszs/ack.vim)
-* [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
-* [NerdTree](https://github.com/scrooloose/nerdtree)
-* [UltiSnips](https://github.com/sirver/ultisnips)
-* [Snippets](https://github.com/honza/vim-snippets)
-* [CoC](https://github.com/neoclide/coc.nvim)
-* [Neoterm](https://github.com/kassio/neoterm)
-* [Ale](https://github.com/dense-analysis/ale)
-* [Fugitive](https://github.com/tpope/vim-fugitive)
+For installed plugins see [.vimrc](.vimrc);
 
 ### Dependencies
 
