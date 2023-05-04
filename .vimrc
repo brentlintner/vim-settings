@@ -239,7 +239,7 @@ set backspace=indent,eol,start " backspacing support
 set nofoldenable " Disable folding
 
 " Fast saving (\w)
-"nmap <leader>w :wa<cr>
+nmap <leader>w :wa<cr>
 " Fast saving (leader free)
 noremap <C-w>w :wa<CR>
 
@@ -290,7 +290,6 @@ set expandtab
 
 " Map space to search
 map <space> /
-map <silent> <leader><cr> :noh<cr>
 
 " Easier way to move between windows.
 " Apparenty (ATM), Neovim sends <BS> vs ^H
@@ -352,9 +351,12 @@ nnoremap <C-w>P :setlocal nospell<CR>
 
 " Clear search
 nnoremap <C-w>s :let @/ = ""<CR>
+map <leader><space> :let @/ = ""<CR>
+map <silent> <leader><cr> :noh<cr>
 
 " highlighting aliases
 au BufRead,BufNewFile *.plist set filetype=xml
+au BufRead,BufNewFile *.gpx set filetype=xml
 
 " if on Windows Terminal
 " nnoremap <c-z> <nop>
