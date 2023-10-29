@@ -26,7 +26,7 @@ Plugin 'brentlintner/twilighted.vim'
 Plugin 'tribela/vim-transparent'
 
 " multi lang syntax support
-Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
@@ -97,8 +97,8 @@ Plugin 'brentlintner/vista.vim'
 "Plugin 'dense-analysis/ale'
 
 " markdown plugin
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 
 " git integration (blame, etc)
 Plugin 'tpope/vim-fugitive'
@@ -131,7 +131,7 @@ hi VertSplit guifg=#262626 guibg=NONE ctermfg=235 ctermbg=NONE
 
 set nowrap
 
-set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*/public/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*app/builds/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
@@ -176,7 +176,7 @@ nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
 
 " vista
-let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#enable_icon = 0
 let g:vista_default_executive = 'coc'
 let g:vista_sidebar_width = 40
 let g:vista_floating_delay = 100
@@ -342,7 +342,7 @@ let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 
 " different split
-nnoremap <C-w>e :split<CR>
+"nnoremap <C-w>e :split<CR>
 nnoremap <C-w>v :vsplit<CR>
 
 " Spellcheck en_CA
@@ -350,7 +350,7 @@ nnoremap <C-w>p :setlocal spell spelllang=en_ca<CR>
 nnoremap <C-w>P :setlocal nospell<CR>
 
 " Clear search
-nnoremap <C-w>s :let @/ = ""<CR>
+nnoremap <C-w><space> :let @/ = ""<CR>
 map <leader><space> :let @/ = ""<CR>
 map <silent> <leader><cr> :noh<cr>
 

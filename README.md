@@ -7,19 +7,20 @@
 | cmd              | description                     |
 | ---              | ---                             |
 | `space`          | Search for pattern in file      |
+| `<c-w>space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
 | `\b`       | View git blame                      |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
-| `<c-s>`   | Clear search highlight          |
 | `<c-p>`         | Search files / Cycling autocomplete reverse (Insert)              |
 | `<c-n>`         | Search buffers / Cycle autocomplete (Insert)  |
 | `<c-c>`       | Close a buffer |
+| `<c-d>`       | Close a buffer |
 | `<c-w>w`             | Save all buffers                |
 | `<c-w>d`       | Delete a buffer window           |
 | `<c-w>v` | Split buffer window vertically             |
-| `<c-w>e` | Split buffer window horizontally             |
+| `<c-w>s` | Split buffer window horizontally             |
 | `<c-w>c` | Delete a buffer             |
 | `<c-w>{p,P}`   | Toggle spell check              |
 | `<c-{h,j,k,l}>` | Move around windows             |
