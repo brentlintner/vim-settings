@@ -131,7 +131,7 @@ hi VertSplit guifg=#262626 guibg=NONE ctermfg=235 ctermbg=NONE
 
 set nowrap
 
-set wildignore+=*/build/,*/storage/*,*/.build/*,coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*app/builds/*,*build/lib*,*vendor/*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+set wildignore+=*/build/,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
@@ -228,7 +228,7 @@ else
 endif
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag --smart-case --nogroup --nocolor --column --ignore node_modules --ignore deployment --ignore vendor --ignore coverage --ignore storage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
+let g:ackprg = 'ag --smart-case --nogroup --nocolor --column --ignore node_modules --ignore deployment --ignore vendor --ignore coverage --ignore dist --ignore "*.lock" --ignore build --ignore package-lock.json'
 command! -nargs=1 Ag Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
 nmap <leader>g :Ag<space>
