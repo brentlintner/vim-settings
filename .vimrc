@@ -101,6 +101,8 @@ Plugin 'dense-analysis/ale'
 " git integration (blame, etc)
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'slim-template/vim-slim'
+
 call vundle#end()
 
 " -- main config --
