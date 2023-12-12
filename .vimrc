@@ -92,9 +92,7 @@ Plugin 'brentlintner/vista.vim'
 " Plugin 'kassio/neoterm'
 
 " auto linting
-" https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together
-"let g:ale_disable_lsp = 1
-"Plugin 'dense-analysis/ale'
+Plugin 'dense-analysis/ale'
 
 " markdown plugin
 "Plugin 'godlygeek/tabular'
@@ -195,11 +193,17 @@ let g:vista_find_nearest_method_or_function_delay = 0
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 0
 hi SignColumn guibg=NONE ctermbg=NONE
+
+" ale
+let g:ale_disable_lsp = 1
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_save = 1
+let g:ale_virtualtext_cursor = 'disabled'
+let g:ale_linters = {
+\   'ruby': ['rubocop'],
+\}
 hi ALEErrorSign guibg=NONE ctermbg=NONE
 hi ALEWarningSign guibg=NONE ctermbg=NONE
-
-let g:ale_linters = {
-\}
 
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
