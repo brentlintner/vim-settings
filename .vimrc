@@ -204,6 +204,7 @@ let g:ale_lint_on_save = 1
 let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
+\   'typescript': ['eslint'],
 \}
 hi ALEErrorSign guibg=NONE ctermbg=NONE
 hi ALEWarningSign guibg=NONE ctermbg=NONE
