@@ -104,7 +104,8 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'slim-template/vim-slim'
 
-Plugin 'octref/RootIgnore'
+" thanks octref!
+Plugin 'brentlintner/RootIgnore'
 
 call vundle#end()
 
