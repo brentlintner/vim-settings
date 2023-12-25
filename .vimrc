@@ -112,9 +112,6 @@ set shell=/bin/zsh
 "set shell=/usr/bin/zsh
 "set shell='cmd.exe'
 
-set tabstop=4
-set shiftwidth=4
-
 " color and syntax settings
 let g:everforest_transparent_background = 1
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
@@ -296,7 +293,9 @@ call matchadd('ColorColumn', '\%81v', 120)
 " Indentation settings..
 set autoindent
 filetype plugin indent on
-set expandtab
+set tabstop=2
+set shiftwidth=2
+"set expandtab
 
 " Map space to search
 map <space> /
