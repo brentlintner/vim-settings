@@ -27,6 +27,7 @@ Plugin 'tribela/vim-transparent'
 
 " multi lang syntax support
 "Plugin 'sheerun/vim-polyglot'
+Plugin 'kchmck/vim-coffee-script'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
