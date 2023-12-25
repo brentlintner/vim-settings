@@ -104,6 +104,8 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'slim-template/vim-slim'
 
+Plugin 'octref/RootIgnore'
+
 call vundle#end()
 
 " -- main config --
@@ -132,18 +134,22 @@ hi VertSplit guifg=#262626 guibg=NONE ctermfg=235 ctermbg=NONE
 
 set nowrap
 
-set wildignore+=*/build/,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+"set wildignore+=*/build/,.DS_Store,log,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+
+let g:RootIgnoreUseHome = 1
+let g:RootIgnoreAgignore = 1
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 1
-let g:ctrlp_custom_ignore = {
-            \   'dir' : '\.test|node_modules|\.git$|\.hg$|\.svn$',
-            \   'file': '',
-            \ }
+"let g:ctrlp_custom_ignore = {
+            "\   'dir' : 'node_modules|\.git$|\.hg$|\.svn$',
+            "\   'file': '',
+            "\ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 "nnoremap <silent> <C-t> :CtrlPTag<CR>
 
@@ -230,7 +236,7 @@ else
 endif
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag --smart-case --vimgrep'
+let g:ackprg = 'ag --smart-case --hidden --vimgrep'
 command! -nargs=1 Ag Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
 nmap <leader>g :Ag<space>
