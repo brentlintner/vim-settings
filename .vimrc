@@ -137,8 +137,9 @@ set nowrap
 
 "set wildignore+=*/build/,.DS_Store,log,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
+" import .gitignore into wildignore when inside a git repo folder structure
 let g:RootIgnoreUseHome = 1
-let g:RootIgnoreAgignore = 1
+let g:RootIgnoreAgignore = 0
 
 " ctrl-p
 " TODO: clear cache on pull up? map new key?
@@ -147,6 +148,11 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 1
+" Use ag and .ignore file for ctrlp
+let g:ctrlp_user_command = [
+		\ '.git',
+		\ 'ag %s -U --hidden --nocolor -g ""'
+		\ ]
 "let g:ctrlp_custom_ignore = {
             "\   'dir' : 'node_modules|\.git$|\.hg$|\.svn$',
             "\   'file': '',
@@ -237,7 +243,7 @@ else
 endif
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag --smart-case --hidden --vimgrep'
+let g:ackprg = 'ag -U --hidden --vimgrep'
 command! -nargs=1 Ag Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
 nmap <leader>g :Ag<space>
