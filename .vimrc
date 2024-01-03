@@ -151,7 +151,7 @@ let g:ctrlp_clear_cache_on_exit = 1
 " Use ag and .ignore file for ctrlp
 let g:ctrlp_user_command = [
 		\ '.git',
-		\ 'ag %s -U --hidden --nocolor -g ""'
+		\ 'ag %s -U -f --hidden --nocolor -g ""'
 		\ ]
 "let g:ctrlp_custom_ignore = {
             "\   'dir' : 'node_modules|\.git$|\.hg$|\.svn$',
@@ -243,7 +243,7 @@ else
 endif
 
 " use silver searcher underneath ack.vim
-let g:ackprg = 'ag -U --hidden --vimgrep'
+let g:ackprg = 'ag -U -f --hidden --vimgrep'
 command! -nargs=1 Ag Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
 nmap <leader>g :Ag<space>
