@@ -10,15 +10,15 @@
 | `<c-w>space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
 | `\b`       | View git blame                      |
+| `\B`       | View git file history                      |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
 | `<c-p>`         | Search files / Cycling autocomplete reverse (Insert)              |
 | `<c-n>`         | Search buffers / Cycle autocomplete (Insert)  |
 | `<c-c>`       | Close a buffer |
-| `<c-d>`       | Close a buffer |
+| `<c-w>c`       | Delete a buffer |
 | `<c-w>w`             | Save all buffers                |
-| `<c-w>d`       | Delete a buffer window           |
 | `<c-w>v` | Split buffer window vertically             |
 | `<c-w>s` | Split buffer window horizontally             |
 | `<c-w>c` | Delete a buffer             |
@@ -33,6 +33,9 @@
 | `gi`             | Go to type definition of type                |
 | `gr`             | Go to implementation of type                |
 | `gh`             | Show function signature  |
+| `zc`             | Fold at syntax  |
+| `zo`             | Fold open at syntax  |
+| `zR`             | Fold open all  |
 
 ## Install
 ```sh

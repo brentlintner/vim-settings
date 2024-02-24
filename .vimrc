@@ -9,6 +9,8 @@ call vundle#begin()
 " Manage thyself!
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " color themes
 "Plugin 'NLKNguyen/papercolor-theme'
 "Plugin 'romainl/Apprentice'
@@ -28,6 +30,8 @@ Plugin 'tribela/vim-transparent'
 " multi lang syntax support
 "Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+"Plugin 'pangloss/vim-javascript'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
@@ -216,7 +220,7 @@ let g:ale_sign_column_always = 1
 let g:ale_lint_on_save = 1
 let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_linters = {
-\   'ruby': ['rubocop'],
+\   'ruby': ['rubocop', 'reek'],
 \   'typescript': ['eslint'],
 \}
 hi ALEErrorSign guibg=NONE ctermbg=NONE
@@ -257,7 +261,8 @@ let g:gist_post_private = 1
 
 set backspace=indent,eol,start " backspacing support
 
-set nofoldenable " Disable folding
+set foldmethod=indent
+set foldlevel=99
 
 " Fast saving (\w)
 nmap <leader>w :wa<cr>
@@ -302,7 +307,7 @@ set title
 
 " Highlight char when over textwidth
 highlight ColorColumn ctermbg=red
-call matchadd('ColorColumn', '\%81v', 120)
+call matchadd('ColorColumn', '\%121v', 120)
 
 " Indentation settings..
 set autoindent
@@ -331,6 +336,7 @@ let g:typescript_compiler_options = ''
 
 " Show git blame
 nmap <leader>b :Git<space>blame<CR>
+nmap <leader>B :0Gclog<CR>
 
 " window and neoterm commands
 " TODO: use leader vs C where possible
