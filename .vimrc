@@ -30,8 +30,12 @@ Plugin 'tribela/vim-transparent'
 " multi lang syntax support
 "Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-rails'
 "Plugin 'pangloss/vim-javascript'
+
+" Rails
+"Plugin 'tpope/vim-bundler'
+"Plugin 'tpope/vim-dispatch'
+"Plugin 'tpope/vim-rails'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
@@ -268,6 +272,9 @@ set foldlevel=99
 nmap <leader>w :wa<cr>
 " Fast saving (leader free)
 noremap <C-w>w :wa<CR>
+
+nmap <leader>t :execute ":!bundle exec rails test %:" . line('.')<CR>
+nmap <leader>T :!bundle exec rails test:all<CR>
 
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
