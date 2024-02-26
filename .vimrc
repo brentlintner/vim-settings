@@ -56,8 +56,8 @@ Plugin 'godlygeek/csapprox'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " support creating gists from buffers
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
+"Plugin 'mattn/webapi-vim'
+"Plugin 'mattn/gist-vim'
 
 " support for Ack
 Plugin 'mileszs/ack.vim'
