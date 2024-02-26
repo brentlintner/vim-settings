@@ -126,6 +126,9 @@ set shell=/bin/zsh
 "set shell=/usr/bin/zsh
 "set shell='cmd.exe'
 
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+
 " color and syntax settings
 let g:everforest_transparent_background = 1
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
