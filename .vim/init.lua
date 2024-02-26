@@ -18,8 +18,8 @@ require'nvim-treesitter.configs'.setup {
 		"python",
 		"regex",
 		"sql",
-		"typescript",
-		"ruby"
+		"typescript"
+		--"ruby"
 	},
 
   sync_install = false,

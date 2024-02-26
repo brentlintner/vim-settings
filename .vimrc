@@ -35,7 +35,7 @@ Plugin 'kchmck/vim-coffee-script'
 " Rails
 "Plugin 'tpope/vim-bundler'
 "Plugin 'tpope/vim-dispatch'
-"Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
 " shows which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
