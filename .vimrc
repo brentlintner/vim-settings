@@ -115,6 +115,9 @@ Plugin 'slim-template/vim-slim'
 " thanks octref!
 Plugin 'brentlintner/RootIgnore'
 
+" AI!
+Plugin 'github/copilot.vim'
+
 call vundle#end()
 
 " -- main config --
