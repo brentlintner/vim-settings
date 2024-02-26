@@ -88,7 +88,7 @@ Plugin 'tpope/vim-surround'
 
 " code snippets
 "Plugin 'sirver/ultisnips'
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 " smart lookups
 Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
