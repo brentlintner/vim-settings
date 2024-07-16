@@ -109,6 +109,7 @@ Plugin 'dense-analysis/ale'
 
 " git integration (blame, etc)
 Plugin 'tpope/vim-fugitive'
+Plugin 'rhysd/git-messenger.vim'
 
 Plugin 'slim-template/vim-slim'
 
@@ -184,7 +185,6 @@ let g:coc_global_extensions=[
         \ 'coc-phpls',
         \ 'coc-html',
         \ 'coc-css',
-        \ 'coc-json',
         \ 'coc-vetur',
         \ 'coc-flutter',
         \ 'coc-vimlsp',
@@ -202,6 +202,12 @@ nmap <silent> gr <Plug>(coc-references)
 "nnoremap <silent> <C-e><C-p> :CocOutline<CR>
 nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
+
+"imap <C-0> <Plug>(copilot-next)
+"imap <C-[> <Plug>(copilot-previous)
+"imap <C-]> <Plug>(copilot-suggest)
+"imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+"let g:copilot_no_tab_map = v:true
 
 " vista
 let g:vista#renderer#enable_icon = 0
@@ -233,7 +239,7 @@ let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_linters = {
-\   'ruby': ['rubocop', 'reek'],
+\   'ruby': ['rubocop'],
 \   'typescript': ['eslint'],
 \}
 hi ALEErrorSign guibg=NONE ctermbg=NONE
@@ -283,7 +289,8 @@ nmap <leader>w :wa<cr>
 noremap <C-w>w :wa<CR>
 
 nmap <leader>t :execute ":!bundle exec rails test %:" . line('.')<CR>
-nmap <leader>T :!bundle exec rails test:all<CR>
+nmap <leader>T :execute ":!bundle exec rails test %"<CR>
+"nmap <leader>T :!bundle exec rails test:all<CR>
 
 set ignorecase " Ignore case when searching
 set smartcase " When searching try to be smart about cases
@@ -330,6 +337,7 @@ set autoindent
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
+set scrolloff=1
 "set expandtab
 
 " Map space to search
@@ -351,8 +359,11 @@ let g:typescript_compiler_binary = 'npx tsc'
 let g:typescript_compiler_options = ''
 
 " Show git blame
-nmap <leader>b :Git<space>blame<CR>
-nmap <leader>B :0Gclog<CR>
+nmap <leader>b :GitMessenger<CR>
+nmap <leader>B :Git<space>blame<CR>
+nmap <leader>l :0Gclog<CR>
+"let g:git_messenger_floating_win_opts = { 'border': 'single' }
+let g:git_messenger_no_default_mappings = v:true
 
 " window and neoterm commands
 " TODO: use leader vs C where possible
