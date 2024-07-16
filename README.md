@@ -9,8 +9,9 @@
 | `space`          | Search for pattern in file      |
 | `<c-w>space`   | Clear search highlight          |
 | `\g WORD`       | Grep files                      |
-| `\b`       | View git blame                      |
-| `\B`       | View git file history                      |
+| `\b`    | View git commit message for current line              |
+| `\B`       | View git blame                      |
+| `\l`       | View git file history                      |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
@@ -36,6 +37,8 @@
 | `zc`             | Fold at syntax  |
 | `zo`             | Fold open at syntax  |
 | `zR`             | Fold open all  |
+| `b|B`             | Backword jumps |
+| `w|W`             | Forward jumps  |
 
 ## Install
 ```sh
