@@ -146,7 +146,7 @@ set termguicolors
 set background=dark
 colorscheme everforest
 hi Normal guibg=NONE ctermbg=NONE
-hi VertSplit guifg=#262626 guibg=NONE ctermfg=235 ctermbg=NONE
+hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
 
 set nowrap
 
