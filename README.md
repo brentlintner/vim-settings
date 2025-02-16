@@ -1,4 +1,4 @@
-# My [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) Config
+# My [Neovim](https://neovim.io/) Config
 
 ![demo with a few files open](https://raw.githubusercontent.com/brentlintner/vim-settings/master/screenshot.png)
 

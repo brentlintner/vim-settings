@@ -1,127 +1,4 @@
-" -- plugin management --
-
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-" Manage thyself!
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" color themes
-"Plugin 'NLKNguyen/papercolor-theme'
-"Plugin 'romainl/Apprentice'
-Plugin 'sainnhe/everforest'
-"Plugin 'jacoborus/tender.vim'
-"Plugin 'gosukiwi/vim-atom-dark'
-"Plugin 'hardselius/warlock'
-"Plugin 'Softmotions/vim-dark-frost-theme'
-"Plugin 'axvr/raider.vim'
-"Plugin 'axvr/photon.vim'
-"Plugin 'neg-serg/neg.nvim'
-Plugin 'brentlintner/twilighted.vim'
-
-" Make themes work with transparent bg
-Plugin 'tribela/vim-transparent'
-
-" multi lang syntax support
-"Plugin 'sheerun/vim-polyglot'
-Plugin 'kchmck/vim-coffee-script'
-"Plugin 'pangloss/vim-javascript'
-
-" Rails
-"Plugin 'tpope/vim-bundler'
-"Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-rails'
-
-" shows which lines have been added, modified, or removed
-Plugin 'airblade/vim-gitgutter'
-
-" support for EditorConfig
-Plugin 'editorconfig/editorconfig-vim'
-
-" highlighting of keywords vs values, warnings, and quote concealing
-Plugin 'elzr/vim-json'
-
-" make gvim-only colorschemes work transparently in terminal
-Plugin 'godlygeek/csapprox'
-
-" css/less/sass/html color preview
-"Plugin 'gorodinskiy/vim-coloresque'
-
-" Fuzzy file, buffer, mru, tag, etc finder
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" support creating gists from buffers
-"Plugin 'mattn/webapi-vim'
-"Plugin 'mattn/gist-vim'
-
-" support for Ack
-Plugin 'mileszs/ack.vim'
-
-" highlight trailing whitespace characters
-Plugin 'ntpeters/vim-better-whitespace'
-
-" auto comment support
-Plugin 'scrooloose/nerdcommenter'
-
-" file system explorer
-Plugin 'scrooloose/nerdtree'
-
-" dev icons!
-Plugin 'ryanoasis/vim-devicons'
-
-" support nerdtree icons
-"Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" helps to end certain code structures automatically
-Plugin 'tpope/vim-endwise'
-
-" change surrounding quotes, etc
-Plugin 'tpope/vim-surround'
-
-" run tests for Ruby
-"Plugin 'kurko/smartest.vim'
-
-" code snippets
-"Plugin 'sirver/ultisnips'
-"Plugin 'honza/vim-snippets'
-
-" smart lookups
-Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
-
-" show lsp symbols in pane
-"Plugin 'liuchengxu/vista.vim'
-Plugin 'brentlintner/vista.vim'
-
-" better terminal
-" Plugin 'kassio/neoterm'
-
-" auto linting
-Plugin 'dense-analysis/ale'
-
-" markdown plugin
-"Plugin 'godlygeek/tabular'
-"Plugin 'plasticboy/vim-markdown'
-
-" git integration (blame, etc)
-Plugin 'tpope/vim-fugitive'
-Plugin 'rhysd/git-messenger.vim'
-
-Plugin 'slim-template/vim-slim'
-
-" thanks octref!
-Plugin 'brentlintner/RootIgnore'
-
-" AI!
-Plugin 'github/copilot.vim'
-
-call vundle#end()
-
-" -- main config --
+set shortmess+=I
 
 set shell=/bin/zsh
 "set shell=/usr/bin/zsh
@@ -148,7 +25,10 @@ colorscheme everforest
 hi Normal guibg=NONE ctermbg=NONE
 hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
 
+set autoread
+
 set nowrap
+"set linebreak
 
 "set wildignore+=*/build/,.DS_Store,log,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
@@ -267,8 +147,12 @@ endif
 
 " use silver searcher underneath ack.vim
 let g:ackprg = 'ag -U -f --hidden --vimgrep'
-command! -nargs=1 Ag Ack <args>
+command! -nargs=1 AgAck Ack <args>
 command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
+function! QuoteSearchPattern(pattern)
+  return "'" . a:pattern . "'"
+endfunction
+command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
 nmap <leader>g :Ag<space>
 
 " disable vim-markdown folder
@@ -334,6 +218,7 @@ call matchadd('ColorColumn', '\%121v', 120)
 
 " Indentation settings..
 set autoindent
+"set nosmartindent
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
