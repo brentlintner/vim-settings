@@ -15,29 +15,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is how you would change lazy defaults, but we are leaving as is in this example
--- require("lazy").setup(
---   import("plugins"),
---   {
---     defaults = {
---       lazy = true, -- set to false if you want all loaded on startup
---       -- It's recommended to leave version=false for now, since a lot the plugin that support versioning, don't conform to semver
---       version = false, -- always use the latest git commit
---       -- version = "*", -- try installing the latest stable version for plugins that do support semver
---     },
---   }
--- )
-
 require("lazy").setup(
   {
-    -- -- NOTE: First, some basic plugins
-    -- { "nvim-lua/popup.nvim" },
-    -- { "nvim-lua/plenary.nvim" },
-
-    -- -- NOTE: Core plugins like theme and treesitter
-    -- { import = "plugins.core" },
-
-    -- -- NOTE: Plugins in this file.
     {
       "brentlintner/twilighted.vim",
     },
