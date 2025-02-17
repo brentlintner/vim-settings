@@ -68,6 +68,8 @@ let g:coc_global_extensions=[
         \ 'coc-vetur',
         \ 'coc-flutter',
         \ 'coc-vimlsp',
+        \ 'coc-sh',
+        \ 'coc-pyright',
         \ 'coc-go',
     \]
 " TODO: map tab to complete (else tab)?
