@@ -178,6 +178,11 @@ nmap <leader>w :wa<cr>
 " Fast saving (leader free)
 noremap <C-w>w :wa<CR>
 
+" Open Dash
+command! -nargs=0 DashOpen :let word = expand("<cword>") | execute '!open "dash://?query=' . word . '"'
+nnoremap <leader>d :DashOpen<CR>
+
+" Rails test
 nmap <leader>t :execute ":!bundle exec rails test %:" . line('.')<CR>
 nmap <leader>T :execute ":!bundle exec rails test %"<CR>
 "nmap <leader>T :!bundle exec rails test:all<CR>
@@ -224,7 +229,6 @@ call matchadd('ColorColumn', '\%121v', 120)
 
 " Indentation settings..
 set autoindent
-"set nosmartindent
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
