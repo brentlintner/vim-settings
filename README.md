@@ -12,6 +12,7 @@
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |
+| `\d`       | Search current word in Dash                      |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
@@ -32,13 +33,13 @@
 | `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
 | `gi`             | Go to type definition of type                |
-| `gr`             | Go to implementation of type                |
+| `gh`             | Show function signature  |
 | `gh`             | Show function signature  |
 | `zc`             | Fold at syntax  |
 | `zo`             | Fold open at syntax  |
 | `zR`             | Fold open all  |
-| `b|B`             | Backword jumps |
-| `w|W`             | Forward jumps  |
+| `b,B`             | Backword jumps |
+| `w,W`             | Forward jumps  |
 
 ## Install
 ```sh
