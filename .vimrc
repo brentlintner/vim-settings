@@ -133,6 +133,10 @@ let g:vue_disable_pre_processors = 1
 " disable optional perl module
 let g:loaded_perl_provider = 0
 
+" smoother y/e scrolling
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+
 " set snippet keys
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
