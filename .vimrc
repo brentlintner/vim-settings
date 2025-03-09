@@ -25,8 +25,6 @@ colorscheme everforest
 hi Normal guibg=NONE ctermbg=NONE
 hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
 
-set autoread
-
 set nowrap
 "set linebreak
 
@@ -54,6 +52,8 @@ let g:ctrlp_user_command = [
             "\ }
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 "nnoremap <silent> <C-t> :CtrlPTag<CR>
+
+set autoread
 
 let g:python3_host_prog = '/usr/bin/python3'
 let g:pip3_host_prog = '/usr/bin/pip3'

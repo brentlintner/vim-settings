@@ -42,9 +42,6 @@ require("lazy").setup(
       "elzr/vim-json",
     },
     {
-      "godlygeek/csapprox",
-    },
-    {
       "ctrlpvim/ctrlp.vim",
     },
     {
