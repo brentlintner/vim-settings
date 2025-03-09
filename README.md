@@ -19,10 +19,8 @@ For installed plugins see [.vim/init.lua](.vim/init.lua).
 ```sh
 git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
 
-cd ~/.vim-settings
-
-ln -s ~/.vim-settings/.vimrc
-ln -s ~/.vim-settings/.vim
+ln -s ~/.vim-settings/.vimrc ~/.vimrc
+ln -s ~/.vim-settings/.vim ~/.vim
 ln -s ~/.vim-settings/.vim ~/.config/nvim
 
 brew install the_silver_searcher
