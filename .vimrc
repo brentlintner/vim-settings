@@ -77,6 +77,8 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
 inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 nmap <silent> gh :call CocAction('doHover')<CR>
+nmap <silent> gh :call CocAction('doHover')<CR>
+nmap <silent> gl :CocDiagnostics<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -153,12 +155,12 @@ endif
 
 " use silver searcher underneath ack.vim
 let g:ackprg = 'ag -U -f --hidden --vimgrep'
-command! -nargs=1 AgAck Ack <args>
-command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
-function! QuoteSearchPattern(pattern)
-  return "'" . a:pattern . "'"
-endfunction
-command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
+"command! -nargs=1 AgAck Ack <args>
+"command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
+"function! QuoteSearchPattern(pattern)
+  "return "'" . a:pattern . "'"
+"endfunction
+"command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
 nmap <leader>g :Ag<space>
 
 " disable vim-markdown folder

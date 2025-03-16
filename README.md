@@ -28,7 +28,7 @@ pip install pynvim
 gem install solargraph
 
 nvim +Lazy
-nvim +UpdateRemotePlugins +CocInstall
+nvim +TSUpdate +UpdateRemotePlugins +CocInstall
 nvim +checkhealth
 ```
 
@@ -65,6 +65,7 @@ nvim +checkhealth
 | `gi`             | Go to type definition of type                |
 | `gh`             | Show function signature  |
 | `gh`             | Show function signature  |
+| `gl`             | Show diagnostic errors pane  |
 | `zc`             | Fold at syntax  |
 | `zo`             | Fold open at syntax  |
 | `zR`             | Fold open all  |
