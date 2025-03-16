@@ -1,5 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck": "never",
+  "python.linting.enabled": false,
   "vetur.ignoreProjectWarning": true,
   "inlayHint.enable": false,
   "outline.followCursor": true,

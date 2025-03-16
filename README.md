@@ -42,7 +42,6 @@ nvim +checkhealth
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |
-| `\d`       | Search current word in Dash                      |
 | `\cc`       | Comment out selected lines           |
 | `\ci`       | Uncomment selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
@@ -62,7 +61,7 @@ nvim +checkhealth
 | `<c-e><c-l>`       | Show lint/compile errors          |
 | `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
-| `gi`             | Go to type definition of type                |
+| `gi`             | Search current word in Dash                |
 | `gh`             | Show function signature  |
 | `gh`             | Show function signature  |
 | `gl`             | Show diagnostic errors pane  |

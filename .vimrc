@@ -81,11 +81,16 @@ nmap <silent> gh :call CocAction('doHover')<CR>
 nmap <silent> gl :CocDiagnostics<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 "nnoremap <silent> <C-e><C-p> :CocOutline<CR>
 nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
+" Open Dash
+command! -nargs=0 DashOpen :let word = expand("<cword>") | execute '!open "dash://?query=' . word . '"'
+nnoremap gi :DashOpen<CR>
+
 
 "imap <C-0> <Plug>(copilot-next)
 "imap <C-[> <Plug>(copilot-previous)
@@ -161,7 +166,7 @@ let g:ackprg = 'ag -U -f --hidden --vimgrep'
   "return "'" . a:pattern . "'"
 "endfunction
 "command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
-nmap <leader>g :Ag<space>
+nmap <leader>g :Ack<space>
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
@@ -179,10 +184,6 @@ set foldlevel=99
 nmap <leader>w :wa<cr>
 " Fast saving (leader free)
 noremap <C-w>w :wa<CR>
-
-" Open Dash
-command! -nargs=0 DashOpen :let word = expand("<cword>") | execute '!open "dash://?query=' . word . '"'
-nnoremap <leader>d :DashOpen<CR>
 
 " Rails test
 nmap <leader>t :execute ":!bundle exec rails test %:" . line('.')<CR>
