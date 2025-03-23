@@ -2,5 +2,5 @@
 .vim/doc/tags
 .viminfo
 tags
-.vim/spell/.spl
-.vim/spell/.sug
+spell/.spl
+spell/.sug
