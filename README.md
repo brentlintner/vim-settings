@@ -17,11 +17,7 @@ For installed plugins see [.vim/init.lua](.vim/init.lua).
 
 ## Install
 ```sh
-git clone https://github.com/brentlintner/vim-settings.git ~/.vim-settings
-
-ln -s ~/.vim-settings/.vimrc ~/.vimrc
-ln -s ~/.vim-settings/.vim ~/.vim
-ln -s ~/.vim-settings/.vim ~/.config/nvim
+git clone https://github.com/brentlintner/vim-settings.git ~/.config/nvim
 
 brew install the_silver_searcher
 pip install pynvim
