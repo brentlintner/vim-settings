@@ -4,6 +4,9 @@ set shell=/bin/zsh
 "set shell=/usr/bin/zsh
 "set shell='cmd.exe'
 
+set encoding=UTF-8
+set conceallevel=3
+
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
 
@@ -55,8 +58,8 @@ nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 
 set autoread
 
-let g:python3_host_prog = '/usr/bin/python3'
-let g:pip3_host_prog = '/usr/bin/pip3'
+"let g:python3_host_prog = '/usr/bin/python3'
+"let g:pip3_host_prog = '/usr/bin/pip3'
 
 " CoC settings
 let g:coc_global_extensions=[
@@ -290,6 +293,7 @@ let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMinimalUI=1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:webdevicons_conceal_nerdtree_brackets = 1
 "let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 "let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
