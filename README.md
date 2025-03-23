@@ -13,7 +13,7 @@
 
 Plugins are managed with [lazy.nvim](https://lazy.folke.io).
 
-For installed plugins see [.vim/init.lua](.vim/init.lua).
+For installed plugins see [init.lua](init.lua).
 
 ## Install
 ```sh
