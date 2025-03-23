@@ -21,7 +21,8 @@ git clone https://github.com/brentlintner/vim-settings.git ~/.config/nvim
 
 brew install the_silver_searcher
 pip install pynvim
-gem install solargraph
+gem install solargraph neovim
+npm install -g neovim
 
 nvim +Lazy
 nvim +TSUpdate +UpdateRemotePlugins +CocInstall

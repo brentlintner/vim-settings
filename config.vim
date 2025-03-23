@@ -7,8 +7,8 @@ set shell=/bin/zsh
 set encoding=UTF-8
 set conceallevel=3
 
-let g:loaded_ruby_provider = 0
-let g:loaded_node_provider = 0
+let g:loaded_ruby_provider = 1
+let g:loaded_node_provider = 1
 
 " color and syntax settings
 let g:everforest_transparent_background = 1
