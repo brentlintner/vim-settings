@@ -1,14 +1,21 @@
 set shortmess+=I
 
-set shell=/bin/zsh
-"set shell=/usr/bin/zsh
-"set shell='cmd.exe'
+if !has('win32')
+	set shell=/bin/zsh
+	"set shell=/usr/bin/zsh
+else
+	set shell='cmd.exe'
+endif
 
 set encoding=UTF-8
 set conceallevel=3
 
 let g:loaded_ruby_provider = 1
 let g:loaded_node_provider = 1
+
+" highlighting aliases
+au BufRead,BufNewFile *.plist set filetype=xml
+au BufRead,BufNewFile *.gpx set filetype=xml
 
 " color and syntax settings
 let g:everforest_transparent_background = 1
@@ -312,17 +319,6 @@ nnoremap <C-w><space> :let @/ = ""<CR>
 map <leader><space> :let @/ = ""<CR>
 map <silent> <leader><cr> :noh<cr>
 
-" highlighting aliases
-au BufRead,BufNewFile *.plist set filetype=xml
-au BufRead,BufNewFile *.gpx set filetype=xml
-
-" if on Windows Terminal
-" nnoremap <c-z> <nop>
-
-if !has('nvim')
-    " Need +virtualedit to paste in insert mode.
-    exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-    exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-    imap <S-Insert> <C-V>
-    vmap <S-Insert> <C-V>
+if has('win32')
+	nnoremap <c-z> <nop>
 endif
