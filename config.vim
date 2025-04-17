@@ -16,6 +16,7 @@ let g:loaded_node_provider = 1
 " highlighting aliases
 au BufRead,BufNewFile *.plist set filetype=xml
 au BufRead,BufNewFile *.gpx set filetype=xml
+au BufRead,BufNewFile *.service set filetype=toml
 
 " color and syntax settings
 let g:everforest_transparent_background = 1
