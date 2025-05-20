@@ -10,9 +10,6 @@ endif
 set encoding=UTF-8
 set conceallevel=3
 
-let g:loaded_ruby_provider = 1
-let g:loaded_node_provider = 1
-
 " highlighting aliases
 au BufRead,BufNewFile *.plist set filetype=xml
 au BufRead,BufNewFile *.gpx set filetype=xml
