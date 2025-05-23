@@ -14,6 +14,7 @@ set conceallevel=3
 au BufRead,BufNewFile *.plist set filetype=xml
 au BufRead,BufNewFile *.gpx set filetype=xml
 au BufRead,BufNewFile *.service set filetype=toml
+au BufRead,BufNewFile *.env* set filetype=sh
 
 " color and syntax settings
 let g:everforest_transparent_background = 1
