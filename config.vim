@@ -15,6 +15,7 @@ au BufRead,BufNewFile *.plist set filetype=xml
 au BufRead,BufNewFile *.gpx set filetype=xml
 au BufRead,BufNewFile *.service set filetype=toml
 au BufRead,BufNewFile *.env* set filetype=sh
+au BufRead,BufNewFile *.hbs set filetype=html
 
 " color and syntax settings
 let g:everforest_transparent_background = 1
