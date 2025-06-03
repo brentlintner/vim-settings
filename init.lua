@@ -95,6 +95,7 @@ require("lazy").setup(
     },
     {
       "nvim-treesitter/nvim-treesitter",
+      branch = "master", -- Use master for frozen backwards compatibility for now
       config = function()
         require("nvim-treesitter.configs").setup {
           ensure_installed = {
