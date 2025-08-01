@@ -1,3 +1,7 @@
+" Disable build in file explorer
+let loaded_netrwPlugin = 1
+let loaded_netrw = 1
+
 set shortmess+=I
 
 if !has('win32')
@@ -295,17 +299,18 @@ nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>= :vertical resize +5<CR>
 
 "  NERD Tree
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeHighlightCursorline = 0
-let g:NERDTreeMinimalUI=1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:webdevicons_conceal_nerdtree_brackets = 1
+"let g:NERDTreeShowHidden = 1
+"let g:NERDTreeIgnore = []
+"let g:NERDTreeHighlightCursorline = 0
+"let g:NERDTreeMinimalUI=1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+"let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+"let g:webdevicons_conceal_nerdtree_brackets = 1
 "let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 "let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
-nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
+"nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
+nnoremap <silent> <C-e><C-f> :NvimTreeToggle<CR>
 
 " different split
 "nnoremap <C-w>e :split<CR>

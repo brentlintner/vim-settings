@@ -1,6 +1,9 @@
 local vimrc = vim.fn.stdpath("config") .. "/config.vim"
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+-- HACK: disable deprecation notices
+--vim.deprecate = function() end
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -55,9 +58,18 @@ require("lazy").setup(
     },
     {
       "scrooloose/nerdtree",
+      enabled = false
     },
     {
       "ryanoasis/vim-devicons",
+      enabled = false
+    },
+    {
+    {
+      "nvim-tree/nvim-tree.lua"
+    },
+      "nvim-tree/nvim-web-devicons",
+      opts = {}
     },
     {
       "tpope/vim-endwise",
@@ -136,5 +148,19 @@ require("lazy").setup(
   },
   {}
 )
+
+require("nvim-tree").setup({
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+  view = {
+    centralize_selection = false,
+    cursorline = false,
+    cursorlineopt = "both",
+  },
+})
 
 vim.cmd.source(vimrc)
