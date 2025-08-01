@@ -149,18 +149,21 @@ require("lazy").setup(
   {}
 )
 
+vim.cmd.source(vimrc)
+
 require("nvim-tree").setup({
   renderer = {
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
   view = {
     centralize_selection = false,
     cursorline = false,
     cursorlineopt = "both",
   },
+  renderer = {
+    root_folder_label = ":~:s?$??"
+  },
 })
-
-vim.cmd.source(vimrc)
