@@ -58,9 +58,9 @@ nvim +checkhealth
 | `<c-e><c-l>`       | Show lint/compile errors          |
 | `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
-| `gi`             | Search current word in Dash                |
-| `gh`             | Show function signature  |
-| `gh`             | Show function signature  |
+| `gt`             | Go to type definition of type                |
+| `gs`             | Search current word in Dash                |
+| `gi`             | Show function signature  |
 | `gl`             | Show diagnostic errors pane  |
 | `zc`             | Fold at syntax  |
 | `zo`             | Fold open at syntax  |
