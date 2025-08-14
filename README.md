@@ -35,7 +35,7 @@ nvim +checkhealth
 | ---              | ---                             |
 | `space`          | Search for pattern in file      |
 | `<c-w>space`   | Clear search highlight          |
-| `\g WORD`       | Grep files                      |
+| `\s WORD`       | Grep files                      |
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |
