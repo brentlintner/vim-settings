@@ -164,7 +164,7 @@ require("nvim-tree").setup({
     cursorlineopt = "both",
   },
   renderer = {
-    root_folder_label = ":~:s?$??"
+    root_folder_label = false
   },
 })
 
