@@ -158,6 +158,10 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = false,
   },
+  git = {
+    enable = false,
+    ignore = false,
+  },
   view = {
     centralize_selection = false,
     cursorline = false,
