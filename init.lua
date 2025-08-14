@@ -167,3 +167,8 @@ require("nvim-tree").setup({
     root_folder_label = ":~:s?$??"
   },
 })
+
+-- HACK: Disable statusline when nvim-tree is open (use lua-statusline or something)
+require('nvim-tree.api').events.subscribe("TreeOpen", function ()
+     vim.wo.statusline = ' '
+end)
