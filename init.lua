@@ -4,6 +4,8 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 -- HACK: disable deprecation notices
 --vim.deprecate = function() end
 
+vim.lsp.set_log_level(vim.log.levels.ERROR)
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",

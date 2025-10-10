@@ -14,6 +14,8 @@ endif
 set encoding=UTF-8
 set conceallevel=3
 
+set verbose=0
+
 " highlighting aliases
 au BufRead,BufNewFile *.plist set filetype=xml
 au BufRead,BufNewFile *.gpx set filetype=xml
