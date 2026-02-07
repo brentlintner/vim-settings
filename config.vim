@@ -144,6 +144,7 @@ let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \   'typescript': ['eslint'],
+\   'python': ['ruff'],
 \}
 hi ALEErrorSign guibg=NONE ctermbg=NONE
 hi ALEWarningSign guibg=NONE ctermbg=NONE
