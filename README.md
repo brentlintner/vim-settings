@@ -4,10 +4,13 @@
 
 ## Dependencies
 
+* [Neovim](https://neovim.io/)
 * [Python](https://pypi.org/project/pip/)
 * [Ruby](https://rubygems.org/)
 * [Node.js](https://nodejs.org/)
-* [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [luarocks](https://luarocks.org/)
+* [Nerd Font](https://www.nerdfonts.com/) (for icons)
 
 ## Main Plugins
 
@@ -16,17 +19,9 @@ Plugins are managed with [lazy.nvim](https://lazy.folke.io).
 For installed plugins see [init.lua](init.lua).
 
 ## Install
+
 ```sh
-git clone https://github.com/brentlintner/vim-settings.git ~/.config/nvim
-
-brew install the_silver_searcher
-pip install pynvim
-gem install solargraph neovim
-npm install -g neovim
-
-nvim +Lazy
-nvim +TSUpdate +UpdateRemotePlugins +CocInstall
-nvim +checkhealth
+./install.sh
 ```
 
 ## Commands

@@ -59,9 +59,9 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 1
 " Use ag and .ignore file for ctrlp
 let g:ctrlp_user_command = [
-		\ '.git',
-		\ 'ag %s -U -f --hidden --nocolor -g ""'
-		\ ]
+      \ '.git',
+      \ 'rg --files --hidden --follow --color never %s'
+      \ ]
 "let g:ctrlp_custom_ignore = {
             "\   'dir' : 'node_modules|\.git$|\.hg$|\.svn$',
             "\   'file': '',

@@ -6,108 +6,52 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 vim.lsp.set_log_level(vim.log.levels.ERROR)
 
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim",
-    lazypath,
-  })
-  vim.cmd [[packadd lazy.nvim]]
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
   {
-    {
-      "brentlintner/twilighted.vim",
-    },
-    {
-      "sainnhe/everforest",
-    },
-    {
-      "tribela/vim-transparent",
-    },
-    {
-      "kchmck/vim-coffee-script",
-    },
-    {
-      "tpope/vim-rails",
-    },
-    {
-      "airblade/vim-gitgutter",
-    },
-    {
-      "editorconfig/editorconfig-vim",
-    },
-    {
-      "elzr/vim-json",
-    },
-    {
-      "ctrlpvim/ctrlp.vim",
-    },
-    {
-      "mileszs/ack.vim",
-    },
-    {
-      "ntpeters/vim-better-whitespace",
-    },
-    {
-      "scrooloose/nerdcommenter",
-    },
-    {
-      "scrooloose/nerdtree",
-      enabled = false
-    },
-    {
-      "ryanoasis/vim-devicons",
-      enabled = false
-    },
-    {
-    {
-      "nvim-tree/nvim-tree.lua"
-    },
-      "nvim-tree/nvim-web-devicons",
-      opts = {}
-    },
-    {
-      "tpope/vim-endwise",
-    },
-    {
-      "tpope/vim-surround",
-    },
-    {
-      "neoclide/coc.nvim",
-      branch = "release",
-    },
-    {
-      "brentlintner/vista.vim",
-    },
-    {
-      "dense-analysis/ale",
-    },
-    {
-      "tpope/vim-fugitive",
-    },
-    {
-      "rhysd/git-messenger.vim",
-    },
-    {
-      "slim-template/vim-slim",
-    },
-    {
-      "brentlintner/RootIgnore",
-    },
-    {
-      "HakonHarnes/img-clip.nvim",
-    },
-    {
-      "github/copilot.vim",
-    },
-    {
-      "nvim-treesitter/nvim-treesitter",
+    { "brentlintner/twilighted.vim", },
+    { "sainnhe/everforest", },
+    { "tribela/vim-transparent", },
+    { "kchmck/vim-coffee-script", },
+    { "tpope/vim-rails", },
+    { "airblade/vim-gitgutter", },
+    { "editorconfig/editorconfig-vim", },
+    { "elzr/vim-json", },
+    { "ctrlpvim/ctrlp.vim", },
+    { "mileszs/ack.vim", },
+    { "ntpeters/vim-better-whitespace", },
+    { "scrooloose/nerdcommenter", },
+    { "scrooloose/nerdtree", enabled = false },
+    { "ryanoasis/vim-devicons", enabled = false },
+    { "nvim-tree/nvim-tree.lua" },
+    { "nvim-tree/nvim-web-devicons", opts = {} },
+    { "tpope/vim-endwise", },
+    { "tpope/vim-surround", },
+    { "neoclide/coc.nvim", branch = "release", },
+    { "brentlintner/vista.vim", },
+    { "dense-analysis/ale", },
+    { "tpope/vim-fugitive", },
+    { "rhysd/git-messenger.vim", },
+    { "slim-template/vim-slim", },
+    { "brentlintner/RootIgnore", },
+    { "HakonHarnes/img-clip.nvim", },
+    { "github/copilot.vim", },
+    { "nvim-treesitter/nvim-treesitter",
       branch = "master", -- Use master for frozen backwards compatibility for now
       config = function()
         require("nvim-treesitter.configs").setup {
@@ -150,8 +94,6 @@ require("lazy").setup(
   {}
 )
 
-vim.cmd.source(vimrc)
-
 require("nvim-tree").setup({
   renderer = {
     group_empty = true,
@@ -177,3 +119,5 @@ require("nvim-tree").setup({
 require('nvim-tree.api').events.subscribe("TreeOpen", function ()
      vim.wo.statusline = ' '
 end)
+
+vim.cmd.source(vimrc)
