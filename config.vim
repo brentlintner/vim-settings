@@ -111,6 +111,9 @@ nnoremap gs :DashOpen<CR>
 "imap <C-]> <Plug>(copilot-suggest)
 "imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 "let g:copilot_no_tab_map = v:true
+let g:copilot_filetypes = {
+      \ 'gitcommit': v:true,
+      \ }
 
 " vista
 let g:vista#renderer#enable_icon = 0
