@@ -71,9 +71,6 @@ nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 
 set autoread
 
-"let g:python3_host_prog = '/usr/bin/python3'
-"let g:pip3_host_prog = '/usr/bin/pip3'
-
 " CoC settings
 let g:coc_global_extensions=[
         \ 'coc-tsserver',
@@ -155,9 +152,6 @@ hi ALEWarningSign guibg=NONE ctermbg=NONE
 
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
-
-" disable optional perl module
-let g:loaded_perl_provider = 0
 
 " smoother y/e scrolling
 nnoremap <C-e> 5<C-e>

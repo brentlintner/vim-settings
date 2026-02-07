@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+shellcheck -s sh -x install.sh && echo "Passed!" || echo "Failed!"

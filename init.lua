@@ -1,6 +1,11 @@
 local vimrc = vim.fn.stdpath("config") .. "/config.vim"
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+-- Provider config
+vim.g.loaded_perl_provider = 0
+-- vim.g:python3_host_prog = '/usr/bin/python3'
+-- vim.g:pip3_host_prog = '/usr/bin/pip3'
+
 -- HACK: disable deprecation notices
 --vim.deprecate = function() end
 

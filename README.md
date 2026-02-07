@@ -10,6 +10,7 @@
 * [Node.js](https://nodejs.org/)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [luarocks](https://luarocks.org/)
+* [shellcheck](https://www.shellcheck.net/) (for linting shell scripts)
 * [Nerd Font](https://www.nerdfonts.com/) (for icons)
 
 ## Main Plugins

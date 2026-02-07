@@ -34,12 +34,35 @@ install_brew_packages() {
     ripgrep \
     luarocks \
     python3 \
+    pyenv \
+    shellcheck \
     node \
     ruby
 
   echo "==> [MacOS] Installing dependencies with Homebrew..."
-  echo "$@"
+  echo "==> brew install $*"
   brew install "$@"
+}
+
+install_linux_packages() {
+  echo "==> [Linux] Skipping... You may need to install ripgrep, luarocks, python, node, and ruby manually."
+}
+
+confirm_and_clean() {
+  printf "Purge existing Neovim configuration? [y/N]: "
+  read -r response
+
+  case "$response" in
+      [yY][eE][sS]|[yY])
+        echo "==> Purging $NVIM_CONFIG_DIR"
+        rm -rf "$NVIM_CONFIG_DIR"
+        echo "==> Purging $NVIM_DATA_DIR"
+        rm -rf "$NVIM_DATA_DIR"
+          ;;
+      *)
+          echo "==> Skipping purge of existing Neovim configuration."
+          ;;
+  esac
 }
 
 tooling_post_install() {
@@ -57,19 +80,18 @@ tooling_post_install() {
 install_repo() {
   echo "==> Cloning vim-settings repository to $SETTINGS_SRC_DIR..."
   if [ ! -d "$SETTINGS_SRC_DIR" ]; then
-    git clone $SETTINGS_REPO $SETTINGS_SRC_DIR
+    git clone "$SETTINGS_REPO" "$SETTINGS_SRC_DIR"
   else
     echo "==> Directory $SETTINGS_SRC_DIR already exists. Skipping clone."
   fi
 
   echo "==> Changing to $SETTINGS_SRC_DIR directory..."
-  cd $SETTINGS_SRC_DIR
+  cd "$SETTINGS_SRC_DIR"
 
-  echo "==> Cleaning up existing Neovim configuration..."
-  rm -rf $NVIM_CONFIG_DIR
+  confirm_and_clean
 
   echo "==> Symlinking to $NVIM_CONFIG_DIR"
-  ln -s $SETTINGS_SRC_DIR $NVIM_CONFIG_DIR
+  ln -s "$SETTINGS_SRC_DIR" "$NVIM_CONFIG_DIR"
 }
 
 check_tool() {
@@ -83,10 +105,9 @@ install_dependencies() {
   echo "==> Installing dependencies..."
 
   if [ "$OS" = "Darwin" ]; then
-    echo "==> [MacOS] Installing dependencies with Homebrew..."
     install_brew_packages
   elif [ "$OS" = "Linux" ]; then
-    echo "==> [Linux] Skipping... You may need to install ripgrep, luarocks, python, node, and ruby manually."
+    install_linux_packages
   fi
 
   check_tooling
@@ -95,12 +116,12 @@ install_dependencies() {
 }
 
 configure_nvim() {
-  nvim --headless "+Lazy! sync" +qa
-  nvim --headless +TSUpdateSync +qa
-  nvim --headless +CocUpdateSync +qa
-  nvim --headless +UpdateRemotePlugins +qa
-  echo "==> Checking Neovim health..."
-  nvim --headless -es +checkhealth +"w! /dev/stdout" +qa
+  nvim --headless "+Lazy! sync" +sleep\ 1 +qa
+  nvim --headless +CocUpdateSync +sleep\ 1 +qa
+  nvim --headless +UpdateRemotePlugins +sleep\ 1 +qa
+  nvim --headless +TSUpdateSync +sleep\ 1 +qa
+  echo "==> Running healthchecks..."
+  nvim --headless -es +checkhealth +"w! /dev/stdout" +qa | grep -E "OK|X|WARNING|ERROR" || true
 }
 
 main() {
