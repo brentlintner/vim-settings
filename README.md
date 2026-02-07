@@ -30,7 +30,7 @@ For installed plugins see [init.lua](init.lua).
 | ---              | ---                             |
 | `space`          | Search for pattern in file      |
 | `<c-w>space`   | Clear search highlight          |
-| `\s WORD`       | Grep files                      |
+| `<c-e>f WORD`       | Grep files                      |
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |

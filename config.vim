@@ -185,7 +185,7 @@ let g:ackprg = 'ag -U -f --hidden --vimgrep'
   "return "'" . a:pattern . "'"
 "endfunction
 "command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
-map <leader>s :Ack<space>
+map <C-w>f :Ack<space>
 
 " disable vim-markdown folder
 let g:vim_markdown_folding_disabled=1
