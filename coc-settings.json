@@ -1,6 +1,8 @@
 {
   "coc.preferences.extensionUpdateCheck": "never",
   "python.linting.enabled": false,
+  "coc.preferences.watchmanPath": "",
+  "workspace.didChangeWatchedFiles.dynamicRegistration": false,
   "vetur.ignoreProjectWarning": true,
   "inlayHint.enable": false,
   "outline.followCursor": true,
