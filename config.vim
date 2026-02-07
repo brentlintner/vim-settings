@@ -139,6 +139,7 @@ hi SignColumn guibg=NONE ctermbg=NONE
 " ale
 let g:ale_disable_lsp = 1
 let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 1
@@ -301,17 +302,6 @@ set laststatus=2
 " Resize windows
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>= :vertical resize +5<CR>
-
-"  NERD Tree
-"let g:NERDTreeShowHidden = 1
-"let g:NERDTreeIgnore = []
-"let g:NERDTreeHighlightCursorline = 0
-"let g:NERDTreeMinimalUI=1
-"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-"let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-"let g:webdevicons_conceal_nerdtree_brackets = 1
-"let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
-"let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
 "nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 nnoremap <silent> <C-e><C-f> :NvimTreeToggle<CR>
