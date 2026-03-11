@@ -69,8 +69,6 @@ let g:ctrlp_user_command = [
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 "nnoremap <silent> <C-t> :CtrlPTag<CR>
 
-set autoread
-
 " CoC settings
 let g:coc_global_extensions=[
         \ 'coc-tsserver',

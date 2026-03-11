@@ -1,6 +1,18 @@
 local vimrc = vim.fn.stdpath("config") .. "/config.vim"
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+-- Add this to your init.lua
+vim.o.autoread = true
+
+-- Trigger checktime on various events
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd('checktime')
+    end
+  end,
+})
+
 -- Provider config
 vim.g.loaded_perl_provider = 0
 -- vim.g:python3_host_prog = '/usr/bin/python3'
@@ -105,6 +117,17 @@ require("nvim-tree").setup({
   },
   filters = {
     dotfiles = false,
+  },
+  filesystem_watchers = {
+    enable = false,
+    debounce_delay = 50,
+    ignore_dirs = {
+      "node_modules",
+      ".git",
+      "build",
+      "dist",
+      "playright-report"
+    },
   },
   git = {
     enable = false,
