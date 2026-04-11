@@ -42,7 +42,7 @@ hi Normal guibg=NONE ctermbg=NONE
 hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
 
 set nowrap
-"set linebreak
+set linebreak
 
 "set wildignore+=*/build/,.DS_Store,log,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
 
