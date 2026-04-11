@@ -21,7 +21,7 @@ vim.g.loaded_perl_provider = 0
 -- HACK: disable deprecation notices
 --vim.deprecate = function() end
 
-vim.lsp.set_log_level(vim.log.levels.ERROR)
+vim.lsp.log.set_level(vim.log.levels.ERROR)
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
