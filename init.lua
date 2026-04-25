@@ -262,7 +262,7 @@ vim.g.ctrlp_show_hidden = 1
 vim.g.ctrlp_working_path_mode = '0'
 vim.g.ctrlp_clear_cache_on_exit = 1
 vim.g.ctrlp_user_command = { '.git', 'rg --files --hidden --follow --color never %s' }
-vim.g.ackprg = '--vimgrep --hidden --no-ignore --follow'
+vim.g.ackprg = 'rg --vimgrep --hidden --follow'
 
 vim.g["vista#renderer#enable_icon"] = 0
 vim.g.vista_default_executive = 'coc'
