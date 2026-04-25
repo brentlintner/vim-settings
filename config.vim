@@ -131,23 +131,6 @@ let g:vista_find_nearest_method_or_function_delay = 0
 let g:gitgutter_set_sign_backgrounds = 0
 hi SignColumn guibg=NONE ctermbg=NONE
 
-" ale
-let g:ale_disable_lsp = 1
-let g:ale_sign_column_always = 1
-let g:ale_fix_on_save = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 1
-let g:ale_lint_on_save = 1
-let g:ale_virtualtext_cursor = 'disabled'
-let g:ale_linters = {
-\   'ruby': ['rubocop'],
-\   'typescript': ['eslint'],
-\   'python': ['ruff'],
-\}
-hi ALEErrorSign guibg=NONE ctermbg=NONE
-hi ALEWarningSign guibg=NONE ctermbg=NONE
-
 " speed up vue plugin
 let g:vue_disable_pre_processors = 1
 
