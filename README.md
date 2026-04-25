@@ -30,13 +30,12 @@ For installed plugins see [init.lua](init.lua).
 | cmd              | description                     |
 | ---              | ---                             |
 | `space`          | Search for pattern in file      |
-| `<c-w>space`   | Clear search highlight          |
-| `<c-e>f WORD`       | Grep files                      |
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |
-| `\gc`       | Comment out selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
+| `<c-w>space`   | Clear search highlight          |
+| `<c-w>f WORD`       | Grep files                      |
 | `<c-p>`         | Search files / Cycling autocomplete reverse (Insert)              |
 | `<c-n>`         | Search buffers / Cycle autocomplete (Insert)  |
 | `<c-c>`       | Close a buffer |
@@ -58,6 +57,7 @@ For installed plugins see [init.lua](init.lua).
 | `gs`             | Search current word in Dash                |
 | `gi`             | Show function signature  |
 | `gl`             | Show diagnostic errors pane  |
+| `gc`       | Comment out selected lines           |
 | `zc`             | Fold at syntax  |
 | `zo`             | Fold open at syntax  |
 | `zR`             | Fold open all  |
