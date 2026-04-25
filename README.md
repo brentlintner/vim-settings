@@ -35,8 +35,7 @@ For installed plugins see [init.lua](init.lua).
 | `\b`    | View git commit message for current line              |
 | `\B`       | View git blame                      |
 | `\l`       | View git file history                      |
-| `\cc`       | Comment out selected lines           |
-| `\ci`       | Uncomment selected lines           |
+| `\gc`       | Comment out selected lines           |
 | `\{-,=}`         | Resize vertically split windows |
 | `<c-p>`         | Search files / Cycling autocomplete reverse (Insert)              |
 | `<c-n>`         | Search buffers / Cycle autocomplete (Insert)  |
@@ -51,7 +50,8 @@ For installed plugins see [init.lua](init.lua).
 | `<c-V>`         | Paste from clipboard            |
 | `<c-e><c-f>`       | Open file tree browser          |
 | `<c-e><c-p>`       | Open lsp symbol browser          |
-| `<c-e><c-l>`       | Show lint/compile errors          |
+| `<c-e><c-l>`       | Show coc disagnostics errors          |
+| `<c-e><c-a>`       | Show lint errors          |
 | `gr`             | Show all files/instances that reference type                |
 | `gd`             | Go to definition of type                |
 | `gt`             | Go to type definition of type                |

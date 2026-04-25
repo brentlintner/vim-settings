@@ -1,89 +1,72 @@
-" Disable build in file explorer
-let loaded_netrwPlugin = 1
-let loaded_netrw = 1
-
-set shortmess+=I
-
-if !has('win32')
-	set shell=/bin/zsh
-	"set shell=/usr/bin/zsh
-else
-	set shell='cmd.exe'
-endif
-
-set encoding=UTF-8
-set conceallevel=3
-
-set verbose=0
-
-" highlighting aliases
-au BufRead,BufNewFile *.plist set filetype=xml
-au BufRead,BufNewFile *.gpx set filetype=xml
-au BufRead,BufNewFile *.service set filetype=toml
-au BufRead,BufNewFile *.env* set filetype=sh
-au BufRead,BufNewFile *.hbs set filetype=html
-
-" color and syntax settings
-let g:everforest_transparent_background = 1
-let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
-                            \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
-                            \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
-                            \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer',
-                            \ 'StatusLine', 'StatusLineNC' ]
-let g:transparent_groups += ['Pmenu']
-let g:transparent_groups += ['CtrlPMode1', 'CtrlPMode2', 'CtrlPStats'] " CtrlP
-let g:transparent_groups += ['NormalFloat'] " coc.nvim
 syntax on
+
+colorscheme everforest
+
+filetype plugin indent on
+
+set shell=/bin/zsh
+set title
 set t_Co=256
 set termguicolors
 set background=dark
-colorscheme everforest
-hi Normal guibg=NONE ctermbg=NONE
-hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
-
+set shortmess+=I
+set encoding=UTF-8
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set scrolloff=1
+set expandtab
 set nowrap
+set number " Show hybrid line numbers except when out of focus or in Insert
 set linebreak
+set ignorecase " Ignore case when searching
+set smartcase " When searching try to be smart about cases
+set hlsearch " Highlight search results
+set incsearch
+set hidden " Allow switching between buffers without saving .
+set conceallevel=3
+set verbose=0
+set backspace=indent,eol,start " backspacing support
+set foldmethod=indent
+set foldlevel=99
+set ruler " Always set the mouse cursor position
+set nobackup
+set nowritebackup
+set nowb
+set noswapfile
 
-"set wildignore+=*/build/,.DS_Store,log,*public/assets/*,*/.build/*,*coverage/*,*coverage_js/*,*.idea*,*.gradle/*,*/dist/*,*android/build/*,*app/build/*,*assets/builds/*,*build/lib*,*.docs*,*/.test*,*.tscache*,*.git/*,*node_modules/*,*bower_components/*,*.vim/bundle,*tmp/*,*.cabal-sandbox/*,*.keep
+if has('mouse')
+  set mouse=a
+endif
 
-" import .gitignore into wildignore when inside a git repo folder structure
-let g:RootIgnoreUseHome = 1
-let g:RootIgnoreAgignore = 0
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
-" ctrl-p
-" TODO: clear cache on pull up? map new key?
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_max_files = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = '0'
-let g:ctrlp_clear_cache_on_exit = 1
-" Use ag and .ignore file for ctrlp
-let g:ctrlp_user_command = [
-      \ '.git',
-      \ 'rg --files --hidden --follow --color never %s'
-      \ ]
-"let g:ctrlp_custom_ignore = {
-            "\   'dir' : 'node_modules|\.git$|\.hg$|\.svn$',
-            "\   'file': '',
-            "\ }
+let g:everforest_transparent_background = 1
+let g:transparent_groups = [
+  \ 'Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+  \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+  \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+  \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+  \ 'StatusLine', 'StatusLineNC'
+\]
+let g:transparent_groups += ['Pmenu']
+let g:transparent_groups += ['CtrlPMode1', 'CtrlPMode2', 'CtrlPStats'] " CtrlP
+let g:transparent_groups += ['NormalFloat'] " coc.nvim
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+
 nnoremap <silent> <C-n> :CtrlPBuffer<CR>
 "nnoremap <silent> <C-t> :CtrlPTag<CR>
 
-" CoC settings
-let g:coc_global_extensions=[
-        \ 'coc-tsserver',
-        \ 'coc-solargraph',
-        \ 'coc-phpls',
-        \ 'coc-html',
-        \ 'coc-css',
-        \ 'coc-vetur',
-        \ 'coc-flutter',
-        \ 'coc-vimlsp',
-        \ 'coc-sh',
-        \ 'coc-pyright',
-        \ 'coc-go',
-    \]
-" TODO: map tab to complete (else tab)?
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
 inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
@@ -96,142 +79,33 @@ nmap <silent> gr <Plug>(coc-references)
 "nnoremap <silent> <C-e><C-p> :CocOutline<CR>
 nnoremap <silent> <C-e><C-p> :Vista!!<CR>
 nnoremap <silent> <C-e><C-l> :CocDiagnostics<CR>
-" Open Dash
+nnoremap <silent> <C-e><C-a> :lopen<CR>
+
 command! -nargs=0 DashOpen :let word = expand("<cword>") | execute '!open "dash://?query=' . word . '"'
 nnoremap gs :DashOpen<CR>
 
+map <C-w>f :Ack<space>
 
-"imap <C-0> <Plug>(copilot-next)
-"imap <C-[> <Plug>(copilot-previous)
-"imap <C-]> <Plug>(copilot-suggest)
-"imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-"let g:copilot_no_tab_map = v:true
-let g:copilot_filetypes = {
-      \ 'gitcommit': v:true,
-      \ }
-
-" vista
-let g:vista#renderer#enable_icon = 0
-let g:vista_default_executive = 'coc'
-let g:vista_sidebar_width = 40
-let g:vista_floating_delay = 100
-let g:vista_update_on_text_changed = 1
-let g:vista_update_on_text_changed_delay = 0
-let g:vista_blink = [0, 0]
-let g:vista_echo_cursor = 0
-let g:vista_echo_cursor_strategy = 'floating_win'
-let g:vista_cursor_delay = 0
-let g:vista_disable_statusline = 1
-let g:vista_highlight_whole_line = 1
-let g:vista_fzf_preview = ['right:50%']
-let g:vista_enable_centering_jump = 0
-let g:vista_find_nearest_method_or_function_delay = 0
-
-" git gutter
-let g:gitgutter_set_sign_backgrounds = 0
-hi SignColumn guibg=NONE ctermbg=NONE
-
-" speed up vue plugin
-let g:vue_disable_pre_processors = 1
-
-" smoother y/e scrolling
+" Smoother y/e scrolling
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
 
-" set snippet keys
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"let g:UltiSnipsEditSplit="vertical"
-"nmap <leader>S :UltiSnipsEdit<cr>
-
-" enable clipboard
-if system('uname -s') == "Darwin\n"
-  set clipboard=unnamed "OSX
-else
-  set clipboard=unnamedplus "Linux
-endif
-
-" use silver searcher underneath ack.vim
-let g:ackprg = 'ag -U -f --hidden --vimgrep'
-"command! -nargs=1 AgAck Ack <args>
-"command! -nargs=1 -complete=file -bar Acks Ag! <args>|cw
-"function! QuoteSearchPattern(pattern)
-  "return "'" . a:pattern . "'"
-"endfunction
-"command! -nargs=1 Ag call QuoteSearchPattern(<q-args>) | AgAck <q-args>
-map <C-w>f :Ack<space>
-
-" disable vim-markdown folder
-let g:vim_markdown_folding_disabled=1
-
-" gist-vim
-let g:gist_detect_filetype = 1
-let g:gist_post_private = 1
-
-set backspace=indent,eol,start " backspacing support
-
-set foldmethod=indent
-set foldlevel=99
-
-" Fast saving (\w)
+" Fast saving
 nmap <leader>w :wa<cr>
-" Fast saving (leader free)
 noremap <C-w>w :wa<CR>
 
-" Rails test
-nmap <leader>t :execute ":!bundle exec rails test %:" . line('.')<CR>
-nmap <leader>T :execute ":!bundle exec rails test %"<CR>
-"nmap <leader>T :!bundle exec rails test:all<CR>
+hi Normal guibg=NONE ctermbg=NONE
+hi VertSplit guifg=#060606 guibg=NONE ctermfg=000 ctermbg=NONE
 
-set ignorecase " Ignore case when searching
-set smartcase " When searching try to be smart about cases
-set hlsearch " Highlight search resultsh
-set incsearch " be like search in modern browsers
+hi ALEErrorSign guibg=NONE ctermbg=NONE
+hi ALEWarningSign guibg=NONE ctermbg=NONE
 
-" Enable mouse (if terminal has support for it)
-if has('mouse')
-  set mouse=a
-endif
-
-set ruler " Always set the mouse cursor position
-
-" Turn off backups, etc.
-set nobackup
-set nowritebackup
-set nowb
-set noswapfile
-
-" Disable wrapping
-"set nowrap
-
-" Allow switching between buffers without saving .
-set hidden
-
-" Show hybrid line numbers except when out of focus or in Insert
-:set number
-
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-:augroup END
-
-" Set xterm title.
-set title
+" transparent sign column
+hi SignColumn guibg=NONE ctermbg=NONE
 
 " Highlight char when over textwidth
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%121v', 120)
-
-" Indentation settings..
-set autoindent
-filetype plugin indent on
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set scrolloff=1
-set expandtab
 
 " Map space to search
 map <space> /
@@ -247,16 +121,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" TypeScript config
-let g:typescript_compiler_binary = 'npx tsc'
-let g:typescript_compiler_options = ''
-
 " Show git blame
 nmap <leader>b :GitMessenger<CR>
 nmap <leader>B :Git<space>blame<CR>
 nmap <leader>l :0Gclog<CR>
-"let g:git_messenger_floating_win_opts = { 'border': 'single' }
-let g:git_messenger_no_default_mappings = v:true
 
 " window and neoterm commands
 " TODO: use leader vs C where possible
@@ -266,10 +134,6 @@ nmap <C-w>c :bd<CR>
 "nmap <leader>C :TcloseAll!<CR>
 "nmap <leader>t :TcloseAll! \| :T npm t %<cr>
 "nmap <leader>T :TcloseAll! \| :T ./vendor/bin/phpunit %<cr>
-"let g:neoterm_default_mod = 'botright'
-
-" Clear whitespace
-let g:better_whitespace_enabled=1
 
 " Make sure it always shows
 set laststatus=2
@@ -278,7 +142,6 @@ set laststatus=2
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>= :vertical resize +5<CR>
 
-"nnoremap <silent> <C-e><C-f> :NERDTreeToggle<CR>
 nnoremap <silent> <C-e><C-f> :NvimTreeToggle<CR>
 
 " different split
