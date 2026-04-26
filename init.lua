@@ -45,6 +45,7 @@ require("lazy").setup(
         local g = vim.g
 
         g.ale_disable_lsp = 1
+        ---g.ale_use_neovim_diagnostics_api = 1
         g.ale_sign_column_always = 1
         g.ale_fix_on_save = 0
         g.ale_lint_on_text_changed = 'never'
@@ -56,7 +57,7 @@ require("lazy").setup(
         g.ale_linters = {
           ruby = {'rubocop', 'ruby'},
           typescript = {'eslint'},
-          python = {'ruff', 'ty'}
+          python = {'ruff'}
         }
       end
     },
