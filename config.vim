@@ -57,6 +57,7 @@ let g:transparent_groups = [
 let g:transparent_groups += ['Pmenu']
 let g:transparent_groups += ['CtrlPMode1', 'CtrlPMode2', 'CtrlPStats'] " CtrlP
 let g:transparent_groups += ['NormalFloat'] " coc.nvim
+let g:transparent_groups += ['NvimTreeNormal', 'NvimTreeNormalNC', 'NvimTreeEndOfBuffer', 'NvimTreeWinSeparator']
 
 :augroup numbertoggle
 :  autocmd!
