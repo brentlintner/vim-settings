@@ -48,8 +48,8 @@ require("lazy").setup(
         ---g.ale_use_neovim_diagnostics_api = 1
         g.ale_sign_column_always = 1
         g.ale_fix_on_save = 0
-        g.ale_lint_on_text_changed = 'never'
-        g.ale_lint_on_insert_leave = 0
+        g.ale_lint_on_text_changed = 'normal'
+        g.ale_lint_on_insert_leave = 1
         g.ale_lint_on_enter = 1
         g.ale_lint_on_save = 1
         g.ale_virtualtext_cursor = 'disabled'

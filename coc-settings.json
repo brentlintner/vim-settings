@@ -1,6 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck": "never",
-  "python.linting.enabled": false,
+  "python.linting.enabled": true,
   "diagnostic.displayByAle": true,
   "vetur.ignoreProjectWarning": true,
   "inlayHint.enable": false,
