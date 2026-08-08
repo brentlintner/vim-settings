@@ -165,7 +165,6 @@ require('nvim-treesitter').install {
   'systemtap',
   'systemverilog',
   'terraform',
-  'tmux',
   'todotxt',
   'toml',
   'typescript',
